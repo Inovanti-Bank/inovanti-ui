@@ -1,5 +1,5 @@
 {
-  "name": "@inovanti/tokens",
+  "name": "@inovanti/react",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@inovanti/tokens": "*"
   }
 }
