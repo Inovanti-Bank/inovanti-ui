@@ -16,6 +16,7 @@
   "devDependencies": {
     "@inovanti/tokens": "*",
     "@inovanti/ts-config": "*",
+    "@inovanti/eslint-config": "*",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "react": "^18.2.0",
