@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Heading, HeadingProps, Text, TextProps } from '@inovanti/react'
-import {dark} from '@inovanti/tokens'
+import { Heading, HeadingProps } from '@inovanti/react'
+import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../styles/global'
+import { GlobalStyle } from '../styles/global'
 export default {
   title: 'Typography/Heading',
   component: Heading,
