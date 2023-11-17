@@ -1,3 +1,10 @@
+import { fontSizes } from "../font-sizes"
+import { fontWeights } from "../font-weights"
+import { fonts } from "../fonts"
+import { lineHeights } from "../line-heights"
+import { radii } from "../radii"
+import { space } from "../space"
+
 export const defaultColors = {
     whiteFixed: '#FFF',
     blackFixed: '#010101',
@@ -31,4 +38,13 @@ export const defaultColors = {
     pastelYellow: '#FFFFBA',
     pastelOrange: '#FFDFBA',
     pastelRed: '#FFB3BA',
+}
+
+export const base = {
+  fontSizes,
+  fontWeights,
+  fonts,
+  lineHeights,
+  radii,
+  space,
 }

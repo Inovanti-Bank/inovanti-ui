@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ["@inovanti/lint-config"]
+    extends: ["@inovanti/lint-config/react"]
 }

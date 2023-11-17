@@ -1,6 +1,9 @@
-import { defaultColors } from './default';
+import { base, defaultColors } from './default';
 
 export const light = {
+    title: 'light',
+    ...base,
+    colors: {
     ...defaultColors,
 
     background: '#eee',
@@ -75,4 +78,4 @@ export const light = {
     yellow700: "#FBC02D",
     yellow800: "#F9A825",
     yellow900: "#F57F17"
-}
+}}

@@ -13,7 +13,8 @@
     "@inovanti/tokens": "*",
     "polished": "^4.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
@@ -27,6 +28,7 @@
     "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "@types/styled-components": "^5.1.30",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "@vitejs/plugin-react": "^4.2.0",

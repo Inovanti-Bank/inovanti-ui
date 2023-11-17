@@ -1,10 +1,13 @@
-import { defaultColors } from "./default";
+import { base, defaultColors } from "./default";
 
 export const dark = {
+    title: 'dark',
+    ...base,
+    colors: {
     ...defaultColors,
 
     background: '#313531',
-    textLow: '#121214',
+        textLow: '#121214',
     textHigh: '#ffffff',
     black: '#FFF',
     white: '#171717',
@@ -74,5 +77,5 @@ export const dark = {
     yellow600: "#FFF9C4",
     yellow700: "#FFFDE7",
     yellow800: "#FFFFF8",
-    yellow900: "#FFFFFB",
+    yellow900: "#FFFFFB"}
 }

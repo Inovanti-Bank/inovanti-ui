@@ -1,1 +1,2 @@
-import { dark } from '@inovanti/tokens'
+export * from './components/Text'
+

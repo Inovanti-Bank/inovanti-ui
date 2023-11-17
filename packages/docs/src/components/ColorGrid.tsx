@@ -2,7 +2,7 @@ import { light } from '@inovanti/tokens'
 import { getContrast } from 'polished'
 
 export function ColorGrid() {
-  return Object.entries(light).map(([key, color]) => {
+  return Object.entries(light.colors).map(([key, color]) => {
     return (
       <div key={key} style={{ backgroundColor: color, padding: '2rem' }}>
         <div
