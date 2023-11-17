@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Text, TextProps } from '@inovanti/react'
+import { Heading, HeadingProps, Text, TextProps } from '@inovanti/react'
 import {dark} from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
 export default {
-  title: 'Typography/Text',
-  component: Text,
+  title: 'Typography/Heading',
+  component: Heading,
   args: {
     children:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ab! Nesciunt modi inventore amet! Aperiam, minima veniam. Nemo dolorem',
-    size: 'md',
+      'Custom Title',
+    size: 'lg',
   },
   argTypes: {
     size: {
@@ -42,13 +42,22 @@ export default {
             </ThemeProvider>)
       }
   ],
-} as Meta<TextProps>
+} as Meta<HeadingProps>
 
-export const Primary: StoryObj<TextProps> = {}
+export const Primary: StoryObj<HeadingProps> = {}
 
-export const CustomTag: StoryObj<TextProps> = {
+export const CustomTag: StoryObj<HeadingProps> = {
   args: {
-    children: 'Strong text',
-    as: 'strong',
+    children: 'Strong Heading',
+    as: 'h1',
+    size: '2xl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "The heading will be h2 by default, to change it, simply pass the 'as' property as the tag of your choice (h1, h3, h4 ...).",
+      },
+    },
   },
 }
