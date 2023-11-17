@@ -7,7 +7,7 @@ ${({ theme, inputSize = 'md' }) => css`
   padding: ${theme.space[3]} ${theme.space[4]};
   border-radius: ${theme.radii.sm};
   box-sizing: border-box;
-  border: 2px solid ${theme.colors.gray700};
+  border: 1.5px solid ${theme.colors.gray600};
   display: flex;
   align-items: center;
 
@@ -22,7 +22,7 @@ ${({ theme, inputSize = 'md' }) => css`
   }}
 
   &:has(input:focus) {
-    border-color: ${theme.colors.primary300};
+    border-color: ${theme.colors.primary700};
   }
 
   &:has(input:disabled) {
@@ -36,16 +36,17 @@ export const Prefix = styled.span`
 ${({ theme }) => css`
   font-family: ${theme.fonts.default};
   font-size: ${theme.fontSizes.sm};
-  color: ${theme.colors.gray300};
+  color: ${theme.colors.gray600};
   font-weight: ${theme.fontWeights.regular};
   `};
 `
 
 export const Input = styled.input`
 ${({ theme }) => css`
+  cursor: text;
   font-family: ${theme.fonts.default};
   font-size: ${theme.fontSizes.sm};
-  color: ${theme.colors.white};
+  color: ${theme.colors.textHigh};
   font-weight: ${theme.fontWeights.regular};
   background: transparent;
   border: 0;
@@ -60,7 +61,7 @@ ${({ theme }) => css`
   }
 
   &::placeholder {
-    color: ${theme.colors.gray400};
+    color: ${theme.colors.gray700};
   }
   `};
 `
