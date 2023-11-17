@@ -22,7 +22,7 @@ export function TokensGrid({ tokens, hasRemValues = false }: TokensGridProps) {
               <td>{key}</td>
               <td>{value}</td>
               {hasRemValues && (
-                <td>{Number(value.replace('rem', '')) * 16}px</td>
+                <td>{(Number(value.replace('rem', '')) || 0) * 16}px</td>
               )}
             </tr>
           )
