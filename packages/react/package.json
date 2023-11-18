@@ -14,9 +14,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@inovanti/eslint-config": "*",
     "@inovanti/tokens": "*",
     "@inovanti/ts-config": "*",
-    "@inovanti/eslint-config": "*",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "react": "^18.2.0",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.30",
+    "phosphor-react": "^1.4.1",
     "styled-components": "^6.1.1"
   }
 }

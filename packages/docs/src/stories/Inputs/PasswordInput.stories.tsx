@@ -1,15 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, Text, TextInput, TextInputProps } from '@inovanti/react'
+import { Box, PasswordInput, TextInputProps } from '@inovanti/react'
 import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Form/Text Input',
-  component: TextInput,
+  title: 'Form/Password Input',
+  component: PasswordInput,
   args: {
-    inputSize: 'md',
+      inputSize: 'md',
+      label: 'Type your password'
   },
   argTypes: {
     inputSize: {
@@ -17,7 +18,7 @@ export default {
       control: {
         type: 'inline-radio',
       },
-    },
+      },
   },
   decorators: [
     (Story) => {
@@ -28,7 +29,6 @@ export default {
           as="label"
           style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}
         >
-          <Text size="sm">Username</Text>
           {Story()}
         </Box></ThemeProvider>
       )
@@ -45,12 +45,5 @@ export const Primary: StoryObj<TextInputProps> = {
 export const Disabled: StoryObj<TextInputProps> = {
   args: {
     disabled: true,
-  },
-}
-
-export const WithPrefix: StoryObj<TextInputProps> = {
-  args: {
-    prefix: 'cal.com/',
-    placeholder: 'your-username',
   },
 }

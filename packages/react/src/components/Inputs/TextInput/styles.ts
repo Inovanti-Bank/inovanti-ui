@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { InputSizeType } from '.'
+import { InputProps } from '../common.styles'
 
-export const TextInputContainer = styled.div<InputSizeType>`
+export const TextInputContainer = styled.div<InputProps>`
 ${({ theme, inputSize = 'md' }) => css`
   background-color: ${theme.colors.gray100};
   padding: ${theme.space[3]} ${theme.space[4]};
