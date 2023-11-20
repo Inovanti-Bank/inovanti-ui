@@ -29,7 +29,7 @@ export const StyledItemIndicator = styled(Select.ItemIndicator)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.primary200};
 `
 
 export const SelectTrigger = styled(Select.SelectTrigger)`
@@ -46,7 +46,7 @@ export const SelectTrigger = styled(Select.SelectTrigger)`
   font-size: ${(props) => props.theme.fontSizes.md};
   color: ${({ theme }) => theme.colors.textHigh};
   &[data-placeholder] {
-    color: ${({ theme }) => theme.colors.fixed.gray200};
+    color: ${({ theme }) => theme.colors.gray200};
   }
 `
 

@@ -1,9 +1,7 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
-import { DataObj } from '@/dtos/FormDataUserDTO'
 import * as Select from '@radix-ui/react-select'
 import { Check, TagChevron } from 'phosphor-react'
 import { ComponentProps, ElementRef, ReactNode, forwardRef } from 'react'
-import { InputContainer, Label, Widths } from '../common.styles'
+import { InputContainer } from '../common.styles'
 import {
   ItemText,
   SelectContent,
@@ -12,8 +10,11 @@ import {
   StyledItem,
   StyledItemIndicator,
 } from './styles'
+import { Spaces } from '../../../types/styles'
+import { Text } from '../../Text'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
 
-interface SelectInputProps {
+export interface SelectInputProps {
   placeholder: string
   label: string
   error?: string
@@ -21,11 +22,16 @@ interface SelectInputProps {
   defaultValue?: number | string | null | undefined
   onChange: (value: string) => void
   data?: DataObj[]
-  width?: Widths
+  width?: Spaces
   gridAreaName?: string
 }
 
-export const SelectInput = ({
+export type DataObj = {
+  value: string
+  label: string
+}
+
+export function SelectInput({
   placeholder,
   fieldName,
   label,
@@ -35,10 +41,10 @@ export const SelectInput = ({
   gridAreaName,
   data = [],
   width = 'full',
-}: SelectInputProps) => {
+}: SelectInputProps) {
   return (
     <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-      <Label>{label}</Label>
+      <Text>{label}</Text>
       <Select.Root
         onValueChange={onChange}
         name={fieldName}
@@ -62,12 +68,12 @@ export const SelectInput = ({
           </SelectContent>
         </Select.Portal>
       </Select.Root>
-      {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+      {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
     </InputContainer>
   )
 }
 
-export interface SelectItemProps extends ComponentProps<typeof StyledItem> {
+interface SelectItemProps extends ComponentProps<typeof StyledItem> {
   children: ReactNode | string
 }
 
