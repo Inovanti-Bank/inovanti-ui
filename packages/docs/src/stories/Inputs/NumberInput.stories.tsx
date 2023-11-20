@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { InputProps, TextInput } from '@inovanti/react'
+import { InputProps, NumberInput, TextInput } from '@inovanti/react'
 import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Form/Inputs/Text Input',
-  component: TextInput,
+  title: 'Form/Inputs/Number Input',
+  component: NumberInput,
   args: {
     inputSize: 'md',
-    label: 'Username',
+    label: 'Idade',
     
   },
   argTypes: {
@@ -34,7 +34,7 @@ export default {
 
 export const Primary: StoryObj<InputProps> = {
   args: {
-    placeholder: 'Type of name',
+    placeholder: 'Digite sua idade',
   },
 }
 
@@ -50,8 +50,8 @@ export const CustomWidth: StoryObj<InputProps> = {
 
 export const Error: StoryObj<InputProps> = {
   args: {
-    label: 'E-mail',
-    error: 'E-mail inválido'
+    label: 'Quantas TVs você tem em casa?',
+    error: 'Atenção, limite acima do permitido'
     
   },
 }

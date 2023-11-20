@@ -5,19 +5,13 @@ import { Input } from '../common.styles'
 import { PasswordInputContainer, SeePasswordButton } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-
-export interface PasswordInputProps extends ComponentProps<typeof Input> {
-  label: string
-  inputSize?: 'sm' | 'md'
-  error?: string
-  width?: Spaces
-}
+import { InputProps } from '../common'
 
 type PasswordType = 'password' | 'text'
 
 export const PasswordInput = forwardRef<
   ElementRef<typeof Input>,
-  PasswordInputProps
+  InputProps
 >(
   (
     {
@@ -25,8 +19,9 @@ export const PasswordInput = forwardRef<
       inputSize = 'md',
       width = 'full',
       error,
+      gridAreaName,
       ...props
-    }: PasswordInputProps,
+    }: InputProps,
     ref,
   ) => {
     const [inputPasswordType, setInputPasswordType] =
@@ -44,7 +39,7 @@ export const PasswordInput = forwardRef<
     }
 
     return (
-      <PasswordInputContainer width={width}>
+      <PasswordInputContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
         <Input
           type={inputPasswordType}

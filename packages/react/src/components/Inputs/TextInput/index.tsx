@@ -3,16 +3,9 @@ import { Input, InputContainer } from '../common.styles'
 import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
+import { InputProps } from '../common'
 
-export interface TextInputProps extends ComponentProps<typeof Input> {
-  label: string
-  inputSize?: 'sm' | 'md'
-  error?: string
-  width?: Spaces
-  gridAreaName?: string
-}
-
-export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
+export const TextInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
     {
       label,
@@ -21,7 +14,7 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
       width = 'full',
       error,
       ...props
-    }: TextInputProps,
+    }: InputProps,
     ref,
   ) => {
     return (

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { PasswordInput, TextInputProps } from '@inovanti/react'
+import { InputProps, PasswordInput } from '@inovanti/react'
 import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
@@ -31,11 +31,11 @@ export default {
       )
     },
   ],
-} as Meta<TextInputProps>
+} as Meta<InputProps>
 
-export const Primary: StoryObj<TextInputProps> = {}
+export const Primary: StoryObj<InputProps> = {}
 
-export const CustomWidth: StoryObj<TextInputProps> = {
+export const CustomWidth: StoryObj<InputProps> = {
   argTypes: {
     width: {
       control: 'inline-radio',
@@ -45,7 +45,7 @@ export const CustomWidth: StoryObj<TextInputProps> = {
   },
 }
 
-export const Error: StoryObj<TextInputProps> = {
+export const Error: StoryObj<InputProps> = {
   args: {
     label: 'Confirme sua senha',
     error: 'As senhas não coincidem'
