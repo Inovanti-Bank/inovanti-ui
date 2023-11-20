@@ -1,26 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { BoxProps, Button } from '@inovanti/react'
+import { AButton } from '@inovanti/react'
 import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
   title: 'Buttons/Action',
-  component: Button,
+  component: AButton,
   args: {
     children: (
-        <>Click me</>
+        "Click me"
       
     ),
   },
-  argTypes: {
-    children: {
-      control: {
-        type: null,
-      },
-    },
-    },
   decorators: [
         (Story) => {
         return (<ThemeProvider theme={dark}>
@@ -29,6 +22,15 @@ export default {
             </ThemeProvider>)
       }
   ],
-} as Meta<typeof Button>
+} as Meta<typeof AButton>
 
-export const Primary: StoryObj<typeof Button> = {}
+export const Primary: StoryObj<typeof AButton> = {}
+
+export const Disabled: StoryObj<typeof AButton> = {
+    args: {
+    disabled: true,
+    },
+}
+
+
+

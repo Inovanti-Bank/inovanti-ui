@@ -26,6 +26,7 @@
   "dependencies": {
     "@types/styled-components": "^5.1.30",
     "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2",
     "styled-components": "^6.1.1"
   }
 }

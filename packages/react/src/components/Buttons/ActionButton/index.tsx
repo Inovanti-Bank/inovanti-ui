@@ -19,6 +19,7 @@ export const AButton = styled.button`
     transition: 0.2s;
     &:hover {
       color: ${theme.colors.green500};
+      border-color: ${theme.colors.green500};
     }
   `};
 `
