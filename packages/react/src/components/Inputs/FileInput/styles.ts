@@ -6,16 +6,21 @@ export const FileInputContainer = styled.button<ContainerProps>`
   cursor: pointer;
   text-align: center;
   display: flex;
+  flex-direction: row;
 
   ${({ theme, width }) => css`
     font-size: ${theme.fontSizes.sm};
-    border: 1px solid ${theme.colors.green300};
+    border: 0.7px solid ${theme.colors.primary400};
     border-radius: ${theme.radii.md};
-    color: ${theme.colors.green300};
+    background-color: ${theme.colors.gray150};
+
+    color: ${theme.colors.primary400};
     font-weight: bold;
     transition: 0.2s;
     &:hover {
-      color: ${theme.colors.green100};
+      color: ${theme.colors.primary200};
+      border: 1px solid ${theme.colors.primary200};
+
     }
 
     width: ${theme.space[width || 'full']};

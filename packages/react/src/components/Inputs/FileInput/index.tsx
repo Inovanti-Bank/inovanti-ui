@@ -1,40 +1,35 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
-
-import { ComponentProps, ElementRef, forwardRef } from 'react'
-import { Input, Widths } from '../common.styles'
+import { ElementRef, forwardRef } from 'react'
+import { Input } from '../common.styles'
 import { FileInputContainer, Label } from './styles'
+import { InputProps } from '../common'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
 
-export interface FileInputProps extends ComponentProps<typeof Input> {
-  label: string
-  inputsize?: 'sm' | 'md'
-  error?: string
-  width?: Widths
-}
 
-export const FileInput = forwardRef<ElementRef<typeof Input>, FileInputProps>(
+export const FileInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
     {
       label,
-      inputsize = 'md',
+      inputSize = 'md',
       error,
       width = 'full',
+      gridAreaName,
       ...props
-    }: FileInputProps,
+    }: InputProps,
     ref,
   ) => {
     return (
-      <FileInputContainer width={width} type="button">
+      <FileInputContainer width={width} type="button"  style={{ gridArea: gridAreaName }}>
         <Label>
           {label}
           <Input
             type="file"
             style={{ display: 'none' }}
-            inputsize={inputsize}
+            inputSize={inputSize}
             ref={ref}
             {...props}
           />
         </Label>
-        {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </FileInputContainer>
     )
   },
