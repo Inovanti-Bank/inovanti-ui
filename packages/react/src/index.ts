@@ -10,6 +10,8 @@ export * from './components/Inputs/TextInput'
 export * from './components/Inputs/NumberInput'
 export * from './components/Inputs/DecimalInput'
 export * from './components/Inputs/FileInput'
+export * from './components/Inputs/MaskInput'
+
 
 
 

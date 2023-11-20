@@ -1,31 +1,33 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
-import { americanToBrazilianDate, isInBrazilianPattern } from '@/utils/date'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { PatternFormat } from 'react-number-format'
-import { InputContainer, Label, Widths } from '../common.styles'
+import { Spaces } from '../../../types/styles'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
+import { Text } from '../../Text'
+import { InputContainer } from '../common.styles'
 import { Input } from './styles'
+import { isInBrazilianPattern, americanToBrazilianDate } from '../../../utils/date'
 
-export interface TextInputProps extends ComponentProps<typeof PatternFormat> {
+export interface MaskInputProps extends ComponentProps<typeof PatternFormat> {
   label: string
-  inputsize?: 'sm' | 'md'
+  inputSize?: 'sm' | 'md'
   error?: string
-  width?: Widths
+  width?: Spaces
   gridAreaName?: string
 }
 
 export const MaskInput = forwardRef<
   ElementRef<typeof PatternFormat>,
-  TextInputProps
+  MaskInputProps
 >(
   (
     {
       label,
-      inputsize = 'md',
+      inputSize = 'md',
       error,
       gridAreaName,
       width = 'full',
       ...props
-    }: TextInputProps,
+    }: MaskInputProps,
     ref,
   ) => {
     if (props.format === '##/##/####') {
@@ -39,10 +41,10 @@ export const MaskInput = forwardRef<
 
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Label>{label}</Label>
-        <Input inputsize={inputsize} getInputRef={ref} {...props} />
+        <Text size="sm">{label}</Text>
+        <Input inputSize={inputSize} getInputRef={ref} {...props} />
 
-        {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </InputContainer>
     )
   },
