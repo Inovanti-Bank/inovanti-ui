@@ -19,6 +19,7 @@
     "@inovanti/ts-config": "*",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "@types/react-modal": "^3.16.3",
     "react": "^18.2.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
@@ -27,6 +28,7 @@
     "@types/styled-components": "^5.1.30",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
+    "react-modal": "^3.16.1",
     "styled-components": "^6.1.1"
   }
 }

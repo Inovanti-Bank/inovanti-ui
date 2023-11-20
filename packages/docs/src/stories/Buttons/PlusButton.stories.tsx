@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Buttons/Plus',
+  title: 'Form/Buttons/Plus',
   component: PlusButton,
   argTypes: {
     onClick: {

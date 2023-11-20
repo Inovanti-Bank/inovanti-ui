@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Form/Password Input',
+  title: 'Form/Inputs/Password Input',
   component: PasswordInput,
   args: {
       inputSize: 'md',

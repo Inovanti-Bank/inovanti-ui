@@ -14,7 +14,7 @@ function getSizes() {
 }
 
 export default {
-  title: 'Buttons/Default',
+  title: 'Form/Buttons/Default',
   component: Button,
   args: {
     children: (

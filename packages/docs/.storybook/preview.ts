@@ -10,8 +10,8 @@ const preview: Preview = {
       },
     },
     docs: {
-    theme: themes.dark
-  }
+      theme: themes.dark
+    }
   },
   
 };

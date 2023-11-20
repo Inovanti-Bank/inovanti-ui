@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Buttons/Action',
+  title: 'Form/Buttons/Action',
   component: AButton,
   args: {
     children: (

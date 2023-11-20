@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
-  title: 'Form/Text Input',
+  title: 'Form/Inputs/Text Input',
   component: TextInput,
   args: {
     inputSize: 'md',

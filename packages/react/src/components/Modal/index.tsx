@@ -3,14 +3,18 @@ import ReactModal from 'react-modal'
 import { useTheme } from 'styled-components'
 import { ModalContainer } from './styles'
 
-interface ModalProps extends ComponentProps<typeof ReactModal> {
+export interface ModalProps extends ComponentProps<typeof ReactModal> {
   children: ReactNode
 }
 
 export const Modal = forwardRef<ElementRef<typeof ReactModal>, ModalProps>(
   ({ children, ...props }: ModalProps, ref) => {
     const theme = useTheme()
-    ReactModal.setAppElement('#root')
+    try {
+      ReactModal.setAppElement('#root')
+    } catch {
+      ReactModal.setAppElement('#storybook-root')
+    }
     return (
       <ModalContainer
         style={{
