@@ -5,7 +5,7 @@ export const StyledItem = styled(Select.Item)`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.textHigh};
   background-color: ${({ theme }) => theme.colors.background};
-  border-bottom: 0.7px ${({ theme }) => theme.colors.green700} solid;
+  border-bottom: 0.7px ${({ theme }) => theme.colors.primary900} solid;
   margin-bottom: ${({ theme }) => theme.space[2]};
   display: flex;
   align-items: center;
@@ -40,13 +40,13 @@ export const SelectTrigger = styled(Select.SelectTrigger)`
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.white};
 
-  border: 0.7px ${({ theme }) => theme.colors.green700} solid;
+  border: 0.7px ${({ theme }) => theme.colors.primary900} solid;
   border-radius: ${({ theme }) => theme.radii.md};
   padding: ${(props) => props.theme.space[3]};
   font-size: ${(props) => props.theme.fontSizes.md};
   color: ${({ theme }) => theme.colors.textHigh};
   &[data-placeholder] {
-    color: ${({ theme }) => theme.colors.gray200};
+    color: ${({ theme }) => theme.colors.gray600};
   }
 `
 
@@ -58,7 +58,7 @@ export const SelectContent = styled(Select.Content)`
 
 export const SelectViewport = styled(Select.Viewport)`
   background-color: ${({ theme }) => theme.colors.background};
-  border: 0.7px ${({ theme }) => theme.colors.green700} solid;
+  border: 0.7px ${({ theme }) => theme.colors.primary900} solid;
   border-radius: 6px;
   padding: 5px;
   width: 100%;
