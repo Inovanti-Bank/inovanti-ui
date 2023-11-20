@@ -1,37 +1,39 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { NumericFormat } from 'react-number-format'
-import { InputContainer, Label, Widths } from '../common.styles'
+import { Spaces } from '../../../types/styles'
+import { Text } from '../../Text'
+import { InputContainer } from '../common.styles'
 import { Input } from './styles'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
 
-export interface TextInputProps extends ComponentProps<typeof NumericFormat> {
+export interface DecimalInputProps extends ComponentProps<typeof NumericFormat> {
   label: string
-  inputsize?: 'sm' | 'md'
+  inputSize?: 'sm' | 'md'
   error?: string
-  width?: Widths
+  width?: Spaces
   gridAreaName?: string
 }
 
 export const DecimalInput = forwardRef<
   ElementRef<typeof NumericFormat>,
-  TextInputProps
+  DecimalInputProps
 >(
   (
     {
       label,
-      inputsize = 'md',
+      inputSize = 'md',
       gridAreaName,
       error,
       width = 'full',
       ...props
-    }: TextInputProps,
+    }: DecimalInputProps,
     ref,
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Label>{label}</Label>
+        <Text size="sm">{label}</Text>
         <Input
-          inputsize={inputsize}
+          inputSize={inputSize}
           thousandSeparator="."
           decimalSeparator=","
           decimalScale={2}
@@ -41,7 +43,7 @@ export const DecimalInput = forwardRef<
           {...props}
         />
 
-        {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </InputContainer>
     )
   },

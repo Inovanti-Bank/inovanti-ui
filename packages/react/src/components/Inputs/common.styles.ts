@@ -23,7 +23,7 @@ export const InputContainer = styled.div<ContainerProps>`
   `};
 `
 
-export const Input = styled.input<InputProps>`
+export const inputStyles = css<InputProps>`
 ${({ theme, inputSize = 'md' }) => css`
   cursor: text;
   font-family: ${theme.fonts.default};
@@ -49,4 +49,8 @@ ${({ theme, inputSize = 'md' }) => css`
     color: ${theme.colors.gray700};
   }
   `};
+`
+
+export const Input = styled.input<InputProps>`
+  ${inputStyles};
 `

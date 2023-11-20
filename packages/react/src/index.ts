@@ -8,6 +8,8 @@ export * from './components/Inputs/common'
 export * from './components/Inputs/PasswordInput'
 export * from './components/Inputs/TextInput'
 export * from './components/Inputs/NumberInput'
+export * from './components/Inputs/DecimalInput'
+
 
 
 export * from './components/Buttons/ActionButton'
