@@ -26,7 +26,7 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text>{label}</Text>
+        <Text size="sm">{label}</Text>
         <Input type="text" inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </InputContainer>

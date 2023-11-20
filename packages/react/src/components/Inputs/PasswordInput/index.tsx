@@ -1,7 +1,7 @@
 import { Eye, EyeSlash } from 'phosphor-react'
 import { ComponentProps, ElementRef, forwardRef, useState } from 'react'
 import { Spaces } from '../../../types/styles'
-import { Input, Label } from '../common.styles'
+import { Input } from '../common.styles'
 import { PasswordInputContainer, SeePasswordButton } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
@@ -45,7 +45,7 @@ export const PasswordInput = forwardRef<
 
     return (
       <PasswordInputContainer width={width}>
-        <Text size="sm" style={{ marginBottom: '8px' }}>{label}</Text>
+        <Text size="sm">{label}</Text>
         <Input
           type={inputPasswordType}
           inputSize={inputSize}

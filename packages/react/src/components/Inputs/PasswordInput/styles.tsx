@@ -2,12 +2,14 @@ import styled, { css } from 'styled-components'
 import { ContainerProps } from '../common.styles'
 
 export const PasswordInputContainer = styled.div<ContainerProps>`
+${({ theme, width = 'full' }) => css`
   display: flex;
   position: relative;
-  margin-bottom: ${({ theme }) => theme.space[6]};
+  margin-bottom: ${theme.space[6]};
   flex-direction: column;
   justify-content: flex-start;
-  width: ${({ theme, width }) => theme.space[width || 'full']};
+  width: ${theme.space[width]};
+  `};
 `
 
 export const SeePasswordButton = styled.button`
@@ -19,10 +21,10 @@ ${({ theme }) => css`
   border-radius: ${theme.radii.sm};
   right: ${theme.space[4]};
   top: ${theme.space[8]};
-  color: ${theme.colors.gray200};
+  color: ${theme.colors.gray700};
   border: 1px transparent solid;
   &:focus {
-    border: 1px ${theme.colors.green700} solid;
+    border: 0.7px ${theme.colors.green700} solid;
   }
   `};
 `
