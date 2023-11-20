@@ -1,6 +1,6 @@
-import { Colors, Spaces } from '@/@types/styled'
 import React, { ComponentProps, ElementRef, forwardRef } from 'react'
 import { ButtonContainer } from './styles'
+import { Colors, Spaces } from '../../../types/styles'
 
 export interface ButtonProps extends ComponentProps<typeof ButtonContainer> {
   children: React.ReactNode

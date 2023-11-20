@@ -1,6 +1,6 @@
-import { Colors } from '@/@types/styled'
-import { ContainerProps } from '@/components/Inputs/common.styles'
 import styled from 'styled-components'
+import { Colors } from '../../../types/styles'
+import { ContainerProps } from '../../Inputs/common.styles'
 
 interface ButtonContainerProps extends ContainerProps {
   color?: Colors
