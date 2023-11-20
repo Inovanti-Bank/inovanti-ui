@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, Text, TextInput, TextInputProps } from '@inovanti/react'
+import { TextInput, TextInputProps } from '@inovanti/react'
 import { dark } from '@inovanti/tokens'
 import { ThemeProvider } from 'styled-components'
+import { getSizes } from '../../components/GetTokens'
 import { GlobalStyle } from '../../styles/global'
 
 export default {
@@ -10,13 +11,13 @@ export default {
   component: TextInput,
   args: {
     inputSize: 'md',
+    label: 'Username',
+    
   },
   argTypes: {
     inputSize: {
+      control:  'inline-radio',
       options: ['sm', 'md'],
-      control: {
-        type: 'inline-radio',
-      },
     },
   },
   decorators: [
@@ -24,13 +25,8 @@ export default {
           return (
           <ThemeProvider theme={dark}>
               <GlobalStyle />
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}
-        >
-          <Text size="sm">Username</Text>
-          {Story()}
-        </Box></ThemeProvider>
+              {Story()}
+            </ThemeProvider>
       )
     },
   ],
@@ -42,15 +38,20 @@ export const Primary: StoryObj<TextInputProps> = {
   },
 }
 
-export const Disabled: StoryObj<TextInputProps> = {
-  args: {
-    disabled: true,
+export const CustomWidth: StoryObj<TextInputProps> = {
+  argTypes: {
+    width: {
+      control: 'inline-radio',
+      options: getSizes()
+    },
+    
   },
 }
 
-export const WithPrefix: StoryObj<TextInputProps> = {
+export const Error: StoryObj<TextInputProps> = {
   args: {
-    prefix: 'cal.com/',
-    placeholder: 'your-username',
+    label: 'E-mail',
+    error: 'E-mail inválido'
+    
   },
 }

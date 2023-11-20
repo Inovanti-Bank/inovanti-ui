@@ -9,6 +9,18 @@ export type InputProps = {
   inputSize?: 'sm' | 'md'
 }
 
+export const InputContainer = styled.div<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: ${({ theme, width }) => theme.space[width || 'full']};
+
+  @media (max-width: 768px) {
+    width: ${({ theme }) => theme.space.full};
+  }
+`
+
 export const Input = styled.input<InputProps>`
 ${({ theme, inputSize = 'md' }) => css`
   cursor: text;
@@ -17,29 +29,22 @@ ${({ theme, inputSize = 'md' }) => css`
   font-size: ${theme.fontSizes[inputSize]};
   border-radius: ${theme.radii.sm};
   background-color: ${theme.colors.white};
-  border: 0.7px ${theme.colors.green700} solid;
+  color: ${theme.colors.textHigh};
+
+  border: 0.7px ${theme.colors.primary900} solid;
 
   &:focus {
     outline: 0;
-    border-color: ${theme.colors.green300};
+    border: 1px ${theme.colors.primary700} solid;
   }
 
   &:disabled {
     cursor: not-allowed;
-    
     color: ${theme.colors.gray300};
   }
 
   &::placeholder {
     color: ${theme.colors.gray700};
   }
-  `};
-`
-
-export const Label = styled.label`
-${({ theme }) => css`
-  margin-bottom: ${theme.space[1]};
-  margin-left: ${theme.space[1]};
-  text-align: left;
   `};
 `

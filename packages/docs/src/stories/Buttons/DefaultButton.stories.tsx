@@ -5,13 +5,8 @@ import { dark } from '@inovanti/tokens'
 import { ThemeProvider, useTheme } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 import { ArrowRight } from 'phosphor-react'
-function getColors() {
-  return Object.keys(dark.colors)
-}
+import { getColors, getSizes } from '../../components/GetTokens'
 
-function getSizes() {
-  return Object.keys(dark.space)
-}
 
 export default {
   title: 'Form/Buttons/Default',
