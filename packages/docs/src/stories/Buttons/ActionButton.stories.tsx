@@ -14,6 +14,11 @@ export default {
       
     ),
   },
+  argTypes: {
+    onClick: {
+      action: 'click',
+    },
+  },
   decorators: [
         (Story) => {
         return (<ThemeProvider theme={dark}>

@@ -7,8 +7,8 @@ export const AButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
   ${({ theme }) => css`
+    gap: ${theme.space[1]};
     font-size: ${theme.fontSizes.sm};
     padding: ${theme.space[2]} ${theme.space[5]};
     margin: ${theme.space[4]};
@@ -20,6 +20,13 @@ export const AButton = styled.button`
     &:hover {
       color: ${theme.colors.green500};
       border-color: ${theme.colors.green500};
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: ${theme.colors.gray700};
+      border-color: ${theme.colors.gray700};
+      background-color: ${theme.colors.gray200};
     }
   `};
 `
