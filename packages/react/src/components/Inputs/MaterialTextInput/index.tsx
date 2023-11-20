@@ -1,18 +1,17 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
-
 import { ComponentProps, ElementRef, forwardRef } from 'react'
-import { InputContainer } from './styles'
-import { Bar, Input, Label } from '../common.styles'
-import { Spaces } from '@/@types/styled'
+import { Spaces } from '../../../types/styles'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
+import { } from '../common.styles'
+import { Bar, Input, InputContainer, Label } from './styles'
 
-export interface TextInputProps extends ComponentProps<typeof Input> {
+export interface MaterialTextInputProps extends ComponentProps<typeof Input> {
   label: string
   error?: string
   width?: Spaces
 }
 
-export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
-  ({ label, width = 'full', error, ...props }: TextInputProps, ref) => {
+export const MaterialTextInput = forwardRef<ElementRef<typeof Input>, MaterialTextInputProps>(
+  ({ label, width = 'full', error, ...props }: MaterialTextInputProps, ref) => {
     return (
       <InputContainer>
         <Input
@@ -25,10 +24,10 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
         />
         <Bar width={width} className="bar" />
         <Label>{label}</Label>
-        {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </InputContainer>
     )
   },
 )
 
-TextInput.displayName = 'TextInput'
+MaterialTextInput.displayName = 'MaterialTextInput'

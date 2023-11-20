@@ -1,11 +1,10 @@
-import { Spaces } from '@/@types/styled'
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
 import { Eye, EyeSlash } from 'phosphor-react'
 import { ComponentProps, ElementRef, forwardRef, useState } from 'react'
-import { Bar, Input, Label } from '../common.styles'
-import { PasswordInputContainer, SeePasswordButton } from './styles'
+import { PasswordInputContainer, SeePasswordButton, Bar, Input, Label  } from './styles'
+import { Spaces } from '../../../types/styles'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
 
-export interface TextInputProps extends ComponentProps<typeof Input> {
+export interface MaterialPasswordInputProps extends ComponentProps<typeof Input> {
   label: string
   error?: string
   width?: Spaces
@@ -13,10 +12,10 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
 
 type PasswordType = 'password' | 'text'
 
-export const PasswordInput = forwardRef<
+export const MaterialPasswordInput = forwardRef<
   ElementRef<typeof Input>,
-  TextInputProps
->(({ label, width = 'full', error, ...props }: TextInputProps, ref) => {
+  MaterialPasswordInputProps
+>(({ label, width = 'full', error, ...props }: MaterialPasswordInputProps, ref) => {
   const [inputPasswordType, setInputPasswordType] =
     useState<PasswordType>('password')
 
@@ -52,9 +51,9 @@ export const PasswordInput = forwardRef<
       </SeePasswordButton>
       <Bar className="bar" />
       <Label>{label}</Label>
-      {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+      {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
     </PasswordInputContainer>
   )
 })
 
-PasswordInput.displayName = 'PasswordInput'
+MaterialPasswordInput.displayName = 'MaterialPasswordInput'
