@@ -7,7 +7,7 @@ export const SearchSelectContainer = styled.div<ContainerProps>`
   justify-content: flex-start;
   margin-bottom: 1rem;
 
-  width: ${({ theme, width }) => theme.space[width || 'full']};
+  width: ${({ theme, width = 'full' }) => theme.space[width]};
 
   @media (max-width: 768px) {
     width: ${({ theme }) => theme.space.full};

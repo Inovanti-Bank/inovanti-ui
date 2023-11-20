@@ -13,6 +13,7 @@ import {
 import { Spaces } from '../../../types/styles'
 import { Text } from '../../Text'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
+import { DataObj } from '../common'
 
 export interface SelectInputProps {
   placeholder: string
@@ -26,10 +27,7 @@ export interface SelectInputProps {
   gridAreaName?: string
 }
 
-export type DataObj = {
-  value: string
-  label: string
-}
+
 
 export function SelectInput({
   placeholder,

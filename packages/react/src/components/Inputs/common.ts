@@ -9,3 +9,8 @@ export interface InputProps extends ComponentProps<typeof Input> {
   width?: Spaces
   gridAreaName?: string
 }
+
+export type DataObj = {
+  value: string
+  label: string
+}

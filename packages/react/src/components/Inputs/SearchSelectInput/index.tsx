@@ -1,16 +1,17 @@
-import { AlertBlank, FormAlert } from '@/components/FormAlert'
-import { DataObj } from '@/dtos/FormDataUserDTO'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
 import { useTheme } from 'styled-components'
-import { Label, Widths } from '../common.styles'
+import { Spaces } from '../../../types/styles'
+import { FormAlert, FormAlertBlank } from '../../FormAlert'
+import { Text } from '../../Text'
+import { DataObj } from '../common'
 import { SearchSelectContainer } from './styles'
 
-interface SearchSelectInputProps extends ComponentProps<typeof Select> {
+export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   label: string
   error?: string
   data?: DataObj[]
-  width?: Widths
+  width?: Spaces
   gridAreaName?: string
 }
 
@@ -33,7 +34,7 @@ export const SearchSelectInput = forwardRef<
 
     return (
       <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Label>{label}</Label>
+        <Text size="sm">{label}</Text>
         <Select
           ref={ref}
           {...props}
@@ -43,35 +44,40 @@ export const SearchSelectInput = forwardRef<
               ...baseStyles,
               cursor: 'pointer',
               borderColor: state.isFocused
-                ? theme.colors.green300
-                : theme.colors.green700,
+                ? theme.colors.primary300
+                : theme.colors.primary700,
               background: theme.colors.white,
               width: '100%',
-              border: `0.7px solid ${theme.colors.green700}`,
+              border: `0.7px solid ${theme.colors.primary700}`,
               borderRadius: '0.375rem',
+              color: theme.colors.textHigh,
+
               padding: theme.space[3],
             }),
             placeholder: (baseStyles) => ({
               ...baseStyles,
-              color: theme.colors.fixed.gray200,
+              color: theme.colors.gray600,
               textAlign: 'center',
             }),
             menu: (baseStyles) => ({
               ...baseStyles,
-              border: `0.7px solid ${theme.colors.green700}`,
+              border: `0.7px solid ${theme.colors.primary700}`,
               borderRadius: '0.375rem',
               marginTop: theme.space[3],
-              background: theme.colors.background,
+              background: theme.colors.white,
             }),
             option: (baseStyles) => ({
               ...baseStyles,
               cursor: 'pointer',
-              borderBottom: `0.7px solid ${theme.colors.green700}`,
+              borderBottom: `0.7px solid ${theme.colors.primary700}`,
               borderRadius: '0.1rem',
               padding: theme.space[3],
               width: '98%',
               margin: theme.space[1],
               marginInline: '1%',
+              color: theme.colors.textHigh,
+              background: theme.colors.gray150,
+
               '&:hover': {
                 background: theme.colors.white,
               },
@@ -79,7 +85,7 @@ export const SearchSelectInput = forwardRef<
           }}
           options={data}
         />
-        {error ? <FormAlert>{error}</FormAlert> : <AlertBlank />}
+        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </SearchSelectContainer>
     )
   },
