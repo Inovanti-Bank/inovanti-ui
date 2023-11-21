@@ -21,4 +21,6 @@ export * from './components/Buttons/ActionButton'
 export * from './components/Buttons/DefaultButton'
 export * from './components/Buttons/DelButton'
 export * from './components/Buttons/PlusButton'
+export * from './components/Checkbox'
+
 
