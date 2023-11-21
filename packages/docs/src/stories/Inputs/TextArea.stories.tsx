@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/TextArea',
   component: TextArea,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Descrição',

@@ -5,6 +5,7 @@ import { Heading, Modal, ModalProps, Text } from '@inovanti/react'
 export default {
   title: 'Surfaces/Modal',
   component: Modal,
+  tags: ['autodocs'],
   args: {
     isOpen: true,
     children: (

@@ -5,6 +5,7 @@ import { PlusButton } from '@inovanti/react'
 export default {
   title: 'Form/Buttons/Plus',
   component: PlusButton,
+  tags: ['autodocs'],
   argTypes: {
     onClick: {
       action: 'click',

@@ -5,6 +5,7 @@ import { AButton } from '@inovanti/react'
 export default {
   title: 'Form/Buttons/Action',
   component: AButton,
+  tags: ['autodocs'],
   args: {
     children: (
         "Click me"

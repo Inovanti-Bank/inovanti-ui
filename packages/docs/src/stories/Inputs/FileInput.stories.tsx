@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/File Input',
   component: FileInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Selecione o arquivo',

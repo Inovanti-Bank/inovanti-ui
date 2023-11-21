@@ -4,6 +4,7 @@ import { Heading, HeadingProps } from '@inovanti/react'
 export default {
   title: 'Typography/Heading',
   component: Heading,
+  tags: ['autodocs'],
   args: {
     children:
       'Custom Title',

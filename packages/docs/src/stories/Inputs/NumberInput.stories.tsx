@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/Number Input',
   component: NumberInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Idade',

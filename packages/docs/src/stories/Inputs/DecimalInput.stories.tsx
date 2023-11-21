@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/Decimal Input',
   component: DecimalInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Qual o seu peso?',

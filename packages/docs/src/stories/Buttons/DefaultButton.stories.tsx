@@ -8,6 +8,7 @@ import { getColors, getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Buttons/Default',
   component: Button,
+  tags: ['autodocs'],
   args: {
     children: (
         "Click me"

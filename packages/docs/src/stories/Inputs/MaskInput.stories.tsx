@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/Mask Input',
   component: MaskInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Data de nascimento',

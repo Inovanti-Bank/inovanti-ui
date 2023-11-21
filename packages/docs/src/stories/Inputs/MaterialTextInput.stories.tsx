@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/Material Text Input',
   component: MaterialTextInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Username',

@@ -5,6 +5,7 @@ import { Box, BoxProps, Text } from '@inovanti/react'
 export default {
   title: 'Surfaces/Box',
   component: Box,
+  tags: ['autodocs'],
   args: {
     children: (
         <Text>Testing Box again</Text>

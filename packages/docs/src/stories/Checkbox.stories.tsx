@@ -5,6 +5,7 @@ import { AButton, Box, Checkbox, Text } from '@inovanti/react'
 export default {
   title: 'Form/Buttons/Checkbox',
   component: Checkbox,
+  tags: ['autodocs'],
   args: {
     children: (
         "Click me"

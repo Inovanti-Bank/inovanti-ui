@@ -7,6 +7,7 @@ import { mockData } from './mockData'
 export default {
   title: 'Form/Inputs/Search Select Input',
   component: SearchSelectInput,
+  tags: ['autodocs'],
   args: {
     label: 'Estado',
     placeholder: 'Selecione seu estado...',

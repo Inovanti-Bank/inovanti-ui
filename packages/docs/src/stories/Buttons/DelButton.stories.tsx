@@ -5,6 +5,7 @@ import { DelButton } from '@inovanti/react'
 export default {
   title: 'Form/Buttons/Delete',
   component: DelButton,
+  tags: ['autodocs'],
   argTypes: {
     onClick: {
       action: 'click',

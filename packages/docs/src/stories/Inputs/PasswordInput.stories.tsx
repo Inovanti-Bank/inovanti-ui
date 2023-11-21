@@ -6,6 +6,7 @@ import { getSizes } from '../../components/GetTokens'
 export default {
   title: 'Form/Inputs/Password Input',
   component: PasswordInput,
+  tags: ['autodocs'],
   args: {
     inputSize: 'md',
     label: 'Senha',

@@ -4,6 +4,7 @@ import { Text, TextProps } from '@inovanti/react'
 export default {
   title: 'Typography/Text',
   component: Text,
+  tags: ['autodocs'],
   args: {
     children:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ab! Nesciunt modi inventore amet! Aperiam, minima veniam. Nemo dolorem',
