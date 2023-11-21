@@ -1,17 +1,17 @@
 {
   "name": "@inovanti/react",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Natan Reis Chmura",
   "license": "MIT",
   "devDependencies": {
     "@inovanti/eslint-config": "*",
