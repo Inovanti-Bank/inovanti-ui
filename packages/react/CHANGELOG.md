@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 1.1.1
+
+### Patch Changes
+
+- Add component FormAlert
+
 ## 1.1.0
 
 ### Minor Changes

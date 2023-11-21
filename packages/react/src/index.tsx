@@ -1,5 +1,7 @@
 export * from './components/Box'
 export * from './components/Modal'
+export * from './components/FormAlert'
+
 
 export * from './components/Heading'
 export * from './components/Text'
