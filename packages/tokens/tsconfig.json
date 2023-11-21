@@ -1,0 +1,6 @@
+{
+  "extends": "@inovanti/ts-config/base.json",
+  "include": [
+    "src"
+  ],
+}
