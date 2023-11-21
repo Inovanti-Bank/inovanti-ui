@@ -13,7 +13,7 @@ export const Input = styled.input<ContainerProps>`
   padding-block: 10px;
   display: block;
   border: none;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray500};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray600};
 
   &:focus {
     outline: none;

@@ -1,4 +1,4 @@
-import { dark, light } from '@inovanti/tokens';
+import { dark } from '@inovanti/tokens';
 import type { Preview } from "@storybook/react";
 import { themes } from '@storybook/theming';
 import React from 'react';
@@ -16,13 +16,13 @@ const preview: Preview = {
       },
     },
     docs: {
-      theme: themes.light
+      theme: themes.dark
     }
   },
   decorators: [
     (Story) => {
       return (
-        <ThemeProvider theme={light}>
+        <ThemeProvider theme={dark}>
         <GlobalStyle />
         <Story />
         </ThemeProvider>
