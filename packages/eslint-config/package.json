@@ -1,6 +1,6 @@
 {
     "name": "@inovanti/eslint-config",
-    "version": "3.0.1",
+    "version": "1.0.0",
     "license": "MIT",
     "private": true,
     "main": "index.js",

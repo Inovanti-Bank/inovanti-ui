@@ -22,9 +22,9 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-        # env:
-        #   TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        #   TURBO_TEAM: natanrei
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: natans-projects-10e80566
 
 
       - name: Deploy storybook
