@@ -15,6 +15,15 @@ export default {
     children: {
       control: 'text',
     },
+    type: {
+      options: [
+        'error',
+        'success',
+      ],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     },
 } as Meta<FormAlertProps>
 

@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 1.2.0
+
+### Minor Changes
+
+- Add components FullScreenLoading and SimpleLoading
+
 ## 1.1.1
 
 ### Patch Changes

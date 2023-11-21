@@ -1,4 +1,4 @@
-import { dark } from '@inovanti/tokens';
+import { dark } from '@inovanti/react';
 import type { Preview } from "@storybook/react";
 import { themes } from '@storybook/theming';
 import React from 'react';
