@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider, useTheme } from 'styled-components'
-import { GlobalStyle } from '../../styles/global'
 import { ArrowRight } from 'phosphor-react'
 import { getColors, getSizes } from '../../components/GetTokens'
 
@@ -36,14 +33,6 @@ export default {
     },
   },
   
-  decorators: [
-        (Story) => {
-        return (<ThemeProvider theme={dark}>
-              <GlobalStyle />
-                {Story()}
-            </ThemeProvider>)
-      }
-  ],
 } as Meta<typeof Button>
 
 export const Primary: StoryObj<typeof Button> = {}

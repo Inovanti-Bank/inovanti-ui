@@ -1,6 +1,7 @@
 {
   "extends": "@inovanti/ts-config/react.json",
   "include": [
-    "src"
+    "src",
+    ".storybook"
   ]
 }

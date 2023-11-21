@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { SelectInput, SelectInputProps } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
-import { GlobalStyle } from '../../styles/global'
 import { mockData } from './mockData'
 
 export default {
@@ -25,16 +22,7 @@ export default {
       action: (e: string) => console.log(e)
     }
   },
-  decorators: [
-    (Story) => {
-          return (
-          <ThemeProvider theme={dark}>
-              <GlobalStyle />
-              {Story()}
-            </ThemeProvider>
-      )
-    },
-  ],
+  
 } as Meta<SelectInputProps>
 
 export const Primary: StoryObj<SelectInputProps> = {

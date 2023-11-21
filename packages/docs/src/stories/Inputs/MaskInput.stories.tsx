@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { MaskInput, MaskInputProps } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
-import { GlobalStyle } from '../../styles/global'
 
 export default {
   title: 'Form/Inputs/Mask Input',
@@ -24,16 +21,7 @@ export default {
       action: (v: object) => console.log(v) 
     }
   },
-  decorators: [
-    (Story) => {
-          return (
-          <ThemeProvider theme={dark}>
-              <GlobalStyle />
-              {Story()}
-            </ThemeProvider>
-      )
-    },
-  ],
+  
 } as Meta<MaskInputProps>
 
 export const Primary: StoryObj<MaskInputProps> = {

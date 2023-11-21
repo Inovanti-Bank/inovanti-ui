@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { FileInput, InputProps } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
-import { GlobalStyle } from '../../styles/global'
 
 export default {
   title: 'Form/Inputs/File Input',
@@ -20,16 +17,7 @@ export default {
       options: ['sm', 'md'],
     },
   },
-  decorators: [
-    (Story) => {
-          return (
-          <ThemeProvider theme={dark}>
-              <GlobalStyle />
-              {Story()}
-            </ThemeProvider>
-      )
-    },
-  ],
+  
 } as Meta<InputProps>
 
 export const Primary: StoryObj<InputProps> = {

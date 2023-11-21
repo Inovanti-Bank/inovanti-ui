@@ -40,7 +40,7 @@ export const Input = styled.input<ContainerProps>`
   &:valid ~ label {
     top: -20px;
     font-size: 14px;
-    color: ${({ theme }) => theme.colors.primary400};
+    color: ${({ theme }) => theme.colors.primary600};
   }
 
   &:focus ~ .bar:before,

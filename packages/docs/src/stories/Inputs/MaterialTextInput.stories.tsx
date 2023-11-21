@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, MaterialTextInput, MaterialTextInputProps } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider } from 'styled-components'
+import { MaterialTextInput, MaterialTextInputProps } from '@inovanti/react'
 import { getSizes } from '../../components/GetTokens'
-import { GlobalStyle } from '../../styles/global'
 
 export default {
   title: 'Form/Inputs/Material Text Input',
@@ -20,19 +17,6 @@ export default {
       options: ['sm', 'md'],
     },
   },
-  decorators: [
-    (Story) => {
-          return (
-          <ThemeProvider theme={dark}>
-              <GlobalStyle />
-              <Box>
-              {Story()}
-
-              </Box>
-            </ThemeProvider>
-      )
-    },
-  ],
 } as Meta<MaterialTextInputProps>
 
 export const Primary: StoryObj<MaterialTextInputProps> = {

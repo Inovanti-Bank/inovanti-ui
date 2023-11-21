@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
 import { Heading, HeadingProps } from '@inovanti/react'
-import { dark } from '@inovanti/tokens'
-import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from '../styles/global'
+
 export default {
   title: 'Typography/Heading',
   component: Heading,
@@ -34,14 +31,6 @@ export default {
       },
     },
     },
-    decorators: [
-        (Story) => {
-        return (<ThemeProvider theme={dark}>
-              <GlobalStyle />
-                {Story()}
-            </ThemeProvider>)
-      }
-  ],
 } as Meta<HeadingProps>
 
 export const Primary: StoryObj<HeadingProps> = {}
