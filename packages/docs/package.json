@@ -13,6 +13,7 @@
     "@inovanti/react": "*",
     "@inovanti/tokens": "*",
     "@storybook/addon-a11y": "^7.5.3",
+    "@storybook/storybook-deployer": "^2.8.16",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",
