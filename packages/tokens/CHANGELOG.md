@@ -1,5 +1,11 @@
 # @inovanti/tokens
 
+## 1.1.4
+
+### Patch Changes
+
+- Add files in package.json
+
 ## 1.1.3
 
 ### Patch Changes
