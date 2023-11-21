@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 1.1.0
+
+### Minor Changes
+
+- Add styles/ theme from tokens
+
 ## 1.0.5
 
 ### Patch Changes

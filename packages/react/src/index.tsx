@@ -23,4 +23,4 @@ export * from './components/Buttons/DelButton'
 export * from './components/Buttons/PlusButton'
 export * from './components/Checkbox'
 
-
+export * from './styles/global'
