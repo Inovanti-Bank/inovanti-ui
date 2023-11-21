@@ -2,6 +2,5 @@
   "extends": "@inovanti/ts-config/react.json",
   "include": [
     "src",
-    "../docs/src/styles/global.tsx"
   ],
 }
