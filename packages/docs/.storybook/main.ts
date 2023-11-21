@@ -27,7 +27,7 @@ const config: StorybookConfig = {
   },
   viteFinal(config, { configType }) {
     if (configType === 'PRODUCTION') {
-      config.base = '/inovanti-ui'
+      config.base = '/inovanti-ui/'
     }
     return mergeConfig(config, {});
   },
