@@ -15,6 +15,7 @@ export * from './components/Inputs/SelectInput'
 export * from './components/Inputs/SearchSelectInput'
 export * from './components/Inputs/MaterialTextInput'
 export * from './components/Inputs/MaterialPasswordInput'
+export * from './components/Inputs/TextArea'
 
 export * from './components/Buttons/ActionButton'
 export * from './components/Buttons/DefaultButton'

@@ -1,9 +1,8 @@
-import { ComponentProps, ElementRef, forwardRef } from 'react'
-import { Input, InputContainer } from '../common.styles'
-import { Spaces } from '../../../types/styles'
+import { ElementRef, forwardRef } from 'react'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputProps } from '../common'
+import { Input, InputContainer } from '../common.styles'
 
 export const TextInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
