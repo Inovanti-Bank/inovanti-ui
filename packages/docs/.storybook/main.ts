@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import { mergeConfig } from 'vite';
 
 import { dirname, join } from "path";
 
@@ -23,6 +24,12 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: true,
+  },
+  viteFinal(config, { configType }) {
+    if (configType === 'PRODUCTION') {
+      config.base = '/inovanti-ui'
+    }
+    return mergeConfig(config, {});
   },
 };
 export default config;
