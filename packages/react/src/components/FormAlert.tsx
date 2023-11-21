@@ -1,7 +1,9 @@
+import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
-interface FormAlertProps {
+export interface FormAlertProps {
   type?: 'error' | 'success'
+  children: ReactNode | string
 }
 
 export const FormAlert = styled.p<FormAlertProps>`
