@@ -15,6 +15,15 @@ export default {
         type: 'text',
       },
     },
+    size: {
+      options: [
+        'sm',
+        'md'
+      ],
+      control: {
+        type: 'inline-radio',
+      },
+    },
   },
 } as Meta<AvatarProps>
 
