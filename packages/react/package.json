@@ -1,6 +1,6 @@
 {
   "name": "@inovanti/react",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -35,7 +35,11 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@types/styled-components": "^5.1.30",
     "date-fns": "^2.30.0",
     "phosphor-react": "^1.4.1",

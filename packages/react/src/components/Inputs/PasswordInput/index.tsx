@@ -9,10 +9,7 @@ import { InputProps } from '../common'
 
 type PasswordType = 'password' | 'text'
 
-export const PasswordInput = forwardRef<
-  ElementRef<typeof Input>,
-  InputProps
->(
+export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
     {
       label,

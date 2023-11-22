@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Spaces } from "../../types/styles";
+import styled, { css } from 'styled-components'
+import { Spaces } from '../../types/styles'
 
 export interface ContainerProps {
   width?: Spaces
@@ -24,30 +24,30 @@ export const InputContainer = styled.div<ContainerProps>`
 `
 
 export const inputStyles = css<InputProps>`
-${({ theme, inputSize = 'md' }) => css`
-  cursor: text;
-  font-family: ${theme.fonts.default};
-  padding: ${theme.space[inputSize === 'sm' ? 2 : 3]};
-  font-size: ${theme.fontSizes[inputSize]};
-  border-radius: ${theme.radii.sm};
-  background-color: ${theme.colors.white};
-  color: ${theme.colors.textHigh};
+  ${({ theme, inputSize = 'md' }) => css`
+    cursor: text;
+    font-family: ${theme.fonts.default};
+    padding: ${theme.space[inputSize === 'sm' ? 2 : 3]};
+    font-size: ${theme.fontSizes[inputSize]};
+    border-radius: ${theme.radii.sm};
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.textHigh};
 
-  border: 0.7px ${theme.colors.primary900} solid;
+    border: 0.7px ${theme.colors.primary900} solid;
 
-  &:focus {
-    outline: 0;
-    border: 1px ${theme.colors.primary700} solid;
-  }
+    &:focus {
+      outline: 0;
+      border: 1px ${theme.colors.primary700} solid;
+    }
 
-  &:disabled {
-    cursor: not-allowed;
-    color: ${theme.colors.gray300};
-  }
+    &:disabled {
+      cursor: not-allowed;
+      color: ${theme.colors.gray300};
+    }
 
-  &::placeholder {
-    color: ${theme.colors.gray700};
-  }
+    &::placeholder {
+      color: ${theme.colors.gray700};
+    }
   `};
 `
 

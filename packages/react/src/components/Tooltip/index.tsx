@@ -2,8 +2,8 @@ import * as RadixTooltip from '@radix-ui/react-tooltip'
 import { ReactNode } from 'react'
 import { TooltipArrow, TooltipContent } from './styles'
 
-interface TooltipProps {
-  children: ReactNode
+export interface TooltipProps {
+  children: ReactNode | string
   message: string
   side?: 'bottom' | 'left' | 'right' | 'top' | undefined
 }

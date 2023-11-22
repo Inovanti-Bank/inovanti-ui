@@ -6,7 +6,8 @@ import { InputContainer } from '../common.styles'
 import { Input } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 
-export interface DecimalInputProps extends ComponentProps<typeof NumericFormat> {
+export interface DecimalInputProps
+  extends ComponentProps<typeof NumericFormat> {
   label: string
   inputSize?: 'sm' | 'md'
   error?: string

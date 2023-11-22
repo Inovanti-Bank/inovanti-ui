@@ -1,32 +1,32 @@
-import { styled, keyframes, css } from 'styled-components';
-import * as RadixCheckbox  from '@radix-ui/react-checkbox';
+import { styled, keyframes, css } from 'styled-components'
+import * as RadixCheckbox from '@radix-ui/react-checkbox'
 
 export const CheckboxContainer = styled(RadixCheckbox.Root)`
-${({ theme }) => css`
-  all: unset;
-  width: ${theme.space[6]};
-  height: ${theme.space[6]};
-  background-color: ${theme.colors.green900};
-  border-radius: ${theme.radii.xs};
-  line-height: 0;
-  cursor: pointer;
-  overflow: hidden;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid ${theme.colors.gray900};
+  ${({ theme }) => css`
+    all: unset;
+    width: ${theme.space[6]};
+    height: ${theme.space[6]};
+    background-color: ${theme.colors.green900};
+    border-radius: ${theme.radii.xs};
+    line-height: 0;
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid ${theme.colors.gray900};
 
-  &[data-state="checked"] {
-    background-color: ${theme.colors.green300};
-  }
+    &[data-state='checked'] {
+      background-color: ${theme.colors.green300};
+    }
 
-  &:focus,
-  &[data-state="checked"] {
-    border: 2px solid ${theme.colors.green300};
-  }
+    &:focus,
+    &[data-state='checked'] {
+      border: 2px solid ${theme.colors.green300};
+    }
   `};
-`;
+`
 
 const slideIn = keyframes`
   from {
@@ -35,7 +35,7 @@ const slideIn = keyframes`
   to {
     transform: translateY(0);
   }
-`;
+`
 
 const slideOut = keyframes`
   from {
@@ -44,20 +44,20 @@ const slideOut = keyframes`
   to {
     transform: translateY(-100%);
   }
-`;
+`
 
 export const CheckboxIndicator = styled(RadixCheckbox.Indicator)`
-${({ theme }) => css`
-  color: ${theme.colors.white};
-  width: ${theme.space[4]};
-  height: ${theme.space[4]};
-`};
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    width: ${theme.space[4]};
+    height: ${theme.space[4]};
+  `};
 
-  &[data-state="checked"] {
+  &[data-state='checked'] {
     animation: ${slideIn} 200ms ease-out;
   }
 
-  &[data-state="unchecked"] {
+  &[data-state='unchecked'] {
     animation: ${slideOut} 200ms ease-out;
   }
-`;
+`

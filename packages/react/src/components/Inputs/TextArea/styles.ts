@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { InputProps, inputStyles } from "../common.styles";
+import styled from 'styled-components'
+import { InputProps, inputStyles } from '../common.styles'
 
 export const TextAreaInput = styled.textarea<InputProps>`
   ${inputStyles};

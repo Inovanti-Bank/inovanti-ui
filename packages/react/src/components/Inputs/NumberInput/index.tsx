@@ -5,7 +5,6 @@ import { Text } from '../../Text'
 import { Input, InputContainer } from '../common.styles'
 import { InputProps } from '../common'
 
-
 export const NumberInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
     {
@@ -19,7 +18,7 @@ export const NumberInput = forwardRef<ElementRef<typeof Input>, InputProps>(
     ref,
   ) => {
     return (
-      <InputContainer width={width}  style={{ gridArea: gridAreaName }}>
+      <InputContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
         <Input type="number" inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}

@@ -1,6 +1,6 @@
 import { SwitchRoot, SwitchThumb } from './styles'
 
-interface SwitchProps {
+export interface SwitchProps {
   checked: boolean
   onCheckedChange: () => void
 }

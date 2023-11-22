@@ -8,11 +8,11 @@ import {
   ToastViewport,
 } from './styles'
 
-interface ToastProviderProps {
+export interface ToastProviderProps {
   children: React.ReactNode
 }
 
-interface ToastProps {
+export interface ToastProps {
   title: string
   description?: string
   open?: boolean

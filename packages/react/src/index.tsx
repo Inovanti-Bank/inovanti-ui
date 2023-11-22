@@ -3,7 +3,11 @@ export * from './components/FormAlert'
 export * from './components/Loads/FullScreenLoading'
 export * from './components/Loads/SimpleLoading'
 export * from './components/Modal'
+
 export * from './components/Avatar'
+export * from './components/Dropdown'
+export * from './components/Toast'
+export * from './components/Tooltip'
 
 export * from './components/Heading'
 export * from './components/Text'
@@ -26,5 +30,6 @@ export * from './components/Buttons/DefaultButton'
 export * from './components/Buttons/DelButton'
 export * from './components/Buttons/PlusButton'
 export * from './components/Checkbox'
+export * from './components/Switch'
 
 export * from './styles/global'
