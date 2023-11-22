@@ -5,7 +5,8 @@ import { InputContainer } from '../common.styles'
 import { TextAreaInput } from './styles'
 import { Spaces } from '../../../types/styles'
 
-export interface TextAreaInputProps extends ComponentProps<typeof TextAreaInput> {
+export interface TextAreaInputProps
+  extends ComponentProps<typeof TextAreaInput> {
   label: string
   inputSize?: 'sm' | 'md'
   error?: string
@@ -13,14 +14,17 @@ export interface TextAreaInputProps extends ComponentProps<typeof TextAreaInput>
   gridAreaName?: string
 }
 
-export const TextArea = forwardRef<ElementRef<typeof TextAreaInput>, TextAreaInputProps>(
+export const TextArea = forwardRef<
+  ElementRef<typeof TextAreaInput>,
+  TextAreaInputProps
+>(
   (
     {
       label,
       inputSize = 'md',
       gridAreaName,
       width = 'full',
-      error, 
+      error,
       ...props
     }: TextAreaInputProps,
     ref,

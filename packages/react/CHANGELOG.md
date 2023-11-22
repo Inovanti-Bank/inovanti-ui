@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.0
+
+### Major Changes
+
+- Adding more components
+
 ## 1.2.1
 
 ### Patch Changes

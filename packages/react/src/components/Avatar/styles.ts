@@ -1,5 +1,5 @@
-import * as Avatar from '@radix-ui/react-avatar';
-import styled from 'styled-components';
+import * as Avatar from '@radix-ui/react-avatar'
+import styled from 'styled-components'
 
 export const AvatarContainer = styled(Avatar.Root)`
   border-radius: 100%;
@@ -7,14 +7,14 @@ export const AvatarContainer = styled(Avatar.Root)`
   width: 4rem;
   height: 4rem;
   overflow: hidden;
-`;
+`
 
 export const AvatarImage = styled(Avatar.Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-`;
+`
 
 export const AvatarFallback = styled(Avatar.Fallback)`
   width: 100%;
@@ -29,4 +29,4 @@ export const AvatarFallback = styled(Avatar.Fallback)`
     width: 1.5rem;
     height: 1.5rem;
   }
-`;
+`

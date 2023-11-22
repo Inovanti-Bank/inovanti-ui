@@ -8,9 +8,12 @@ export const SwitchRoot = styled(Root)`
   height: 22px;
   margin: 1px 10px 1px 0;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.green300};
+  background-color: ${({ theme }) => theme.colors.gray500};
   border-radius: 9999px;
   position: relative;
+  &[data-state='checked'] {
+    background-color: ${({ theme }) => theme.colors.green300};
+  }
 `
 
 export const SwitchThumb = styled(Thumb)`

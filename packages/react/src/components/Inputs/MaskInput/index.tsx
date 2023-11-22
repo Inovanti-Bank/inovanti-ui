@@ -5,7 +5,10 @@ import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputContainer } from '../common.styles'
 import { Input } from './styles'
-import { isInBrazilianPattern, americanToBrazilianDate } from '../../../utils/date'
+import {
+  isInBrazilianPattern,
+  americanToBrazilianDate,
+} from '../../../utils/date'
 
 export interface MaskInputProps extends ComponentProps<typeof PatternFormat> {
   label: string

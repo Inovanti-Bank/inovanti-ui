@@ -20,7 +20,6 @@ export const FileInputContainer = styled.button<ContainerProps>`
     &:hover {
       color: ${theme.colors.primary200};
       border: 1px solid ${theme.colors.primary200};
-
     }
 
     width: ${theme.space[width || 'full']};

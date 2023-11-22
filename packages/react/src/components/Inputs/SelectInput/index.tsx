@@ -27,8 +27,6 @@ export interface SelectInputProps {
   gridAreaName?: string
 }
 
-
-
 export function SelectInput({
   placeholder,
   fieldName,
