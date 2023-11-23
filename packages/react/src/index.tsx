@@ -23,6 +23,10 @@ export * from './components/Inputs/SearchSelectInput'
 export * from './components/Inputs/SelectInput'
 export * from './components/Inputs/TextArea'
 export * from './components/Inputs/TextInput'
+export * from './components/Inputs/TextPrefixInput'
+export * from './components/Inputs/PasswordPrefixInput'
+
+
 export * from './components/Inputs/common'
 
 export * from './components/Buttons/ActionButton'
