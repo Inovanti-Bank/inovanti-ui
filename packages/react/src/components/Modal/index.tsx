@@ -42,3 +42,5 @@ export const Modal = forwardRef<ElementRef<typeof ReactModal>, ModalProps>(
 )
 
 Modal.displayName = 'Modal'
+
+

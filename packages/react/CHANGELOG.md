@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.4
+
+### Patch Changes
+
+- Export styles in Modal
+
 ## 2.0.3
 
 ### Patch Changes
