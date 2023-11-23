@@ -40,8 +40,8 @@ export const CustomWidth: StoryObj<PasswordPrefixInputProps> = {
 
 export const Error: StoryObj<PasswordPrefixInputProps> = {
   args: {
-    label: 'E-mail',
-    error: 'E-mail inválido'
+    label: 'Confirme sua senha',
+    error: 'As senhas não coincidem'
     
   },
 }

@@ -80,6 +80,7 @@ export const Input = styled.input`
 
 export const PasswordContainer = styled.div`
   ${({ theme }) => css`
+  position: relative;
     width: ${theme.space.full};
     flex: 1;
     height: ${theme.space.full};
@@ -92,10 +93,10 @@ export const SeePasswordButton = styled.button`
     all: unset;
     cursor: pointer;
     position: absolute;
-    padding: 2px 3px 0px 2px;
+    padding: 3px 3px 0px 2px;
     border-radius: ${theme.radii.sm};
-    right: ${theme.space[6]};
-    top: ${theme.space[12]};
+    right: ${theme.space[2]};
+    top: -${theme.space[2]};
     color: ${theme.colors.gray700};
     border: 1px transparent solid;
     &:focus {
