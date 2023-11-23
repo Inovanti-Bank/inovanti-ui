@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Add components TextPrefixInput and PasswordPrefixInput
+
 ## 2.0.1
 
 ### Patch Changes

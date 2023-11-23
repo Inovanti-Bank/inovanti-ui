@@ -1,6 +1,5 @@
 import { Eye, EyeSlash } from 'phosphor-react'
-import { ComponentProps, ElementRef, forwardRef, useState } from 'react'
-import { Spaces } from '../../../types/styles'
+import { ElementRef, forwardRef, useState } from 'react'
 import { Input } from '../common.styles'
 import { PasswordInputContainer, SeePasswordButton } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
