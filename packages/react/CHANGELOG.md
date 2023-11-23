@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.3
+
+### Patch Changes
+
+- Adjusts in responsive of PasswordPrefixInput
+
 ## 2.0.2
 
 ### Patch Changes
