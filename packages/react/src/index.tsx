@@ -3,6 +3,8 @@ export * from './components/FormAlert'
 export * from './components/Loads/FullScreenLoading'
 export * from './components/Loads/SimpleLoading'
 export * from './components/Modal'
+export * from './components/Modal/styles'
+
 
 export * from './components/Avatar'
 export * from './components/Dropdown'
