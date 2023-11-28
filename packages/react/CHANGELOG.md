@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.1.0
+
+### Minor Changes
+
+- Removing margin bottom in text component
+
 ## 2.0.6
 
 ### Patch Changes

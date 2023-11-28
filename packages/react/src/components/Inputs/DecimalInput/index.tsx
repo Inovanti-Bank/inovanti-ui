@@ -1,10 +1,10 @@
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { NumericFormat } from 'react-number-format'
 import { Spaces } from '../../../types/styles'
-import { Text } from '../../Text'
-import { InputContainer } from '../common.styles'
-import { Input } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
+import { Text } from '../../Text'
+import { InputContainer, Separator } from '../common.styles'
+import { Input } from './styles'
 
 export interface DecimalInputProps
   extends ComponentProps<typeof NumericFormat> {
@@ -33,6 +33,7 @@ export const DecimalInput = forwardRef<
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
+        <Separator />
         <Input
           inputSize={inputSize}
           thousandSeparator="."

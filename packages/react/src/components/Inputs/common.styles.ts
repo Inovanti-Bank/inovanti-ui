@@ -23,6 +23,10 @@ export const InputContainer = styled.div<ContainerProps>`
   `};
 `
 
+export const Separator = styled.div`
+height: ${({ theme }) => theme.space[1]};
+`
+
 export const inputStyles = css<InputProps>`
   ${({ theme, inputSize = 'md' }) => css`
     cursor: text;

@@ -6,6 +6,7 @@ import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { DataObj } from '../common'
 import { SearchSelectContainer } from './styles'
+import { Separator } from '../common.styles'
 
 export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   label: string
@@ -35,6 +36,7 @@ export const SearchSelectInput = forwardRef<
     return (
       <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
+        <Separator />
         <Select
           ref={ref}
           {...props}

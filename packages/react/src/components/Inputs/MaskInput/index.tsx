@@ -1,14 +1,14 @@
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { PatternFormat } from 'react-number-format'
 import { Spaces } from '../../../types/styles'
+import {
+  americanToBrazilianDate,
+  isInBrazilianPattern,
+} from '../../../utils/date'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { InputContainer } from '../common.styles'
+import { InputContainer, Separator } from '../common.styles'
 import { Input } from './styles'
-import {
-  isInBrazilianPattern,
-  americanToBrazilianDate,
-} from '../../../utils/date'
 
 export interface MaskInputProps extends ComponentProps<typeof PatternFormat> {
   label: string
@@ -45,6 +45,7 @@ export const MaskInput = forwardRef<
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
+        <Separator />
         <Input inputSize={inputSize} getInputRef={ref} {...props} />
 
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
