@@ -13,7 +13,6 @@ export const Text = styled.p<TextProps>`
     font-family: ${theme.fonts.default};
     line-height: ${theme.lineHeights.base};
     margin: 0;
-    margin-bottom: ${theme.space[1]};
     color: ${theme.colors.textHigh};
     font-size: ${theme.fontSizes[size]};
   `};

@@ -2,7 +2,7 @@ import { ElementRef, forwardRef } from 'react'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputProps } from '../common'
-import { Input, InputContainer } from '../common.styles'
+import { Input, InputContainer, Separator } from '../common.styles'
 
 export const TextInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
@@ -19,6 +19,7 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, InputProps>(
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
         <Text size="sm">{label}</Text>
+        <Separator />
         <Input type="text" inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
       </InputContainer>
