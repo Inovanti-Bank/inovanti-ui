@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.5
+
+### Patch Changes
+
+- Add SimpleTextInput Component
+
 ## 2.0.4
 
 ### Patch Changes
