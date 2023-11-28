@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.0.6
+
+### Patch Changes
+
+- Add component DateInput
+
 ## 2.0.5
 
 ### Patch Changes
