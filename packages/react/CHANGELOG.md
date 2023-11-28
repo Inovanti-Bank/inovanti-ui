@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.1.1
+
+### Patch Changes
+
+- Adjust in export of type in SimpleInput component
+
 ## 2.1.0
 
 ### Minor Changes
