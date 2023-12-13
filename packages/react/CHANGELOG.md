@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.1.2
+
+### Patch Changes
+
+- Change colors of Checkbox
+
 ## 2.1.1
 
 ### Patch Changes
