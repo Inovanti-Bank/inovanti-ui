@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.0
+
+### Minor Changes
+
+- Add MultiSelectInput Component
+
 ## 2.1.2
 
 ### Patch Changes
