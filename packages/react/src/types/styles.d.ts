@@ -1,7 +1,7 @@
 import { light } from '@inovanti/tokens'
 import 'styled-components'
 
-type CustomTheme = typeof light
+export type CustomTheme = typeof light
 
 declare module 'styled-components' {
   export interface DefaultTheme extends CustomTheme {}

@@ -30,11 +30,6 @@ export * from './components/Inputs/SimpleTextInput'
 export * from './components/Inputs/TextArea'
 export * from './components/Inputs/TextInput'
 export * from './components/Inputs/TextPrefixInput'
-
-
-
-
-
 export * from './components/Inputs/common'
 
 export * from './components/Buttons/ActionButton'
@@ -46,3 +41,4 @@ export * from './components/Switch'
 
 export * from './styles/global'
 
+export * from './types/styles.d'

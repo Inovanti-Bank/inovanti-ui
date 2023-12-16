@@ -10,7 +10,7 @@ export function Avatar({size= 'md', ...props}: AvatarProps) {
   return (
     <AvatarContainer size={size} >
       <AvatarImage {...props} />
-      <AvatarFallback delayMs={600}>
+      <AvatarFallback size={size} delayMs={600}>
         <User />
       </AvatarFallback>
     </AvatarContainer>

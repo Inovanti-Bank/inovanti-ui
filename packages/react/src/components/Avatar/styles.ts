@@ -8,8 +8,8 @@ interface AvatarContainerProps {
 export const AvatarContainer = styled(Avatar.Root)<AvatarContainerProps>`
   border-radius: 100%;
   display: inline-block;
-  width: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[12]};
-  height: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[12]};
+  width: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[10]};
+  height: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[10]};
   overflow: hidden;
 `
 
@@ -20,17 +20,17 @@ export const AvatarImage = styled(Avatar.Image)`
   border-radius: inherit;
 `
 
-export const AvatarFallback = styled(Avatar.Fallback)`
-  width: 100%;
-  height: 100%;
+export const AvatarFallback = styled(Avatar.Fallback)<AvatarContainerProps>`
+  width: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[10]};
+  height: ${({ theme, size }) => size === 'md' ? theme.space[16] : theme.space[10]};
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.gray300};
+  background-color: ${({ theme }) => theme.colors.gray150};
   color: ${({ theme }) => theme.colors.textHigh};
 
   svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
   }
 `
