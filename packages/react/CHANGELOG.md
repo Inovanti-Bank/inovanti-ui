@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.1
+
+### Patch Changes
+
+- Updates in sizes of Avatar Fallback and exportation of types used in styles
+
 ## 2.2.0
 
 ### Minor Changes

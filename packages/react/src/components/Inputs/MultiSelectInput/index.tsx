@@ -12,7 +12,9 @@ export interface MultiSelectInputProps extends ComponentProps<typeof Select> {
   label: string
   error?: string
   data?: DataObj[]
+  height?: Spaces
   width?: Spaces
+
   flexColumn?: boolean
   gridAreaName?: string
 }
@@ -28,6 +30,7 @@ export const MultiSelectInput = forwardRef<
       gridAreaName,
       data = [],
       width = 'full',
+      height = 16,
       flexColumn = false,
       ...props
     }: MultiSelectInputProps,
@@ -56,7 +59,7 @@ export const MultiSelectInput = forwardRef<
                 borderRadius: theme.radii.sm,
                 color: theme.colors.textHigh,
                 overflowX: 'auto',
-                maxHeight: flexColumn ? theme.space[20] : theme.space[16],
+                maxHeight: theme.space[height],
                 padding: theme.space[3],
                 
               }),
@@ -86,11 +89,14 @@ export const MultiSelectInput = forwardRef<
             multiValue: (baseStyles) => ({
                 ...baseStyles,
                 background: theme.colors.gray100,
-                padding: theme.space[1],
+                paddingBlock: flexColumn ? theme.space[3] : theme.space[2],
+                paddingInline: theme.space[2],
+                
                 marginRight: theme.space[1],
                 marginBottom: theme.space[1],
                 borderRadius: theme.radii.sm,
-                width: flexColumn ? theme.space.full : 'auto',
+              width: flexColumn ? theme.space.full : 'auto',
+                
                 
             }),
             
@@ -105,6 +111,7 @@ export const MultiSelectInput = forwardRef<
               marginInline: '1%',
               color: theme.colors.textHigh,
               background: theme.colors.gray100,
+              zIndex: 100000,
 
               '&:hover': {
                 background: theme.colors.white,
