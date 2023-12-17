@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.2
+
+### Patch Changes
+
+- Add 'sm' and 'md' in variables of button
+
 ## 2.2.1
 
 ### Patch Changes

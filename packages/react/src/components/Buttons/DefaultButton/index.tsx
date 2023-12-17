@@ -6,6 +6,7 @@ export interface ButtonProps extends ComponentProps<typeof ButtonContainer> {
   children: React.ReactNode
   width?: Spaces
   color?: Colors
+  $size?: 'sm' | 'md' | 'normal'
 }
 
 export const Button = forwardRef<
@@ -13,11 +14,11 @@ export const Button = forwardRef<
   ButtonProps
 >(
   (
-    { children, color = 'green300', width = 'full', ...props }: ButtonProps,
+    { children, color = 'primary450', width = 'full', $size, ...props }: ButtonProps,
     ref,
   ) => {
     return (
-      <ButtonContainer color={color} width={width} ref={ref} {...props}>
+      <ButtonContainer color={color} width={width} ref={ref} $size={$size} {...props}>
         {children}
       </ButtonContainer>
     )

@@ -14,6 +14,7 @@ export default {
         "Click me"
       
     ),
+    $size: undefined,
     color: undefined,
     width: undefined
   },
@@ -28,6 +29,16 @@ export default {
     },
     disabled: {
       control: 'boolean'
+    },
+    $size: {
+      options: [
+        'sm',
+        'md',
+        'normal'
+      ],
+      control: {
+        type: 'inline-radio',
+      },
     },
     onClick: {
       action: 'click',
