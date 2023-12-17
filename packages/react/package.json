@@ -1,6 +1,6 @@
 {
   "name": "@inovanti/react",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

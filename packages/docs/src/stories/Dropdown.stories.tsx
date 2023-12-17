@@ -27,8 +27,9 @@ export default {
     </button>
     ],
     children:
-      <div><Avatar src='https://github.com/natanrei.png'
-        alt='Natan Rei' /></div>
+      <Avatar src='https://github.com/natanrei.pnge'
+        size='sm'
+        alt='Natan Rei' />
   },
   argTypes: {
     side: {
