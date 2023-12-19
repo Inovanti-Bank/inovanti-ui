@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.3
+
+### Patch Changes
+
+- Add prop Weight in Text component, change color and add prop small in switch
+
 ## 2.2.2
 
 ### Patch Changes
