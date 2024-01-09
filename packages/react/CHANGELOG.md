@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.4
+
+### Patch Changes
+
+- Remove styles from Dropdown trigger to make viable reusibility
+
 ## 2.2.3
 
 ### Patch Changes

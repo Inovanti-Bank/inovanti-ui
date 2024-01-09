@@ -6,21 +6,7 @@ export const Container = styled(DropdownMenu.Root)``
 export const Trigger = styled(DropdownMenu.Trigger)``
 
 export const TriggerButton = styled.button`
-  font-family: inherit;
   cursor: pointer;
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: ${({ theme }) => theme.colors.primary100};
-  color: ${({ theme }) => theme.colors.gray500};
-  &:hover {
-    box-shadow:
-      0px 10px 38px -10px ${({ theme }) => theme.colors.primary200},
-      0px 10px 20px -15px ${({ theme }) => theme.colors.primary200};
-  }
 `
 
 export const Box = styled(DropdownMenu.Portal)``
