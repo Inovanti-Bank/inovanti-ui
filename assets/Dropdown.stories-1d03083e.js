@@ -1,0 +1,8 @@
+import{j as r}from"./jsx-runtime-a51fe075.js";import{D as d,S as l,A as p,B as h,X as u,l as g}from"./index-294ded12.js";import"./index-6bd1afc7.js";import"./_commonjsHelpers-de833af9.js";import"./index-9d475cdf.js";import"./polished.esm-37b74356.js";const v={title:"Data display/Dropdown",component:d,tags:["autodocs"],args:{items:[r.jsxs(r.Fragment,{children:[r.jsx(l,{checked:!0,onCheckedChange:()=>{}},1),"Tema escuro"]}),r.jsx("button",{onClick:()=>{},children:"Alterar senha"},2),r.jsx("button",{onClick:()=>{},children:"Alterar avatar"},2),r.jsx("button",{onClick:()=>{},children:"Sair"},2)],children:r.jsx(p,{src:"https://github.com/natanrei.pnge",size:"sm",alt:"Natan Rei"})},argTypes:{side:{options:["bottom","left","right","top"],control:{type:"inline-radio"}}},decorators:[a=>r.jsx(h,{as:"label",style:{display:"flex",flexDirection:"row",gap:"0.5rem"},children:a()})],parameters:{docs:{description:{component:"Pode ser usado no header como um menu com funcionalidades ligadas ao usuário (Clique no avatar para visualizar)"}}}},e={},o={decorators:[a=>r.jsx(u,{theme:g,children:a()})]};var t,s,i;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:"{}",...(i=(s=e.parameters)==null?void 0:s.docs)==null?void 0:i.source}}};var n,c,m;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  decorators: [Story => {
+    return <ThemeProvider theme={light}>
+          {Story()}
+        </ThemeProvider>;
+  }]
+}`,...(m=(c=o.parameters)==null?void 0:c.docs)==null?void 0:m.source}}};const C=["Primary","LightTheme"];export{o as LightTheme,e as Primary,C as __namedExportsOrder,v as default};
+//# sourceMappingURL=Dropdown.stories-1d03083e.js.map
