@@ -12,13 +12,14 @@ export const FileInputContainer = styled.button<ContainerProps>`
     font-size: ${theme.fontSizes.sm};
     border: 0.7px solid ${theme.colors.primary400};
     border-radius: ${theme.radii.md};
-    background-color: ${theme.colors.gray150};
+    background-color: ${theme.title === 'light' ? theme.colors.gray50 : theme.colors.gray150};
 
-    color: ${theme.colors.primary400};
+    color: ${theme.title === 'light' ? theme.colors.primary700 : theme.colors.primary400};
     font-weight: bold;
     transition: 0.2s;
+    
     &:hover {
-      color: ${theme.colors.primary200};
+      color: ${theme.title === 'light' ? theme.colors.primary600 : theme.colors.primary200};
       border: 1px solid ${theme.colors.primary200};
     }
 

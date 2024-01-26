@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 2.2.5
+
+### Patch Changes
+
+- Change color of FileInput Background in LightTheme
+
 ## 2.2.4
 
 ### Patch Changes

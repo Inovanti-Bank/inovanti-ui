@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { FileInput, InputProps } from '@inovanti/react'
+import { Box, FileInput, InputProps, light } from '@inovanti/react'
+import { ThemeProvider } from 'styled-components'
 import { getSizes } from '../../components/GetTokens'
 
 export default {
@@ -47,4 +48,18 @@ export const Error: StoryObj<InputProps> = {
   args: {
     error: 'Formato inválido'
   },
+}
+
+export const LightTheme: StoryObj<InputProps> = {
+  decorators: [
+    (Story) => {
+      return (
+        <ThemeProvider theme={light}>
+          <Box>
+          {Story()}
+          </Box>
+        </ThemeProvider>
+      )
+    },
+  ],
 }
