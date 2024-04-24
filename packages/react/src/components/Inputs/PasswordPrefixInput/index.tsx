@@ -3,8 +3,8 @@ import { ComponentProps, ElementRef, ReactNode, forwardRef, useState } from 'rea
 import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { Input, InputContainer, InputWithPrefixContainer, PasswordContainer, Prefix, SeePasswordButton } from './styles'
 import { Separator } from '../common.styles'
+import { Input, InputContainer, InputWithPrefixContainer, PasswordContainer, Prefix, SeePasswordButton } from './styles'
 
 type PasswordType = 'password' | 'text'
 
@@ -47,7 +47,7 @@ export const PasswordPrefixInput = forwardRef<ElementRef<typeof Input>, Password
 
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="sm">{label}</Text>
         <Separator />
         <InputWithPrefixContainer inputSize={inputSize}>
           <Prefix>{prefix}</Prefix>

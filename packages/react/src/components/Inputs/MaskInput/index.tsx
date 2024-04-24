@@ -2,8 +2,8 @@ import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { PatternFormat } from 'react-number-format'
 import { Spaces } from '../../../types/styles'
 import {
-  americanToBrazilianDate,
-  isInBrazilianPattern,
+    americanToBrazilianDate,
+    isInBrazilianPattern,
 } from '../../../utils/date'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
@@ -44,7 +44,7 @@ export const MaskInput = forwardRef<
 
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="sm">{label}</Text>
         <Separator />
         <Input inputSize={inputSize} getInputRef={ref} {...props} />
 

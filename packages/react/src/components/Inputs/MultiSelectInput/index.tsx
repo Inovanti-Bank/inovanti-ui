@@ -40,7 +40,7 @@ export const MultiSelectInput = forwardRef<
 
     return (
       <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="sm">{label}</Text>
         <Select
           isMulti
           ref={ref}

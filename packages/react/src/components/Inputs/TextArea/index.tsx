@@ -1,9 +1,9 @@
 import { ComponentProps, ElementRef, forwardRef } from 'react'
+import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputContainer, Separator } from '../common.styles'
 import { TextAreaInput } from './styles'
-import { Spaces } from '../../../types/styles'
 
 export interface TextAreaInputProps
   extends ComponentProps<typeof TextAreaInput> {
@@ -31,7 +31,7 @@ export const TextArea = forwardRef<
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="sm">{label}</Text>
         <Separator />
         <TextAreaInput inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
