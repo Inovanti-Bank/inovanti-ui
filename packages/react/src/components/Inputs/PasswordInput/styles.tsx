@@ -18,7 +18,7 @@ export const SeePasswordButton = styled.button`
     cursor: pointer;
     position: absolute;
     padding: 2px 3px 0px 2px;
-    border-radius: ${theme.radii.sm};
+    border-radius: ${theme.radii['rounded-sm']};
     right: ${theme.space[4]};
     top: ${theme.space[8]};
     color: ${theme.colors.gray700};

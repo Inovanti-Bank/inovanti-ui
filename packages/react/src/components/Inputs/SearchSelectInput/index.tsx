@@ -35,7 +35,7 @@ export const SearchSelectInput = forwardRef<
 
     return (
       <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Select
           ref={ref}

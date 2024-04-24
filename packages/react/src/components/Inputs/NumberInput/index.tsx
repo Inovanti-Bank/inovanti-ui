@@ -18,7 +18,7 @@ export const NumberInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Input type="number" inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}

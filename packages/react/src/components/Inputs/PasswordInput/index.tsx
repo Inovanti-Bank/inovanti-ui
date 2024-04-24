@@ -36,7 +36,7 @@ export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
 
     return (
       <PasswordInputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Input
           type={inputPasswordType}

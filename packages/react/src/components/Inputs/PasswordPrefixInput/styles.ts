@@ -28,10 +28,13 @@ export const InputWithPrefixContainer = styled.div<InputProps>`
         display: flex;
         align-items: center;
         width: ${theme.space.full};
-        font-size: ${theme.fontSizes[inputSize]};
+        font-size: ${
+          // @ts-expect-error TODO: arrumar isso daqui ein
+          theme.fontSizes[inputSize]
+        };
         background-color: ${theme.colors.white};
         color: ${theme.colors.textHigh};
-        border-radius: ${theme.radii.sm};
+        border-radius: ${theme.radii['rounded-sm']};
         font-family: ${theme.fonts.default};
         padding: ${theme.space[inputSize === 'sm' ? 2 : 3]};
 
@@ -94,7 +97,7 @@ export const SeePasswordButton = styled.button`
     cursor: pointer;
     position: absolute;
     padding: 3px 3px 0px 2px;
-    border-radius: ${theme.radii.sm};
+    border-radius: ${theme.radii['rounded-sm']};
     right: ${theme.space[2]};
     top: -${theme.space[2]};
     color: ${theme.colors.gray700};

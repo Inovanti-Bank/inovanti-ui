@@ -9,9 +9,9 @@ export const FileInputContainer = styled.button<ContainerProps>`
   flex-direction: row;
 
   ${({ theme, width }) => css`
-    font-size: ${theme.fontSizes.sm};
+    font-size: ${theme.fontSizes['text-sm']};
     border: 0.7px solid ${theme.colors.primary400};
-    border-radius: ${theme.radii.md};
+    border-radius: ${theme.radii['rounded-md']};
     background-color: ${theme.title === 'light' ? theme.colors.gray50 : theme.colors.gray150};
 
     color: ${theme.title === 'light' ? theme.colors.primary700 : theme.colors.primary400};

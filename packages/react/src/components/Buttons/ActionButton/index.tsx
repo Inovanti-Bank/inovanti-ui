@@ -9,11 +9,11 @@ export const AButton = styled.button`
   justify-content: center;
   ${({ theme }) => css`
     gap: ${theme.space[1]};
-    font-size: ${theme.fontSizes.sm};
+    font-size: ${theme.fontSizes['text-sm']};
     padding: ${theme.space[2]} ${theme.space[5]};
     margin: ${theme.space[4]};
     border: 1px solid ${theme.colors.green300};
-    border-radius: ${theme.radii.md};
+    border-radius: ${theme.radii['rounded-md']};
     color: ${theme.colors.green300};
     font-weight: 600;
     transition: 0.2s;

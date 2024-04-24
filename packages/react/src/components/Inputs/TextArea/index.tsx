@@ -31,7 +31,7 @@ export const TextArea = forwardRef<
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <TextAreaInput inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}

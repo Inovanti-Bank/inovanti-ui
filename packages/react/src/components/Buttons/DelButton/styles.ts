@@ -6,7 +6,7 @@ export const ButtonContainer = styled.button`
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
-  border-radius: ${({ theme }) => theme.radii.full};
+  border-radius: ${({ theme }) => theme.radii['rounded-full']};
   margin-bottom: ${({ theme }) => theme.space[3]};
 
   width: auto;

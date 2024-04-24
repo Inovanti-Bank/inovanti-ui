@@ -41,9 +41,9 @@ export const SelectTrigger = styled(Select.SelectTrigger)`
   background-color: ${({ theme }) => theme.colors.white};
 
   border: 0.7px ${({ theme }) => theme.colors.primary900} solid;
-  border-radius: ${({ theme }) => theme.radii.md};
+  border-radius: ${({ theme }) => theme.radii['rounded-md']};
   padding: ${(props) => props.theme.space[3]};
-  font-size: ${(props) => props.theme.fontSizes.md};
+  font-size: ${(props) => props.theme.fontSizes['text-base']};
   color: ${({ theme }) => theme.colors.textHigh};
   &[data-placeholder] {
     color: ${({ theme }) => theme.colors.gray600};
