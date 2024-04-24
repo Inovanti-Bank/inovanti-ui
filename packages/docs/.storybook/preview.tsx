@@ -5,6 +5,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/styles/global';
 
+import '@inovanti/react/dist/index.css';
+
 const preview: Preview = {  
   
   parameters: {
@@ -25,10 +27,13 @@ const preview: Preview = {
   decorators: [
     (Story) => {
       return (
+        <div className='dark'>
+
         <ThemeProvider theme={dark}>
         <GlobalStyle />
         <Story />
         </ThemeProvider>
+        </div>
       )
     }
   ],
