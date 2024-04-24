@@ -24,7 +24,6 @@ export default {
       return (
         <Box
           as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
         >
           {Story()}
           <Text>Aceitar termos de uso</Text>
