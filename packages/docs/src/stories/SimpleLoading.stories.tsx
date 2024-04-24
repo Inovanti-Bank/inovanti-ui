@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box, Loading, LoadingProps, Text } from '@inovanti/react'
 
 export default {
-  title: 'Surfaces/Loads/Simple Loading',
+  title: 'Surfaces/Simple Loading',
   component: Loading,
   tags: ['autodocs'],
   args: {

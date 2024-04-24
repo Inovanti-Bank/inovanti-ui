@@ -1,5 +1,5 @@
-import { Text } from '../Text';
 import { Loading } from './SimpleLoading';
+import { Text } from './Text';
 
 export interface FullScreenLoadingProps {
   message: string;

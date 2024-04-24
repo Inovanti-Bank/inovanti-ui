@@ -1,9 +1,9 @@
 export * from './components/Box'
 export * from './components/FormAlert'
-export * from './components/Loads/FullScreenLoading'
-export * from './components/Loads/SimpleLoading'
+export * from './components/FullScreenLoading'
 export * from './components/Modal'
 export * from './components/Modal/styles'
+export * from './components/SimpleLoading'
 
 
 export * from './components/Avatar'
@@ -44,3 +44,4 @@ export * from './styles/global'
 export * from './types/styles.d'
 
 import './styles/globals.css'
+
