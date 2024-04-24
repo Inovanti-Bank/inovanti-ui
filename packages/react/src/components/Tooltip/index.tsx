@@ -5,7 +5,7 @@ import { TooltipArrow, TooltipContent } from './styles'
 export interface TooltipProps {
   children: ReactNode | string
   message: string
-  side?: 'bottom' | 'left' | 'right' | 'top' | undefined
+  side?: 'bottom' | 'left' | 'right' | 'top'
 }
 
 export const Tooltip = ({ children, message, side = 'left' }: TooltipProps) => {
