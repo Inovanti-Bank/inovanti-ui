@@ -41,3 +41,5 @@ export const space = {
   screen: '100vw',
   screenH: '100vh',
 }
+
+export type SpaceType = keyof typeof space
