@@ -1,8 +1,7 @@
 export * from './components/Box'
 export * from './components/FormAlert'
 export * from './components/FullScreenLoading'
-export * from './components/Modal'
-export * from './components/Modal/styles'
+export * from './components/Dialog'
 export * from './components/SimpleLoading'
 
 
