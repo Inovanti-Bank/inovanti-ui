@@ -7,12 +7,17 @@ export default {
   component: Loading,
   tags: ['autodocs'],
   args: {
-    size: 32,
+    size: 6,
   },
   argTypes: {
     size: {
-      control: "number",
-    }
+      options: [
+        4, 6, 8, 12, 16, 24, 32, 40, 64
+      ],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     },
   decorators: [
     (Story) => {
@@ -22,7 +27,7 @@ export default {
           style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
         >
           {Story()}
-          <Text size="sm">Aceitar termos de uso</Text>
+          <Text>Aceitar termos de uso</Text>
         </Box>
       )
     },
