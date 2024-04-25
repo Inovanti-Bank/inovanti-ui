@@ -28,11 +28,16 @@ export const TextArea = forwardRef<
     ref,
   ) => {
     return (
-      <div className={cn(
+      <div
+        className={cn(
           'flex flex-col justify-start mb-4',
           `${resolveSpace($width)}`
-        )} style={{ gridArea: $gridArea }}>
-        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        )}
+        style={{ gridArea: $gridArea }}
+      >
+        {label &&
+          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        }
         <textarea
           className={cn(baseInputStyles(className), 'resize-y min-h-20 whitespace-pre-wrap')}
           ref={ref}
