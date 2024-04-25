@@ -1,13 +1,13 @@
+import { SpaceType } from '@inovanti/tokens'
 import { ComponentProps } from 'react'
-import { Spaces } from '../../types/styles'
-import { Input } from './common.styles'
+import { BaseInput } from './BaseInput'
 
-export interface InputProps extends ComponentProps<typeof Input> {
-  label: string
-  inputSize?: 'sm' | 'md'
+export interface InputProps extends ComponentProps<typeof BaseInput> {
+  label?: string
+  className?: string
   error?: string
-  width?: Spaces
-  gridAreaName?: string
+  $width?: SpaceType
+  $gridArea?: string
 }
 
 export type DataObj = {
