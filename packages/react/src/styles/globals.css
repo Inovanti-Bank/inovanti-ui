@@ -18,7 +18,7 @@
 
     /* Colors */
     --background: 0 0% 100%;
-    --foreground: 77 47.4% 11.2%;
+    --foreground: 77 47.4% 2%;
 
     --muted: 70 40% 96.1%;
     --muted-foreground: 62 16.3% 46.9%;
@@ -55,6 +55,7 @@
     --text-primary: 0 0% 9%;
     --text-secondary: 0 0% 36%;
     --text-tertiary: 0 0% 45%;
+    --text-quaternary: 0 0% 60%;
     --text-success: 111 71% 46%;
     --text-error: 0 100% 59%;
     --text-disabled: 0 0% 54%;
@@ -120,7 +121,7 @@
 
   .dark {
     --background: 72 71% 4%;
-    --foreground: 62 31% 91%;
+    --foreground: 60 100% 98%;
 
     --muted: 74 47% 11%;
     --muted-foreground: 215.4 16.3% 56.9%;
@@ -157,6 +158,7 @@
     --text-primary: 0 0% 91%;
     --text-secondary: 0 0% 64%;
     --text-tertiary: 0 0% 55%;
+    --text-quaternary: 0 0% 40%;
     --text-success: 111 71% 46%;
     --text-error: 0 100% 59%;
     --text-disabled: 0 0% 46%;

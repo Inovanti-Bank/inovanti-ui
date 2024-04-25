@@ -66,6 +66,7 @@ export default {
           primary: "hsl(var(--text-primary))",
           secondary: "hsl(var(--text-secondary))",
           tertiary: "hsl(var(--text-tertiary))",
+          quaternary: "hsl(var(--text-quaternary))",
         },
         success: "hsl(var(--text-success))",
         error: "hsl(var(--text-error))",
