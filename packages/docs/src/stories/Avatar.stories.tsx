@@ -34,3 +34,9 @@ export const WithFallback: StoryObj<AvatarProps> = {
     src: undefined,
   },
 }
+
+export const Small: StoryObj<AvatarProps> = {
+  args: {
+    size: 'sm'
+  },
+}
