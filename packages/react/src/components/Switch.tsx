@@ -11,12 +11,12 @@ export function Switch({ checked, onCheckedChange, small = false }: SwitchProps)
   return (
     <Root
       className={cn(
-        small ? 'w-[26px] h-[17px]' : 'w-[33px] h-[22px]',
+        small ? 'w-[26px] h-[17px]' : 'w-[33px] h-[21px]',
         'mt-[1px] mr-[10px] mb-[1px] ml-0',
         'cursor-pointer',
         'rounded-full relative',
-        'bg-gray-300',
-        'data-[checked]:bg-yellow-500'
+        'data-[state=checked]:bg-primary',
+        'bg-gray-300'
       )}
       checked={checked}
       onCheckedChange={onCheckedChange}
