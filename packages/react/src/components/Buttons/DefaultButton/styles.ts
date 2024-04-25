@@ -24,7 +24,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     ) < 3.5
       ? theme.colors.blackFixed
       : theme.colors.whiteFixed};
-    font-weight: ${theme.fontWeights.semibold};
+    font-weight: ${theme.fontWeights['font-semibold']};
     background-color: ${theme.colors[color || 'primary450']};
     border: 1px solid transparent;
     &:focus {

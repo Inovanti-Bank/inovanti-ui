@@ -1,5 +1,5 @@
-import { styled, keyframes, css } from 'styled-components'
 import * as RadixCheckbox from '@radix-ui/react-checkbox'
+import { css, keyframes, styled } from 'styled-components'
 
 export const CheckboxContainer = styled(RadixCheckbox.Root)`
   ${({ theme }) => css`
@@ -7,7 +7,7 @@ export const CheckboxContainer = styled(RadixCheckbox.Root)`
     width: ${theme.space[6]};
     height: ${theme.space[6]};
     background-color: ${theme.colors.whiteFixed};
-    border-radius: ${theme.radii.xs};
+    border-radius: ${theme.radii['rounded-sm']};
     line-height: 0;
     cursor: pointer;
     overflow: hidden;

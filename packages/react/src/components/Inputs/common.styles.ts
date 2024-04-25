@@ -32,8 +32,11 @@ export const inputStyles = css<InputProps>`
     cursor: text;
     font-family: ${theme.fonts.default};
     padding: ${theme.space[inputSize === 'sm' ? 2 : 3]};
-    font-size: ${theme.fontSizes[inputSize]};
-    border-radius: ${theme.radii.sm};
+    font-size: ${
+      // @ts-expect-error TODO: arrumar isso daqui ein
+      theme.fontSizes[inputSize]
+    };
+    border-radius: ${theme.radii['rounded-sm']};
     background-color: ${theme.colors.white};
     color: ${theme.colors.textHigh};
 

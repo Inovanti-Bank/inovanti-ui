@@ -2,8 +2,8 @@ import { ComponentProps, ElementRef, ReactNode, forwardRef } from 'react'
 import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { Input, InputContainer, InputWithPrefixContainer, Prefix } from './styles'
 import { Separator } from '../common.styles'
+import { Input, InputContainer, InputWithPrefixContainer, Prefix } from './styles'
 
 export interface TextPrefixInputProps extends Omit<ComponentProps<typeof Input>, 'prefix'> {
   label: string
@@ -29,7 +29,7 @@ export const TextPrefixInput = forwardRef<ElementRef<typeof Input>, TextPrefixIn
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <InputWithPrefixContainer inputSize={inputSize}>
         <Prefix>{prefix}</Prefix>

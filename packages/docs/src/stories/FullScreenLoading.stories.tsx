@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { FullScreenLoading, FullScreenLoadingProps } from '@inovanti/react'
 
 export default {
-  title: 'Surfaces/Loads/FullScreen Loading',
+  title: 'Surfaces/FullScreen Loading',
   component: FullScreenLoading,
   tags: ['autodocs'],
   args: {

@@ -3,26 +3,30 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box, Loading, LoadingProps, Text } from '@inovanti/react'
 
 export default {
-  title: 'Surfaces/Loads/Simple Loading',
+  title: 'Surfaces/Simple Loading',
   component: Loading,
   tags: ['autodocs'],
   args: {
-    size: 32,
+    size: 6,
   },
   argTypes: {
     size: {
-      control: "number",
-    }
+      options: [
+        4, 6, 8, 12, 16, 24, 32, 40, 64
+      ],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     },
   decorators: [
     (Story) => {
       return (
         <Box
           as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
         >
           {Story()}
-          <Text size="sm">Aceitar termos de uso</Text>
+          <Text>Aceitar termos de uso</Text>
         </Box>
       )
     },

@@ -40,7 +40,7 @@ export const MultiSelectInput = forwardRef<
 
     return (
       <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Select
           isMulti
           ref={ref}
@@ -56,7 +56,7 @@ export const MultiSelectInput = forwardRef<
                 background: theme.colors.white,
                 width: '100%',
                 border: `0.7px solid ${theme.colors.primary700}`,
-                borderRadius: theme.radii.sm,
+                borderRadius: theme.radii['rounded-sm'],
                 color: theme.colors.textHigh,
                 overflowX: 'auto',
                 maxHeight: theme.space[height],
@@ -82,7 +82,7 @@ export const MultiSelectInput = forwardRef<
             menu: (baseStyles) => ({
               ...baseStyles,
               border: `0.7px solid ${theme.colors.primary700}`,
-              borderRadius: theme.radii.sm,
+              borderRadius: theme.radii['rounded-sm'],
               marginTop: theme.space[3],
               background: theme.colors.white,
               }),
@@ -94,7 +94,7 @@ export const MultiSelectInput = forwardRef<
                 
                 marginRight: theme.space[1],
                 marginBottom: theme.space[1],
-                borderRadius: theme.radii.sm,
+                borderRadius: theme.radii['rounded-sm'],
               width: flexColumn ? theme.space.full : 'auto',
                 
                 

@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  }
+
+  :root {
+
+    /* shadcn variables */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+
+    /* Colors */
+    --primary: 45, 91, 255;
+    --secondary: 98, 132, 253;
+    --tertiary: 150, 173, 255;
+    --quaternary: 236, 240, 255;
+
+    --hover: 27, 74, 240;
+    --click: 0, 46, 208;
+    --icon: 124, 123, 123;
+    --outline: 215, 215, 215;
+    --divider: 237, 237, 237;
+
+    --bg-light: 255, 255, 255;
+    --bg-dark: 248, 248, 248;
+    --bg-disabled: 239, 239, 239;
+
+    --text-primary: 24, 24, 24;
+    --text-secondary: 92, 92, 92;
+    --text-tertiary: 116, 116, 116;
+    --text-success: 58, 201, 34;
+    --text-error: 255, 48, 48;
+    --text-disabled: 138, 138, 138;
+
+    --scrollbar-thumb-color: #d7d7d7;
+    --scrollbar-track-color: #ededed;
+
+    /* Screens */
+    --screen-mobile: 640px;
+    --screen-tablet: 1024px;
+    --screen-desktop: 1440px;
+    --screen-tv: 1920px;
+
+    /* Shadows */
+    --shadow-sm: 0px 0px 10px rgba(132, 132, 132, 15%);
+    --shadow-md: 0px 0px 20px rgba(132, 132, 132, 20%);
+    --shadow-lg: 0px 0px 30px rgba(132, 132, 132, 25%);
+    --shadow-focus: 0px 0px 0px 2px #c4ba03;
+    --shadow-outline: 0px 0px 0px 2px #e8e8e8;
+    --shadow-button-focus: 0px 0px 0px 2px #fff200;
+
+    /* Blur */
+    --blur: 4px;
+
+    /* Font Size */
+    --text-xxs: 0.625rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.75rem;
+    --text-4xl: 2rem;
+    --text-5xl: 2.25rem;
+    --text-6xl: 3rem;
+    --text-7xl: 4rem;
+    --text-8xl: 4.5rem;
+    --text-9xl: 6rem;
+
+    /* Font Weights */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* Line Heights */
+    --line-shorter: 125%;
+    --line-short: 140%;
+    --line-base: 160%;
+    --line-tall: 180%;
+
+    /* Radii */
+    --radius-px: 1px;
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xxl: 3rem;
+    --radius-full: 99999px;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .text-code {
+      font-family: monospace;
+  }
+
+  button, input, textarea {
+      all: unset;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  li {
+      list-style: none;
+  }
+
+  html {
+      font-size: 16px;
+      @media (max-width: 768px) {
+          font-size: 14px;
+      }
+      @media (max-width: 480px) {
+          overflow-y: scroll;
+      }
+      overflow-x: hidden;
+  }
+
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 14px;
+    border: 3px solid var(--scrollbar-track-color);
+  }
+}

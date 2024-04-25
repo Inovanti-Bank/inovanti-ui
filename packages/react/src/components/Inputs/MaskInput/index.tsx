@@ -44,7 +44,7 @@ export const MaskInput = forwardRef<
 
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Input inputSize={inputSize} getInputRef={ref} {...props} />
 

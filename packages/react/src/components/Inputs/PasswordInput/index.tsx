@@ -1,10 +1,10 @@
 import { Eye, EyeSlash } from 'phosphor-react'
 import { ElementRef, forwardRef, useState } from 'react'
-import { Input, Separator } from '../common.styles'
-import { PasswordInputContainer, SeePasswordButton } from './styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputProps } from '../common'
+import { Input, Separator } from '../common.styles'
+import { PasswordInputContainer, SeePasswordButton } from './styles'
 
 type PasswordType = 'password' | 'text'
 
@@ -36,7 +36,7 @@ export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
 
     return (
       <PasswordInputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Input
           type={inputPasswordType}

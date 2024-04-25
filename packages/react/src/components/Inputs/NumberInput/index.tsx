@@ -1,9 +1,8 @@
-import { ComponentProps, ElementRef, forwardRef } from 'react'
-import { Spaces } from '../../../types/styles'
+import { ElementRef, forwardRef } from 'react'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { Input, InputContainer, Separator } from '../common.styles'
 import { InputProps } from '../common'
+import { Input, InputContainer, Separator } from '../common.styles'
 
 export const NumberInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   (
@@ -19,7 +18,7 @@ export const NumberInput = forwardRef<ElementRef<typeof Input>, InputProps>(
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text size="sm">{label}</Text>
+        <Text $size="text-sm">{label}</Text>
         <Separator />
         <Input type="number" inputSize={inputSize} ref={ref} {...props} />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
