@@ -1,21 +1,22 @@
 import { Eye, EyeSlash } from 'phosphor-react'
 import { ElementRef, forwardRef, useState } from 'react'
-import { FormAlert, FormAlertBlank } from '../../FormAlert'
-import { Text } from '../../Text'
-import { InputProps } from '../common'
-import { Input } from '../common.styles'
-import { PasswordInputContainer, SeePasswordButton } from './styles'
+import { FormAlert, FormAlertBlank } from '../FormAlert'
+import { Text } from '../Text'
+import { InputProps } from './common'
+import { cn } from '@/utils/cn'
+import { resolveSpace } from '@inovanti/tokens'
+import { BaseInput } from './BaseInput'
 
 type PasswordType = 'password' | 'text'
 
-export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
+export const PasswordInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
   (
     {
       label,
-      inputSize = 'md',
-      width = 'full',
+      className,
       error,
-      gridAreaName,
+      $width = '64',
+      $gridArea,
       ...props
     }: InputProps,
     ref,
@@ -35,26 +36,40 @@ export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
     }
 
     return (
-      <PasswordInputContainer width={width} style={{ gridArea: gridAreaName }}>
+      <div
+        className={cn(
+          'flex flex-col justify-start mb-6 relative',
+          `${resolveSpace($width)}`
+        )}
+        style={{ gridArea: $gridArea }}
+      >
         <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
-        <Input
+        <BaseInput
+          className={className}
           type={inputPasswordType}
-          inputSize={inputSize}
           ref={ref}
           {...props}
         />
-        <SeePasswordButton
-          type="button"
+        <button
+          className={cn(
+            'absolute right-4 top-8',
+            'cursor-pointer rounded-sm',
+            'pt-[1px] pr-[3px] pb-[0px] pl-[2px]',
+            'border-[0.5px] border-transparent',
+            'text-gray-tertiary',
+            'focus:border-gray-tertiary'
+          )}
+          type='button'
           onClick={() => handleTogglePasswordType(inputPasswordType)}
         >
           {inputPasswordType === 'password' ? (
-            <EyeSlash size={inputSize === 'md' ? 24 : 16} />
+            <EyeSlash size={24} />
           ) : (
-            <Eye size={inputSize === 'md' ? 24 : 16} />
+            <Eye size={24} />
           )}
-        </SeePasswordButton>
+        </button>
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
-      </PasswordInputContainer>
+      </div>
     )
   },
 )
