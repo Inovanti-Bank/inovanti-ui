@@ -3,7 +3,7 @@ import { NumericFormat } from 'react-number-format'
 import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { InputContainer, Separator } from '../common.styles'
+import { InputContainer } from '../common.styles'
 import { Input } from './styles'
 
 export interface DecimalInputProps
@@ -32,8 +32,7 @@ export const DecimalInput = forwardRef<
   ) => {
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="text-sm">{label}</Text>
-        <Separator />
+        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         <Input
           inputSize={inputSize}
           thousandSeparator="."

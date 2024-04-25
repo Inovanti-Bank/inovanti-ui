@@ -7,7 +7,7 @@ import {
 } from '../../../utils/date'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
-import { InputContainer, Separator } from '../common.styles'
+import { InputContainer } from '../common.styles'
 import { Input } from './styles'
 
 export interface MaskInputProps extends ComponentProps<typeof PatternFormat> {
@@ -44,8 +44,7 @@ export const MaskInput = forwardRef<
 
     return (
       <InputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="text-sm">{label}</Text>
-        <Separator />
+        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         <Input inputSize={inputSize} getInputRef={ref} {...props} />
 
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}

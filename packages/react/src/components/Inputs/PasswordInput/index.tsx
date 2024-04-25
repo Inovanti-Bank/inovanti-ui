@@ -3,7 +3,7 @@ import { ElementRef, forwardRef, useState } from 'react'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { InputProps } from '../common'
-import { Input, Separator } from '../common.styles'
+import { Input } from '../common.styles'
 import { PasswordInputContainer, SeePasswordButton } from './styles'
 
 type PasswordType = 'password' | 'text'
@@ -36,8 +36,7 @@ export const PasswordInput = forwardRef<ElementRef<typeof Input>, InputProps>(
 
     return (
       <PasswordInputContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="text-sm">{label}</Text>
-        <Separator />
+        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         <Input
           type={inputPasswordType}
           inputSize={inputSize}
