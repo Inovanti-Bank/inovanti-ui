@@ -1,8 +1,8 @@
 import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
-import { ComponentProps, ComponentPropsWithoutRef, ElementRef, ReactNode, forwardRef } from 'react'
-import { FormAlert, FormAlertBlank } from '../../FormAlert'
-import { Text } from '../../Text'
+import { ComponentPropsWithoutRef, ReactNode, forwardRef } from 'react'
+import { FormAlert, FormAlertBlank } from '../FormAlert'
+import { Text } from '../Text'
 
 export interface TextPrefixInputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'prefix'> {
   label?: string
