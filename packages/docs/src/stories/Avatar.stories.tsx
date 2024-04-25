@@ -42,12 +42,9 @@ export const LightTheme: StoryObj<AvatarProps> = {
       return (
         <ThemeProvider theme={light}>
 
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-          >
+        <Box>
           {Story()}
-          <Text size="sm">Ativar acesso a dados</Text>
+          <Text>Ativar acesso a dados</Text>
         </Box>
           </ThemeProvider>
       )
