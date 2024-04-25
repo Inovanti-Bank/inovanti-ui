@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from '@inovanti/react'
+import { Box, Button } from '@inovanti/react'
 import { ArrowRight } from 'phosphor-react'
-import { getColors, getSizes } from '../../components/GetTokens'
+import { getSizes } from '../../components/GetTokens'
 
 
 export default {
-  title: 'Form/Buttons/Default',
+  title: 'Form/Buttons/Button',
   component: Button,
   tags: ['autodocs'],
   args: {
@@ -14,31 +14,15 @@ export default {
         "Click me"
       
     ),
-    $size: undefined,
-    color: undefined,
-    width: undefined
+    $width: undefined
   },
   argTypes: {
-    color: {
-      control: 'inline-radio',
-      options: getColors()
-    },
-    width: {
+    $width: {
       control: 'inline-radio',
       options: getSizes()
     },
     disabled: {
       control: 'boolean'
-    },
-    $size: {
-      options: [
-        'sm',
-        'md',
-        'normal'
-      ],
-      control: {
-        type: 'inline-radio',
-      },
     },
     onClick: {
       action: 'click',
