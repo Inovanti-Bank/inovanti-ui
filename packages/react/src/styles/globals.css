@@ -38,6 +38,12 @@
     --secondary: 70 40% 96.1%;
     --secondary-foreground: 71 47.4% 11.2%;
 
+    --tertiary: 57 89% 45%;
+    --tertiary-foreground: 70 40% 98%;
+
+    --quaternary: 70 40% 96.1%;
+    --quaternary-foreground: 71 47.4% 11.2%;
+
     --accent: 70 3% 13%;
     --accent-foreground: 71 47.4% 11.2%;
 
@@ -45,6 +51,13 @@
     --destructive-foreground: 70 40% 98%;
 
     --ring: 68 20.2% 65.1%;
+
+    --text-primary: 0 0% 9%;
+    --text-secondary: 0 0% 36%;
+    --text-tertiary: 0 0% 45%;
+    --text-success: 111 71% 46%;
+    --text-error: 0 100% 59%;
+    --text-disabled: 0 0% 54%;
 
     --scrollbar-thumb-color: #d7d7d7;
     --scrollbar-track-color: #ededed;
@@ -134,11 +147,20 @@
     --destructive-foreground: 66 40% 98%;
 
     --ring: 64 34% 17%;
+
+    --text-primary: 0 0% 91%;
+    --text-secondary: 0 0% 64%;
+    --text-tertiary: 0 0% 55%;
+    --text-success: 111 71% 46%;
+    --text-error: 0 100% 59%;
+    --text-disabled: 0 0% 46%;
   }
 
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    color: var(--text-primary);
+    background-color: var(--background);
   }
 
   .text-code {
