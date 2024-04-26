@@ -5,15 +5,16 @@ import { Spaces } from '../../../types/styles'
 import { FormAlert, FormAlertBlank } from '../../FormAlert'
 import { Text } from '../../Text'
 import { DataObj } from '../common'
-import { Separator } from '../common.styles'
-import { SearchSelectContainer } from './styles'
+import { cn } from '@/utils/cn'
+import { resolveSpace } from '@inovanti/tokens'
 
 export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
-  label: string
+  label?: string
+  className?: string
   error?: string
   data?: DataObj[]
-  width?: Spaces
-  gridAreaName?: string
+  $width?: Spaces
+  $gridArea?: string
 }
 
 export const SearchSelectInput = forwardRef<
@@ -23,10 +24,11 @@ export const SearchSelectInput = forwardRef<
   (
     {
       label,
+      className = '',
       error,
-      gridAreaName,
-      data = [],
-      width = 'full',
+      data,
+      $width = '64',
+      $gridArea,
       ...props
     }: SearchSelectInputProps,
     ref,
@@ -34,9 +36,14 @@ export const SearchSelectInput = forwardRef<
     const theme = useTheme()
 
     return (
-      <SearchSelectContainer width={width} style={{ gridArea: gridAreaName }}>
-        <Text $size="text-sm">{label}</Text>
-        <Separator />
+      <div
+        className={cn(
+          'flex flex-col justify-start mb-4',
+          `${resolveSpace($width)}`
+        )}
+        style={{ gridArea: $gridArea }}
+      >
+        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         <Select
           ref={ref}
           {...props}
@@ -88,7 +95,7 @@ export const SearchSelectInput = forwardRef<
           options={data}
         />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
-      </SearchSelectContainer>
+      </div>
     )
   },
 )

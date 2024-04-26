@@ -4,8 +4,8 @@ import { cn } from '../utils/cn';
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   as?: ElementType
-  $size?: FontSizesType; // "text-xs" | "text-sm" | "text-base" | "text-lg" | "text-xl" | "text-2xl" | "text-3xl" | "text-4xl" | "text-5xl" | "text-6xl" | "text-7xl" | "text-8xl" | "text-9xl"
-  $fontWeight?: FontWeightsType; // "font-thin" | "font-extralight" | "font-light" | "font-normal" | "font-medium" | "font-semibold" | "font-bold" | "font-extrabold" | "font-black"
+  $size?: FontSizesType;
+  $fontWeight?: FontWeightsType;
   children: ReactNode;
 }
 

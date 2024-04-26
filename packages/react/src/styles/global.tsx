@@ -11,10 +11,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    button, input, textarea {
-        all: unset;
-    }
-
     a {
         text-decoration: none;
     }

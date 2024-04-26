@@ -1,7 +1,7 @@
 import * as Select from '@radix-ui/react-select'
 import { Check, TagChevron } from 'phosphor-react'
 import { ComponentProps, ElementRef, ReactNode, forwardRef } from 'react'
-import { InputContainer, Separator } from '../common.styles'
+import { InputContainer } from '../common.styles'
 import {
   ItemText,
   SelectContent,
@@ -41,7 +41,6 @@ export function SelectInput({
   return (
     <InputContainer width={width} style={{ gridArea: gridAreaName }}>
       <Text>{label}</Text>
-      <Separator />
       <Select.Root
         onValueChange={onChange}
         name={fieldName}
