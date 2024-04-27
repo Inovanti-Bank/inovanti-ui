@@ -43,7 +43,9 @@ export const PasswordInput = forwardRef<ElementRef<typeof BaseInput>, InputProps
         )}
         style={{ gridArea: $gridArea }}
       >
-        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        {label &&
+          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        }
         <BaseInput
           className={className}
           type={inputPasswordType}
