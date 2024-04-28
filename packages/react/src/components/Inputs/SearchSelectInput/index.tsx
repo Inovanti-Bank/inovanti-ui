@@ -34,7 +34,6 @@ export const SearchSelectInput = forwardRef<
     ref,
   ) => {
     const theme = useTheme()
-
     return (
       <div
         className={cn(
@@ -47,49 +46,35 @@ export const SearchSelectInput = forwardRef<
         <Select
           ref={ref}
           {...props}
+          menuIsOpen
           unstyled
+          classNames={{ 
+            control: (state) => cn(
+              'cursor-pointer bg-background text-gray-primary rounded-sm w-full px-3 py-2 border',
+              state.isFocused ? 'border-secondary' : 'border-primary'
+            ),
+            placeholder: (_) => cn(
+              'text-gray-tertiary text-center',
+            ),
+            menu: (_) => cn(
+              'border border-primary rounded-sm mt-3 bg-background w-max'
+            ),
+            option: (_) => cn(
+              'cursor-pointer rounded-sm w-max border-b border-primary m-1',
+              'text-gray-primary bg-background',
+              'hover:bg-background/70 px-3 py-2',
+              
+            ),
+           }}
           styles={{
-            control: (baseStyles, state) => ({
+            control: (baseStyles, _) => ({
               ...baseStyles,
-              cursor: 'pointer',
-              borderColor: state.isFocused
-                ? theme.colors.primary300
-                : theme.colors.primary700,
-              background: theme.colors.white,
-              width: '100%',
-              border: `0.7px solid ${theme.colors.primary700}`,
-              borderRadius: '0.375rem',
-              color: theme.colors.textHigh,
-
-              padding: theme.space[3],
             }),
             placeholder: (baseStyles) => ({
               ...baseStyles,
-              color: theme.colors.gray600,
-              textAlign: 'center',
-            }),
-            menu: (baseStyles) => ({
-              ...baseStyles,
-              border: `0.7px solid ${theme.colors.primary700}`,
-              borderRadius: '0.375rem',
-              marginTop: theme.space[3],
-              background: theme.colors.white,
             }),
             option: (baseStyles) => ({
               ...baseStyles,
-              cursor: 'pointer',
-              borderBottom: `0.7px solid ${theme.colors.primary700}`,
-              borderRadius: '0.1rem',
-              padding: theme.space[3],
-              width: '98%',
-              margin: theme.space[1],
-              marginInline: '1%',
-              color: theme.colors.textHigh,
-              background: theme.colors.gray100,
-
-              '&:hover': {
-                background: theme.colors.white,
-              },
             }),
           }}
           options={data}
