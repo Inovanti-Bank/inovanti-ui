@@ -1,14 +1,13 @@
+
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
-import { useTheme } from 'styled-components'
-import { Spaces } from '../../types/styles'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'
 import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
 
-export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
+export interface MultiSelectInputProps extends ComponentProps<typeof Select> {
   label?: string
   className?: string
   error?: string
@@ -17,9 +16,9 @@ export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   $gridArea?: string
 }
 
-export const SearchSelectInput = forwardRef<
+export const MultiSelectInput = forwardRef<
   ElementRef<typeof Select>,
-  SearchSelectInputProps
+  MultiSelectInputProps
 >(
   (
     {
@@ -30,7 +29,7 @@ export const SearchSelectInput = forwardRef<
       $width = '64',
       $gridArea,
       ...props
-    }: SearchSelectInputProps,
+    }: MultiSelectInputProps,
     ref,
   ) => {
     return (
@@ -45,7 +44,9 @@ export const SearchSelectInput = forwardRef<
           <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         }
         <Select
+          isMulti
           ref={ref}
+          closeMenuOnSelect={false}
           {...props}
           unstyled
           classNames={{ 
@@ -85,6 +86,7 @@ export const SearchSelectInput = forwardRef<
             }),
             
           }}
+          className={className}
           options={data}
         />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
@@ -93,4 +95,4 @@ export const SearchSelectInput = forwardRef<
   },
 )
 
-SearchSelectInput.displayName = 'SearchSelectInput'
+MultiSelectInput.displayName = 'MultiSelectInput'
