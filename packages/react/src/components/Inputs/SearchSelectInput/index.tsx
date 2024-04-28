@@ -46,7 +46,6 @@ export const SearchSelectInput = forwardRef<
         <Select
           ref={ref}
           {...props}
-          menuIsOpen
           unstyled
           classNames={{ 
             control: (state) => cn(
@@ -57,10 +56,10 @@ export const SearchSelectInput = forwardRef<
               'text-gray-tertiary text-center',
             ),
             menu: (_) => cn(
-              'border border-primary rounded-sm mt-3 bg-background w-max'
+              'border border-primary rounded-sm mt-1 bg-background'
             ),
             option: (_) => cn(
-              'cursor-pointer rounded-sm w-max border-b border-primary m-1',
+              'cursor-pointer rounded-sm border-b border-primary',
               'text-gray-primary bg-background',
               'hover:bg-background/70 px-3 py-2',
               
@@ -76,6 +75,14 @@ export const SearchSelectInput = forwardRef<
             option: (baseStyles) => ({
               ...baseStyles,
             }),
+            menu: (baseStyles) => ({
+              ...baseStyles,
+              width: 'max-content',
+              minWidth: '100%',
+              maxWidth: '200%',
+              lineBreak: 'auto'
+            }),
+            
           }}
           options={data}
         />
