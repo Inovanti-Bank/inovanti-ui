@@ -1,5 +1,5 @@
 import { addons } from '@storybook/addons'
-import inovantiTheme from './inovantiTheme'
+import inovantiTheme from './InovantiTheme'
 
 addons.setConfig({
     theme: inovantiTheme
