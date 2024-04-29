@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, MultiSelectInput, SearchSelectInputProps, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
-import { getSizes } from '../../components/GetTokens'
+import { MultiSelectInput, SearchSelectInputProps } from '@inovanti/react'
 import { mockDataProcess } from './mockData'
 
 export default {
@@ -32,33 +30,9 @@ export const Primary: StoryObj<SearchSelectInputProps> = {
   args: {},
 }
 
-export const CustomWidth: StoryObj<SearchSelectInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
-  },
-}
 
 export const Error: StoryObj<SearchSelectInputProps> = {
   args: {
     error: 'Estado ausente'
   },
-}
-
-export const LightTheme: StoryObj<SearchSelectInputProps> = {
-  decorators: [
-    (Story) => {
-        return (
-            <ThemeProvider theme={light}>
-                <Box>
-
-          {Story()}
-                </Box>
-          </ThemeProvider>
-      )
-    },
-  ],
 }

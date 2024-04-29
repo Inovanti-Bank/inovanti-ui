@@ -1,9 +1,6 @@
-import { dark } from '@inovanti/react';
 import type { Preview } from "@storybook/react";
 import { themes } from '@storybook/theming';
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from '../src/styles/global';
 
 import '@inovanti/react/dist/index.css';
 
@@ -28,11 +25,7 @@ const preview: Preview = {
     (Story) => {
       return (
         <div className='dark'>
-
-        <ThemeProvider theme={dark}>
-        <GlobalStyle />
         <Story />
-        </ThemeProvider>
         </div>
       )
     }

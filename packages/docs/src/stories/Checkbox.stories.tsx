@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, Checkbox, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Box, Checkbox, Text } from '@inovanti/react'
 
 export default {
   title: 'Form/Buttons/Checkbox',
@@ -49,21 +48,3 @@ export const Disabled: StoryObj<typeof Checkbox> = {
       },
     ],
 }
-
-export const LightMode: StoryObj<typeof Checkbox> = {
-    decorators: [
-    (Story) => {
-        return (
-        <ThemeProvider theme={light}>
-            
-        <Box>
-          {Story()}
-          <Text>Aceitar termos de uso</Text>
-        </Box>
-          </ThemeProvider>
-      )
-    },
-  ],
-}
-
-
