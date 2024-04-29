@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import React, { ComponentPropsWithoutRef, forwardRef } from 'react'

@@ -1,4 +1,6 @@
 
+'use client'
+
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
 import { FormAlert, FormAlertBlank } from '../FormAlert'

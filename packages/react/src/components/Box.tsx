@@ -1,3 +1,5 @@
+'use client'
+
 import { ElementType, forwardRef, ReactNode, Ref } from 'react';
 import { cn } from '../utils/cn';
 export interface BoxProps {

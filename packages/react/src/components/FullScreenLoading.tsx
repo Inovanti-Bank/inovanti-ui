@@ -1,3 +1,5 @@
+'use client'
+
 import { Loading } from './SimpleLoading';
 import { Text } from './Text';
 

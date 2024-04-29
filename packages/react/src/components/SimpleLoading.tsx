@@ -1,3 +1,5 @@
+'use client'
+
 import { SpinnerGap } from '@phosphor-icons/react/dist/ssr/SpinnerGap';
 type SizeType = 4 | 6 | 8 | 12 | 16 | 24 | 32 | 40 | 64
 

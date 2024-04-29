@@ -1,3 +1,5 @@
+'use client'
+
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
