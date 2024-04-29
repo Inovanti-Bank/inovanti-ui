@@ -9,10 +9,9 @@ export default {
   args: {
     message: "Parabéns",
     side: 'right',
+    className: 'max-w-40',
     children:
-    <Box className="cursor-pointer">
       <Text>Hover here</Text>
-    </Box>
   },
   argTypes: {
     side: {

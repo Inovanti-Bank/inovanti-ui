@@ -1,25 +1,24 @@
+
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
-import { useTheme } from 'styled-components'
-import { Spaces } from '../../../types/styles'
-import { FormAlert, FormAlertBlank } from '../../FormAlert'
-import { Text } from '../../Text'
-import { DataObj } from '../common'
+import { FormAlert, FormAlertBlank } from '../FormAlert'
+import { Text } from '../Text'
+import { DataObj } from './common'
 import { cn } from '@/utils/cn'
-import { resolveSpace } from '@inovanti/tokens'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
 
-export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
+export interface MultiSelectInputProps extends ComponentProps<typeof Select> {
   label?: string
   className?: string
   error?: string
   data?: DataObj[]
-  $width?: Spaces
+  $width?: SpaceType
   $gridArea?: string
 }
 
-export const SearchSelectInput = forwardRef<
+export const MultiSelectInput = forwardRef<
   ElementRef<typeof Select>,
-  SearchSelectInputProps
+  MultiSelectInputProps
 >(
   (
     {
@@ -30,10 +29,9 @@ export const SearchSelectInput = forwardRef<
       $width = '64',
       $gridArea,
       ...props
-    }: SearchSelectInputProps,
+    }: MultiSelectInputProps,
     ref,
   ) => {
-    const theme = useTheme()
     return (
       <div
         className={cn(
@@ -42,11 +40,14 @@ export const SearchSelectInput = forwardRef<
         )}
         style={{ gridArea: $gridArea }}
       >
-        <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        {label &&
+          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+        }
         <Select
+          isMulti
           ref={ref}
+          closeMenuOnSelect={false}
           {...props}
-          menuIsOpen
           unstyled
           classNames={{ 
             control: (state) => cn(
@@ -57,10 +58,10 @@ export const SearchSelectInput = forwardRef<
               'text-gray-tertiary text-center',
             ),
             menu: (_) => cn(
-              'border border-primary rounded-sm mt-3 bg-background w-max'
+              'border border-primary rounded-sm mt-1 bg-background'
             ),
             option: (_) => cn(
-              'cursor-pointer rounded-sm w-max border-b border-primary m-1',
+              'cursor-pointer rounded-sm border-b border-primary',
               'text-gray-primary bg-background',
               'hover:bg-background/70 px-3 py-2',
               
@@ -76,7 +77,16 @@ export const SearchSelectInput = forwardRef<
             option: (baseStyles) => ({
               ...baseStyles,
             }),
+            menu: (baseStyles) => ({
+              ...baseStyles,
+              width: 'max-content',
+              minWidth: '100%',
+              maxWidth: '200%',
+              lineBreak: 'auto'
+            }),
+            
           }}
+          className={className}
           options={data}
         />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
@@ -85,4 +95,4 @@ export const SearchSelectInput = forwardRef<
   },
 )
 
-SearchSelectInput.displayName = 'SearchSelectInput'
+MultiSelectInput.displayName = 'MultiSelectInput'
