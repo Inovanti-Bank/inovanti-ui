@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.2
+
+### Patch Changes
+
+- Add support to ssr with 'use client' statement
+
 ## 3.0.1
 
 ### Patch Changes
