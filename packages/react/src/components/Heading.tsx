@@ -1,21 +1,25 @@
-import { ElementType, ReactNode } from 'react'
-import styled, { css } from 'styled-components'
-import { FontSizes } from '../types/styles'
+import { FontSizesType, FontWeightsType } from '@inovanti/tokens';
+import { ElementType, HTMLAttributes, ReactNode, createElement, forwardRef } from 'react';
+import { cn } from '../utils/cn';
 
-export interface HeadingProps {
-  size?: FontSizes
+export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   as?: ElementType
-  children: ReactNode
+  $size?: FontSizesType;
+  $fontWeight?: FontWeightsType;
+  children: ReactNode;
 }
 
-export const Heading = styled.h2<HeadingProps>`
-  ${({ theme, size = 'md' }) => css`
-    font-family: ${theme.fonts.default};
-    line-height: ${theme.lineHeights.shorter};
-    margin: 0;
-    color: ${theme.colors.textHigh};
-    font-size: ${theme.fontSizes[size]};
-  `};
-`
+export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+  ({ className, children, as = 'h2', $size = 'text-lg', $fontWeight = 'font-semibold', ...rest }, ref) => {
+    return createElement(as, {
+      ref: ref,
+      className: cn(
+          `${$size} ${$fontWeight} m-0 text-black dark:text-white`,
+          className
+      ),
+      ...rest
+    }, children )
+  }
+);
 
-Heading.displayName = 'Heading'
+Heading.displayName = 'Heading';

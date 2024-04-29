@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="./README_imgs/logo-dark.png" alt="Logo Inovanti">
+  <img src="./.vscode/logo-dark.png" alt="Logo Inovanti">
 </p>
 
-# Inovanti Design System
+<h1 align="center">
+  Inovanti Design System
+</h1>
 
 This project is the Design System for use in Inovanti React based projects
 

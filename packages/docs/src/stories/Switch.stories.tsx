@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, Switch, SwitchProps, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Box, Switch, SwitchProps, Text } from '@inovanti/react'
 
 export default {
   title: 'Form/Buttons/Switch',
@@ -15,12 +14,9 @@ export default {
    decorators: [
     (Story) => {
       return (
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-        >
+        <Box>
           {Story()}
-          <Text size="sm">Ativar acesso a dados</Text>
+          <Text>Ativar acesso a dados</Text>
         </Box>
       )
     },
@@ -28,25 +24,6 @@ export default {
 } as Meta<SwitchProps>
 
 export const Primary: StoryObj<SwitchProps> = {}
-
-export const LightMode: StoryObj<SwitchProps> = {
-    decorators: [
-    (Story) => {
-        return (
-        <ThemeProvider theme={light}>
-            
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-          >
-          {Story()}
-        </Box>
-          </ThemeProvider>
-      )
-    },
-  ],
-}
-
 
 export const Small: StoryObj<SwitchProps> = {
   args: {

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { AButton, Box, Checkbox, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Box, Checkbox, Text } from '@inovanti/react'
 
 export default {
   title: 'Form/Buttons/Checkbox',
@@ -19,60 +18,33 @@ export default {
     },
   },
    
-} as Meta<typeof AButton>
+} as Meta<typeof Checkbox>
 
-export const Primary: StoryObj<typeof AButton> = {
+export const Primary: StoryObj<typeof Checkbox> = {
     decorators: [
         (Story) => {
           return (
-            <Box
-              as="label"
-              style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-            >
+            <Box>
               {Story()}
-              <Text size="sm">Aceitar termos de uso</Text>
+              <Text>Aceitar termos de uso</Text>
             </Box>
           )
         },
       ],
 }
 
-export const Disabled: StoryObj<typeof AButton> = {
+export const Disabled: StoryObj<typeof Checkbox> = {
     args: {
     disabled: true,
     },
     decorators: [
       (Story) => {
         return (
-          <Box
-            as="label"
-            style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-          >
+          <Box>
             {Story()}
-            <Text size="sm">Aceitar termos de uso</Text>
+            <Text>Aceitar termos de uso</Text>
           </Box>
         )
       },
     ],
 }
-
-export const LightMode: StoryObj<typeof AButton> = {
-    decorators: [
-    (Story) => {
-        return (
-        <ThemeProvider theme={light}>
-            
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-          >
-          {Story()}
-          <Text size="sm">Aceitar termos de uso</Text>
-        </Box>
-          </ThemeProvider>
-      )
-    },
-  ],
-}
-
-

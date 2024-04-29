@@ -1,21 +1,29 @@
-import { ReactNode } from 'react'
-import styled, { css } from 'styled-components'
+import { ReactNode } from 'react';
+import { cn } from '../utils/cn';
 
 export interface FormAlertProps {
-  type?: 'error' | 'success'
-  children: ReactNode | string
+  type?: 'error' | 'success';
+  children: ReactNode | string;
+  className?: string;
 }
 
-export const FormAlert = styled.p<FormAlertProps>`
-  ${({ theme, type = 'error' }) => css`
-    color: ${theme.colors[type === 'error' ? 'red300' : 'green500']};
-    padding-top: ${theme.space[1]};
-    font-size: ${theme.fontSizes.sm};
-  `};
-`
-export const FormAlertBlank = styled.p`
-  height: ${({ theme }) => theme.space[5]};
-`
+export const FormAlert: React.FC<FormAlertProps> = ({ type = 'error', children, className }) => {
+  return (
+    <p
+      className={cn(
+        'py-1 text-sm',
+        type === 'error' ? 'text-red-400' : 'text-green-500',
+        className
+      )}
+    >
+      {children}
+    </p>
+  );
+};
 
-FormAlert.displayName = 'FormAlert'
-FormAlertBlank.displayName = 'FormAlertBlank'
+export const FormAlertBlank: React.FC = () => {
+  return <p className='h-5' />;
+};
+
+FormAlert.displayName = 'FormAlert';
+FormAlertBlank.displayName = 'FormAlertBlank';

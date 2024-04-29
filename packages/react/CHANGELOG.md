@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.0
+
+### Major Changes
+
+- Change styles framework from styled-components to tailwind
+
 ## 2.2.5
 
 ### Patch Changes

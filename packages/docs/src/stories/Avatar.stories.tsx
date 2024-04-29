@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Avatar, AvatarProps, Box, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Avatar, AvatarProps } from '@inovanti/react'
 
 export default {
   title: 'Data display/Avatar',
@@ -36,21 +35,8 @@ export const WithFallback: StoryObj<AvatarProps> = {
   },
 }
 
-export const LightTheme: StoryObj<AvatarProps> = {
-  decorators: [
-    (Story) => {
-      return (
-        <ThemeProvider theme={light}>
-
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-          >
-          {Story()}
-          <Text size="sm">Ativar acesso a dados</Text>
-        </Box>
-          </ThemeProvider>
-      )
-    },
-  ],
+export const Small: StoryObj<AvatarProps> = {
+  args: {
+    size: 'sm'
+  },
 }

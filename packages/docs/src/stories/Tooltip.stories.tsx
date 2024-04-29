@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Avatar, Box, Text, Tooltip, TooltipProps } from '@inovanti/react'
+import { Box, Text, Tooltip, TooltipProps } from '@inovanti/react'
 
 export default {
   title: 'Data display/Tooltip',
@@ -8,11 +8,10 @@ export default {
   tags: ['autodocs'],
   args: {
     message: "Parabéns",
+    side: 'right',
+    className: 'max-w-40',
     children:
-    <Box>
-      <Avatar src='https://github.com/natanrei.png'
-        alt='Natan Rei' />
-    </Box>
+      <Text>Hover here</Text>
   },
   argTypes: {
     side: {
@@ -30,10 +29,7 @@ export default {
    decorators: [
     (Story) => {
       return (
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}
-        >
+        <Box>
           {Story()}
         </Box>
       )

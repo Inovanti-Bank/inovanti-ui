@@ -1,0 +1,9 @@
+.input-with-prefix {
+    &:has(input:focus) {
+        @apply border-secondary outline-none
+    }
+
+    &:has(input:disabled) {
+        @apply cursor-not-allowed
+    }
+}

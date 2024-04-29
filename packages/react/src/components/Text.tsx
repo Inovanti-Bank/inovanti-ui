@@ -1,23 +1,25 @@
-import { ElementType, ReactNode } from 'react'
-import styled, { css } from 'styled-components'
-import { FontSizes, FontWeights } from '../types/styles'
+import { FontSizesType, FontWeightsType } from '@inovanti/tokens';
+import { ElementType, HTMLAttributes, ReactNode, createElement, forwardRef } from 'react';
+import { cn } from '../utils/cn';
 
-export interface TextProps {
-  size?: FontSizes
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   as?: ElementType
-  fontWeight?: FontWeights
-  children: ReactNode
+  $size?: FontSizesType;
+  $fontWeight?: FontWeightsType;
+  children: ReactNode;
 }
 
-export const Text = styled.p<TextProps>`
-  ${({ theme, size = 'md', fontWeight = 'regular' }) => css`
-    font-family: ${theme.fonts.default};
-    line-height: ${theme.lineHeights.base};
-    margin: 0;
-    color: ${theme.colors.textHigh};
-    font-size: ${theme.fontSizes[size]};
-    font-weight: ${theme.fontWeights[fontWeight]};
-  `};
-`
+export const Text = forwardRef<HTMLParagraphElement, TextProps>(
+  ({ className, children, as = 'p', $size = 'text-base', $fontWeight = 'font-medium', ...rest }, ref) => {
+    return createElement(as, {
+      ref: ref,
+      className: cn(
+          `${$size} ${$fontWeight} m-0 text-black dark:text-white`,
+          className
+      ),
+      ...rest
+    }, children )
+  }
+);
 
-Text.displayName = 'Text'
+Text.displayName = 'Text';
