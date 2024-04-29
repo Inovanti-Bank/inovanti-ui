@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Box, Button } from '@inovanti/react'
-import { ArrowRight } from 'phosphor-react'
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight';
 import { getSizes } from '../../components/GetTokens'
 
 
