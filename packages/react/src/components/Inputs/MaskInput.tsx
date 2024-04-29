@@ -1,15 +1,15 @@
 'use client'
 
+import { cn } from '@/utils/cn'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { PatternFormat } from 'react-number-format'
 import {
-  americanToBrazilianDate,
-  isInBrazilianPattern,
+    americanToBrazilianDate,
+    isInBrazilianPattern,
 } from '../../utils/date'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
-import { SpaceType, resolveSpace } from '@inovanti/tokens'
-import { cn } from '@/utils/cn'
 import { baseInputStyles } from './BaseInput'
 
 export interface MaskInputProps extends ComponentProps<typeof PatternFormat> {
@@ -29,7 +29,7 @@ export const MaskInput = forwardRef<
       label,
       className,
       error,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: MaskInputProps,

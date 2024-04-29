@@ -1,6 +1,6 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react'
-import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { cn } from '@/utils/cn'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
+import { ComponentPropsWithoutRef, forwardRef } from 'react'
 import { baseInputStyles } from './BaseInput'
 
 export interface SimpleInputProps extends ComponentPropsWithoutRef<'input'> {
@@ -13,7 +13,7 @@ export const SimpleTextInput = forwardRef<HTMLInputElement, SimpleInputProps>(
   (
     {
       className = '',
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: SimpleInputProps,

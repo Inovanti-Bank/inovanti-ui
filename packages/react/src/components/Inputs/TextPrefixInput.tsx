@@ -20,7 +20,7 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
       className = '',
       error,
       prefix,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: TextPrefixInputProps,

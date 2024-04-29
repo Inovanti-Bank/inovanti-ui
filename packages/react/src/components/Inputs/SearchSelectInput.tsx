@@ -1,10 +1,10 @@
+import { cn } from '@/utils/cn'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'
-import { cn } from '@/utils/cn'
-import { SpaceType, resolveSpace } from '@inovanti/tokens'
 
 export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   label?: string
@@ -25,7 +25,7 @@ export const SearchSelectInput = forwardRef<
       className = '',
       error,
       data,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: SearchSelectInputProps,

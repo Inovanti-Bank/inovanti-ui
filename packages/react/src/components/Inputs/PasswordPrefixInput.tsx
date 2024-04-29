@@ -25,7 +25,7 @@ export const PasswordPrefixInput = forwardRef<HTMLInputElement, PasswordPrefixIn
       className = '',
       error,
       prefix,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: PasswordPrefixInputProps,

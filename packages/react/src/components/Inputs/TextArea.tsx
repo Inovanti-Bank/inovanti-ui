@@ -21,7 +21,7 @@ export const TextArea = forwardRef<
       label,
       className = '',
       error,
-      $width = '96',
+      $width = '80',
       $gridArea,
       ...props
     }: TextAreaProps,
