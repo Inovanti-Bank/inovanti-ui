@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/utils/cn'
 import { resolveSpace } from '@inovanti/tokens'
 import { ElementRef, forwardRef } from 'react'

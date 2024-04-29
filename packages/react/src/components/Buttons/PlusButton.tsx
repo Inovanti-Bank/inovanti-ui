@@ -1,3 +1,5 @@
+'use client'
+
 import { Plus } from '@phosphor-icons/react/dist/ssr/Plus';
 import { forwardRef, ComponentPropsWithoutRef } from 'react';
 

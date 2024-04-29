@@ -1,3 +1,5 @@
+'use client'
+
 import { User } from '@phosphor-icons/react/dist/ssr/User';
 import { ComponentProps } from 'react'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'

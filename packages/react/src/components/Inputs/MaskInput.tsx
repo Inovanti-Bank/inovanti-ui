@@ -1,3 +1,5 @@
+'use client'
+
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { PatternFormat } from 'react-number-format'
 import {

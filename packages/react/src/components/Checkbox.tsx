@@ -1,3 +1,5 @@
+'use client'
+
 import { Check } from '@phosphor-icons/react/dist/ssr/Check';
 import { ComponentProps } from 'react'
 import { cn } from '@/utils/cn'

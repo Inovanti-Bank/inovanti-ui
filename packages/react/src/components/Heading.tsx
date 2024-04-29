@@ -1,3 +1,5 @@
+'use client'
+
 import { FontSizesType, FontWeightsType } from '@inovanti/tokens';
 import { ElementType, HTMLAttributes, ReactNode, createElement, forwardRef } from 'react';
 import { cn } from '../utils/cn';
