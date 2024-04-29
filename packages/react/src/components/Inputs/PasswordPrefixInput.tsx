@@ -1,6 +1,7 @@
 import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
-import { Eye, EyeSlash } from 'phosphor-react'
+import { Eye } from '@phosphor-icons/react/dist/ssr/Eye'
+import { EyeSlash } from '@phosphor-icons/react/dist/ssr/EyeSlash'
 import { ComponentPropsWithoutRef, ReactNode, forwardRef, useState } from 'react'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'

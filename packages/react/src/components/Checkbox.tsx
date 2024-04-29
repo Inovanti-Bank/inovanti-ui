@@ -1,4 +1,4 @@
-import { Check } from 'phosphor-react'
+import { Check } from '@phosphor-icons/react/dist/ssr/Check';
 import { ComponentProps } from 'react'
 import { cn } from '@/utils/cn'
 import * as RadixCheckbox from '@radix-ui/react-checkbox'

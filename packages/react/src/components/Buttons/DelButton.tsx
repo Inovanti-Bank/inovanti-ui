@@ -1,4 +1,4 @@
-import { X } from 'phosphor-react';
+import { X } from '@phosphor-icons/react/dist/ssr/X';
 import { ComponentPropsWithoutRef, forwardRef } from 'react';
 
 export interface DelButtonProps extends ComponentPropsWithoutRef<'button'> { }

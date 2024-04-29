@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { cn } from "@/utils/cn"
-import { X } from "phosphor-react"
+import { X } from '@phosphor-icons/react/dist/ssr/X';
 
 const Dialog = DialogPrimitive.Root
 

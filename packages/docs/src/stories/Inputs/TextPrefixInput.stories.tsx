@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { TextPrefixInput, TextPrefixInputProps } from '@inovanti/react'
-import { User } from 'phosphor-react'
+import { User } from '@phosphor-icons/react/dist/ssr/User';
 import { getSizes } from '../../components/GetTokens'
 
 export default {

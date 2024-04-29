@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Box, Button, InputProps, SimpleTextInput } from '@inovanti/react'
-import { MagnifyingGlass } from 'phosphor-react'
+import { MagnifyingGlass } from '@phosphor-icons/react/dist/ssr/MagnifyingGlass';
 import { getSizes } from '../../components/GetTokens'
 
 export default {

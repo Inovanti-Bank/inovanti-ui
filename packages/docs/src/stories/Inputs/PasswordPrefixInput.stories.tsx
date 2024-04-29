@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { PasswordPrefixInput, PasswordPrefixInputProps } from '@inovanti/react'
-import { Key } from 'phosphor-react'
+import { Key } from '@phosphor-icons/react/dist/ssr/Key';
 import { getSizes } from '../../components/GetTokens'
 
 export default {
