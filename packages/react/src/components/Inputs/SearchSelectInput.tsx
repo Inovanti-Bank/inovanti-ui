@@ -1,7 +1,5 @@
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
-import { useTheme } from 'styled-components'
-import { Spaces } from '../../types/styles'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'

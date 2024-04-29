@@ -34,8 +34,6 @@ export * from './components/Buttons/PlusButton'
 export * from './components/Checkbox'
 export * from './components/Switch'
 
-export * from './styles/global'
-
 export * from './types/styles.d'
 
 import './styles/globals.css'
