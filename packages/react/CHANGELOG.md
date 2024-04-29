@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.1
+
+### Patch Changes
+
+- 96a5a3a: Changing from phosphor-react to @phosphor-icons/react to support ssr
+
 ## 3.0.0
 
 ### Major Changes
