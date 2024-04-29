@@ -1,11 +1,4 @@
 import { light } from '@inovanti/tokens'
-import 'styled-components'
-
-export type CustomTheme = typeof light
-
-declare module 'styled-components' {
-  export interface DefaultTheme extends CustomTheme {}
-}
 
 export type Colors = keyof typeof light.colors
 export type FontSizes = keyof typeof light.fontSizes
