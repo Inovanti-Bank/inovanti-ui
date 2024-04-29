@@ -1,11 +1,11 @@
 'use client'
 
+import { cn } from '@/utils/cn'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
+import { NumericFormat } from 'react-number-format'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
-import { SpaceType, resolveSpace } from '@inovanti/tokens'
-import { cn } from '@/utils/cn'
-import { NumericFormat } from 'react-number-format'
 import { baseInputStyles } from './BaseInput'
 
 export interface DecimalInputProps
@@ -26,7 +26,7 @@ export const DecimalInput = forwardRef<
       label,
       className,
       error,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: DecimalInputProps,

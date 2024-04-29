@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.3
+
+### Patch Changes
+
+- Setting default width of Inputs how 80
+
 ## 3.0.2
 
 ### Patch Changes
