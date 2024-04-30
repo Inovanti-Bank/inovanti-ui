@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Text, TextProps } from '@inovanti/react'
+import { Box, Text, TextProps } from '@inovanti/react'
 export default {
   title: 'Typography/Text',
   component: Text,
@@ -11,6 +11,15 @@ export default {
     $size: 'text-base',
     $fontWeight: 'font-normal',
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     
     $size: {

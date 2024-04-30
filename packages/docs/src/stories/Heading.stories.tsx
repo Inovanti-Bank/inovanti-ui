@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Heading, HeadingProps } from '@inovanti/react'
+import { Box, Heading, HeadingProps } from '@inovanti/react'
 export default {
   title: 'Typography/Heading',
   component: Heading,
@@ -11,6 +11,15 @@ export default {
     $size: 'text-lg',
     $fontWeight: 'font-semibold',
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     
     $size: {
