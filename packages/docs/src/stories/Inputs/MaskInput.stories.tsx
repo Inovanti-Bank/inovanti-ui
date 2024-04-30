@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { MaskInput, MaskInputProps } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, MaskInput, MaskInputProps } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/Mask Input',
@@ -13,6 +12,15 @@ export default {
     format: '##/##/####',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -28,16 +36,6 @@ export default {
 export const Primary: StoryObj<MaskInputProps> = {
   args: {
     placeholder: 'Digite sua data de nascimento',
-  },
-}
-
-export const CustomWidth: StoryObj<MaskInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 

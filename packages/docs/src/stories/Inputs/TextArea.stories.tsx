@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { TextAreaInputProps, TextArea } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, TextArea } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/TextArea',
@@ -12,6 +11,15 @@ export default {
     label: 'Descrição',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -19,25 +27,15 @@ export default {
     },
   },
   
-} as Meta<TextAreaInputProps>
+} as Meta<typeof TextArea>
 
-export const Primary: StoryObj<TextAreaInputProps> = {
+export const Primary: StoryObj<typeof TextArea> = {
   args: {
     placeholder: 'Escreva uma bela descrição',
   },
 }
 
-export const CustomWidth: StoryObj<TextAreaInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
-  },
-}
-
-export const Error: StoryObj<TextAreaInputProps> = {
+export const Error: StoryObj<typeof TextArea> = {
   args: {
     error: 'Descrição inválida'
     

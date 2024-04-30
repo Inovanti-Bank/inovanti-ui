@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { MultiSelectInput, SearchSelectInputProps } from '@inovanti/react'
+import { Box, MultiSelectInput, SearchSelectInputProps } from '@inovanti/react'
 import { mockDataProcess } from './mockData'
 
 export default {
@@ -14,6 +14,15 @@ export default {
     data: mockDataProcess
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',

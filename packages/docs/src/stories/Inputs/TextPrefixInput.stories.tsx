@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { TextPrefixInput, TextPrefixInputProps } from '@inovanti/react'
+import { Box, TextPrefixInput, TextPrefixInputProps } from '@inovanti/react';
 import { User } from '@phosphor-icons/react/dist/ssr/User';
-import { getSizes } from '../../components/GetTokens'
 
 export default {
   title: 'Form/Inputs/Text Prefix Input',
@@ -14,6 +13,15 @@ export default {
     prefix: 'inovanti.com.br/'
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -31,16 +39,6 @@ export const Primary: StoryObj<TextPrefixInputProps> = {
 export const WithIcon: StoryObj<TextPrefixInputProps> = {
   args: {
     prefix: <div style={{ paddingRight: '0.5rem',paddingLeft: '0.3rem' }}><User size={16} /></div>
-  },
-}
-
-export const CustomWidth: StoryObj<TextPrefixInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 

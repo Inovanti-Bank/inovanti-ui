@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Box, FileInput, InputProps } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
 
 export default {
   title: 'Form/Inputs/File Input',
@@ -12,6 +11,15 @@ export default {
     label: 'Selecione o arquivo',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -24,16 +32,6 @@ export default {
 export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Type of name',
-  },
-}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 

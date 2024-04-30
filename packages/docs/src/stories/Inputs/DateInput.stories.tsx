@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { DateInput, InputProps } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, DateInput, InputProps } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/Date Input',
@@ -13,6 +12,15 @@ export default {
     id: 'testing'
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -28,16 +36,6 @@ export default {
 export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Type of name',
-  },
-}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 
