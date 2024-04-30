@@ -180,6 +180,11 @@
 
     --scrollbar-thumb-color: #141414;
     --scrollbar-track-color: #444444;
+
+  }
+
+  .dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
   }
 
   body {
