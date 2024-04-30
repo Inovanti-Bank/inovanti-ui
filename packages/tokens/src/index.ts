@@ -1,5 +1,4 @@
-export * from './theme/dark'
-export * from './theme/light'
+export * from './theme/default'
 export * from './space'
 export * from './radii'
 export * from './fonts'

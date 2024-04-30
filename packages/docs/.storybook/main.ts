@@ -15,8 +15,8 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-a11y"),
-
-
+    getAbsolutePath("@storybook/addon-themes"),
+  
   ],
   staticDirs: ["../public"],
   framework: {

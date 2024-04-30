@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { InputProps, PasswordInput } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, InputProps, PasswordInput } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/Password Input',
@@ -13,6 +12,15 @@ export default {
     placeholder: 'Digite sua senha...'
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -23,16 +31,6 @@ export default {
 } as Meta<InputProps>
 
 export const Primary: StoryObj<InputProps> = {}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
-  },
-}
 
 export const Error: StoryObj<InputProps> = {
   args: {

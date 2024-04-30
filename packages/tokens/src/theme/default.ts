@@ -1,50 +1,48 @@
-import { fontSizes } from "../font-sizes"
-import { fontWeights } from "../font-weights"
-import { fonts } from "../fonts"
-import { lineHeights } from "../line-heights"
-import { radii } from "../radii"
-import { space } from "../space"
+export const inovantiDefaultTheme = {
+  black: '#000000',
+  white: '#ffffff',
 
-export const defaultColors = {
-    whiteFixed: '#FFF',
-    blackFixed: '#010101',
+  primary: '#f0e400',
+  secondary: '#e9e03a',
+  tertiary: '#d8ce18',
+  quaternary: '#f2ea5a',
 
-    primary50: '#FFF9C8',
-    primary100: '#FFF59D',
-    primary200: '#FFEF72',
-    primary300: '#FFEA47',
-    primary400: '#FFE41C',
-    primary450: '#FFDE00',
-    primary500: '#EED800',
-    primary600: '#CDC100',
-    primary700: '#ABA900',
-    primary800: '#8A9200',
-    primary900: '#686A00',
-    primary950: '#464300',
-
-    grayFixed50: '#E1E1E6',
-    grayFixed100: '#E1E1E6',
-    grayFixed200: '#A9A9B2',
-    grayFixed400: '#7C7C8A',
-    grayFixed500: '#505059',
-    grayFixed600: '#323238',
-    grayFixed700: '#29292E',
-    grayFixed800: '#202024',
-    grayFixed900: '#121214',
-
-    pastelPurple: '#dbcdf0',
-    pastelBlue: '#BAE1FF',
-    pastelGreen: '#BAFFC9',
-    pastelYellow: '#FFFFBA',
-    pastelOrange: '#FFDFBA',
-    pastelRed: '#FFB3BA',
+  'gray-50': '#f2f2f2',
+  'gray-100': '#e6e6e6',
+  'gray-150': '#d9d9d9',
+  'gray-200': '#cccccc',
+  'gray-300': '#b3b3b3',
+  'gray-400': '#999999',
+  'gray-500': '#808080',
+  'gray-600': '#666666',
+  'gray-700': '#4d4d4d',
+  'gray-800': '#333333',
+  'gray-850': '#262626',
+  'gray-900': '#1a1a1a',
+  'gray-950': '#0d0d0d',
 }
 
-export const base = {
-  fontSizes,
-  fontWeights,
-  fonts,
-  lineHeights,
-  radii,
-  space,
+export const inovantiDarkTheme = {
+  black: '#ffffff',
+  white: '#000000',
+
+  primary: '#f0e400',
+  secondary: '#e9e03a',
+  tertiary: '#d8ce18',
+  quaternary: '#f2ea5a',
+
+  'gray-50': '#0d0d0d',
+  'gray-100': '#1a1a1a',
+  'gray-150': '#262626',
+  'gray-200': '#333333',
+  'gray-300': '#4d4d4d',
+  'gray-400': '#666666',
+  'gray-500': '#808080',
+  'gray-600': '#999999',
+  'gray-700': '#b3b3b3',
+  'gray-800': '#cccccc',
+  'gray-850': '#d9d9d9',
+  'gray-900': '#e6e6e6',
+  'gray-950': '#f2f2f2',
+  
 }

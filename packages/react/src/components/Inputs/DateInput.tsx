@@ -32,7 +32,7 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
           <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         }
         <BaseInput
-          className={className}
+          className={`dark ${className}`}
           type="date"
           ref={ref}
           {...props}

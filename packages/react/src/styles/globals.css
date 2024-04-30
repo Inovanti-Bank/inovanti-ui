@@ -86,16 +86,16 @@
     --card: 0 0% 100%;
     --card-foreground: 71 47.4% 11.2%;
 
-    --primary: 57 89% 45%;
+    --primary: 57 100% 47%;
     --primary-foreground: 70 40% 98%;
 
-    --secondary: 70 40% 96.1%;
+    --secondary: 57 80% 57%;
     --secondary-foreground: 71 47.4% 11.2%;
 
-    --tertiary: 57 89% 45%;
+    --tertiary: 57 80% 47%;
     --tertiary-foreground: 70 40% 98%;
 
-    --quaternary: 70 40% 96.1%;
+    --quaternary: 57 85% 65%;
     --quaternary-foreground: 71 47.4% 11.2%;
 
     --accent: 70 3% 13%;
@@ -116,6 +116,22 @@
 
     --scrollbar-thumb-color: #d7d7d7;
     --scrollbar-track-color: #ededed;
+
+    --white: 0 0% 100%;
+    --gray-50: 0 0% 95%;
+    --gray-100: 0 0% 90%;
+    --gray-150: 0 0% 85%;
+    --gray-200: 0 0% 80%;
+    --gray-300: 0 0% 70%;
+    --gray-400: 0 0% 60%;
+    --gray-500: 0 0% 50%;
+    --gray-600: 0 0% 40%;
+    --gray-700: 0 0% 30%;
+    --gray-800: 0 0% 20%;
+    --gray-850: 0 0% 15%;
+    --gray-900: 0 0% 10%;
+    --gray-950: 0 0% 5%;
+    --black: 0 0% 0%;
   }
 
   .dark {
@@ -137,7 +153,7 @@
     --card: 72 71% 4%;
     --card-foreground: 62 31% 91%;
 
-    --primary: 57 89% 45%;
+    --primary: 57 100% 47%;
     --primary-foreground: 70 40% 98%;
 
     --secondary: 70 40% 96.1%;
@@ -164,6 +180,11 @@
 
     --scrollbar-thumb-color: #141414;
     --scrollbar-track-color: #444444;
+
+  }
+
+  .dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
   }
 
   body {

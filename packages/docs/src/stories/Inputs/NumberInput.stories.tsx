@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { InputProps, NumberInput } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, InputProps, NumberInput } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/Number Input',
@@ -12,6 +11,15 @@ export default {
     label: 'Idade',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -24,16 +32,6 @@ export default {
 export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Digite sua idade',
-  },
-}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 

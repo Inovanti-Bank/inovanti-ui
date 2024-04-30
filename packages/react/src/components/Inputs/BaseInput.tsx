@@ -27,14 +27,14 @@ export const BaseInput = forwardRef<HTMLInputElement, BaseInputProps>(
 BaseInput.displayName = 'BaseInput'
 
 export const baseInputStyles = (className?: string) => {
-    return cn(
+  return cn(
         'cursor-text px-3 py-2 rounded-sm text-base',
         'disabled:cursor-not-allowed',
-        'border border-primary',
-        'focus:border-secondary focus:outline-none focus:opacity-100',
-        'bg-background opacity-95',
-        'text-gray-primary',
-        'placeholder:text-gray-tertiary',
+        'border border-primary/65',
+        'focus:border-primary/100 focus:outline-none focus:opacity-100',
+        'bg-white dark:bg-gray-850 opacity-95',
+        'text-black dark:text-white',
+        'placeholder:text-gray-400',
         className
     )
 }

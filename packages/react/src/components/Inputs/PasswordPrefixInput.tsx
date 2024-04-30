@@ -58,15 +58,16 @@ export const PasswordPrefixInput = forwardRef<HTMLInputElement, PasswordPrefixIn
           <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         }
         <div className={cn(
-          'input-with-prefix flex items-center w-full text-base bg-background text-gray-primary',
+          'input-with-prefix flex items-center w-full text-base',
+          'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white',
           'rounded-sm px-3 py-2',
-          'border border-primary',
+          'border border-primary/65',
           className
         )}>
           <span className='text-gray-secondary'>{prefix}</span>
           <div className='flex-1 relative w-full h-full'>
             <input
-              className='w-full h-full cursor-text bg-transparent focus:outline-none disabled:cursor-not-allowed placeholder:text-gray-tertiary'
+              className='w-full h-full cursor-text bg-transparent focus:outline-none disabled:cursor-not-allowed placeholder:text-gray-400 dark:placeholder:text-gray-400'
               type={inputPasswordType}
               ref={ref}
               {...props}

@@ -22,7 +22,7 @@ export function Avatar({size= 'md', ...props}: AvatarProps) {
       />
       <AvatarPrimitive.Fallback
         className={cn(
-          'flex items-center justify-center text-accent bg-primary-foreground',
+          'flex items-center justify-center text-accent bg-gray-150 dark:bg-gray-700 text-black dark:text-white',
           size === 'md' ? 'w-16 h-16' : 'w-10 h-10',
         )}
         delayMs={600}

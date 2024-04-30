@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Box, Button, InputProps, SimpleTextInput } from '@inovanti/react'
+import { Box, Button, InputProps, SimpleTextInput } from '@inovanti/react';
 import { MagnifyingGlass } from '@phosphor-icons/react/dist/ssr/MagnifyingGlass';
-import { getSizes } from '../../components/GetTokens'
 
 export default {
   title: 'Form/Inputs/Simple Text Input',
@@ -12,6 +11,7 @@ export default {
     inputSize: 'md',
     
   },
+  
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -25,38 +25,29 @@ export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Type of name',
   },
-}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
     },
-    
-  },
+  ],
 }
 
 export const SearchBar: StoryObj<InputProps> = {
     argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
     },
     args: {
-    width: 96,
+    placeholder: 'Pesquise por nome...'
   },
   decorators: [
     (Story) => {
       return (
-        <Box
-          as="label"
-          style={{ display: 'flex', flexDirection: 'row', gap: '0.5rem', alignItems: 'center' }}
-        >
+        <Box as="label">
           {Story()}
-          <Button width={10} color='primary450'><MagnifyingGlass /></Button>
+          <Button color='primary450'><MagnifyingGlass /></Button>
         </Box>
       )
     },
