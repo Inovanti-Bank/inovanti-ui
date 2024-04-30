@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.4
+
+### Patch Changes
+
+- Adaptations to support dark theme and a better colors management
+
 ## 3.0.3
 
 ### Patch Changes
