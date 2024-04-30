@@ -1,12 +1,13 @@
 {
   "name": "@inovanti/react",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/**"
+    "dist/**",
+    "tailwind.config.ts"
   ],
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
