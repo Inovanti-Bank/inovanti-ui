@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.5
+
+### Patch Changes
+
+- Add tailwind to build
+
 ## 3.0.4
 
 ### Patch Changes
