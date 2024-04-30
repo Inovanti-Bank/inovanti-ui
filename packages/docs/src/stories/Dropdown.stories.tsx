@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Avatar, Box, Dropdown, DropdownProps, Switch, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Avatar, Box, Dropdown, DropdownProps, Switch } from '@inovanti/react'
 
 export default {
   title: 'Data display/Dropdown',
@@ -64,18 +63,3 @@ export default {
 } as Meta<DropdownProps>
 
 export const Primary: StoryObj<DropdownProps> = {}
-
-export const LightTheme: StoryObj<DropdownProps> = {
-  decorators: [
-    (Story) => {
-      return (
-        <ThemeProvider theme={light}>
-          {Story()}
-        </ThemeProvider>
-      )
-    },
-  ],
-}
-
-
-

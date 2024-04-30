@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, FileInput, InputProps, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
-import { getSizes } from '../../components/GetTokens'
+import { Box, FileInput, InputProps } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/File Input',
@@ -13,6 +11,15 @@ export default {
     label: 'Selecione o arquivo',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -28,16 +35,6 @@ export const Primary: StoryObj<InputProps> = {
   },
 }
 
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
-  },
-}
-
 export const SelectedFile: StoryObj<InputProps> = {
   args: {
     label: 'testando.html'
@@ -48,18 +45,4 @@ export const Error: StoryObj<InputProps> = {
   args: {
     error: 'Formato inválido'
   },
-}
-
-export const LightTheme: StoryObj<InputProps> = {
-  decorators: [
-    (Story) => {
-      return (
-        <ThemeProvider theme={light}>
-          <Box>
-          {Story()}
-          </Box>
-        </ThemeProvider>
-      )
-    },
-  ],
 }

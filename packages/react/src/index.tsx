@@ -7,8 +7,11 @@ export * from './components/SimpleLoading'
 
 export * from './components/Avatar'
 export * from './components/Dropdown'
-export * from './components/Toast'
 export * from './components/Tooltip'
+export * from './components/Toast/toast'
+export * from './components/Toast/toaster'
+export * from './components/Toast/toaster'
+export * from './components/Toast/use-toast'
 
 export * from './components/Heading'
 export * from './components/Text'
@@ -33,8 +36,6 @@ export * from './components/Buttons/DelButton'
 export * from './components/Buttons/PlusButton'
 export * from './components/Checkbox'
 export * from './components/Switch'
-
-export * from './styles/global'
 
 export * from './types/styles.d'
 

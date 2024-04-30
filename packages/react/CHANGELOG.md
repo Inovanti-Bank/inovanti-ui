@@ -1,5 +1,41 @@
 # @inovanti/react
 
+## 3.0.5
+
+### Patch Changes
+
+- Add tailwind to build
+
+## 3.0.4
+
+### Patch Changes
+
+- Adaptations to support dark theme and a better colors management
+
+## 3.0.3
+
+### Patch Changes
+
+- Setting default width of Inputs how 80
+
+## 3.0.2
+
+### Patch Changes
+
+- Add support to ssr with 'use client' statement
+
+## 3.0.1
+
+### Patch Changes
+
+- 96a5a3a: Changing from phosphor-react to @phosphor-icons/react to support ssr
+
+## 3.0.0
+
+### Major Changes
+
+- Change styles framework from styled-components to tailwind
+
 ## 2.2.5
 
 ### Patch Changes

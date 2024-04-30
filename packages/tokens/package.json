@@ -1,6 +1,6 @@
 {
   "name": "@inovanti/tokens",
-  "version": "1.1.4",
+  "version": "2.0.1",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require('tailwindcss/colors')
 
 export default {
   darkMode: ["class"],
@@ -17,49 +18,75 @@ export default {
         "2xl": "1400px",
       },
     },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      yellow: colors.yellow,
+      green: colors.green,
+      blue: colors.blue,
+      red: colors.red,
+      purple: colors.purple,
+      white: "hsl(var(--white))",
+      dark: "hsl(var(--dark))",
+      gray: {
+        '50': "hsl(var(--gray-50))",
+        '100': "hsl(var(--gray-100))",
+        '150': "hsl(var(--gray-150))",
+        '200': "hsl(var(--gray-200))",
+        '300': "hsl(var(--gray-300))",
+        '400': "hsl(var(--gray-400))",
+        '500': "hsl(var(--gray-500))",
+        '600': "hsl(var(--gray-600))",
+        '700': "hsl(var(--gray-700))",
+        '800': "hsl(var(--gray-800))",
+        '850': "hsl(var(--gray-850))",
+        '900': "hsl(var(--gray-900))",
+      },
+      border: "hsl(var(--border))",
+      input: "hsl(var(--input))",
+      ring: "hsl(var(--ring))",
+      background: "hsl(var(--background))",
+      foreground: "hsl(var(--foreground))",
+      primary: {
+        DEFAULT: "hsl(var(--primary))",
+        foreground: "hsl(var(--primary-foreground))",
+      },
+      secondary: {
+        DEFAULT: "hsl(var(--secondary))",
+        foreground: "hsl(var(--secondary-foreground))",
+      },
+      tertiary: {
+        DEFAULT: "hsl(var(--tertiary))",
+        foreground: "hsl(var(--tertiary-foreground))",
+      },
+      quaternary: {
+        DEFAULT: "hsl(var(--quaternary))",
+        foreground: "hsl(var(--quaternary-foreground))",
+      },
+      destructive: {
+        DEFAULT: "hsl(var(--destructive))",
+        foreground: "hsl(var(--destructive-foreground))",
+      },
+      muted: {
+        DEFAULT: "hsl(var(--muted))",
+        foreground: "hsl(var(--muted-foreground))",
+      },
+      accent: {
+        DEFAULT: "hsl(var(--accent))",
+        foreground: "hsl(var(--accent-foreground))",
+      },
+      popover: {
+        DEFAULT: "hsl(var(--popover))",
+        foreground: "hsl(var(--popover-foreground))",
+      },
+      card: {
+        DEFAULT: "hsl(var(--card))",
+        foreground: "hsl(var(--card-foreground))",
+      }
+    },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        tertiary: {
-          DEFAULT: "hsl(var(--tertiary))",
-          foreground: "hsl(var(--tertiary-foreground))",
-        },
-        quaternary: {
-          DEFAULT: "hsl(var(--quaternary))",
-          foreground: "hsl(var(--quaternary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        
       },
       textColor: {
         gray: {
@@ -101,6 +128,14 @@ export default {
           from: { opacity: '0', transform: 'translateX(-2px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
         },
+        slideIn: {
+          from: { transform: 'translateY(-100%)' },
+          to: { transform: 'translateY(0)' },
+        },
+        slideOut: {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(-100%)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -109,6 +144,8 @@ export default {
         slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideRightAndFade: 'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideIn: 'slideIn 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideOut: 'slideOut 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

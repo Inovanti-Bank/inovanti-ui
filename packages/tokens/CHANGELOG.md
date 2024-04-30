@@ -1,5 +1,17 @@
 # @inovanti/tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- Reestruturation in tokens
+
+## 2.0.0
+
+### Major Changes
+
+- Change styles framework from styled-components to tailwind
+
 ## 1.1.4
 
 ### Patch Changes

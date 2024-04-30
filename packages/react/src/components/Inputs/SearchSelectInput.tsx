@@ -1,12 +1,10 @@
+import { cn } from '@/utils/cn'
+import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
-import { useTheme } from 'styled-components'
-import { Spaces } from '../../types/styles'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'
-import { cn } from '@/utils/cn'
-import { SpaceType, resolveSpace } from '@inovanti/tokens'
 
 export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   label?: string
@@ -27,7 +25,7 @@ export const SearchSelectInput = forwardRef<
       className = '',
       error,
       data,
-      $width = '64',
+      $width = '80',
       $gridArea,
       ...props
     }: SearchSelectInputProps,
@@ -50,20 +48,20 @@ export const SearchSelectInput = forwardRef<
           unstyled
           classNames={{ 
             control: (state) => cn(
-              'cursor-pointer bg-background text-gray-primary rounded-sm w-full px-3 py-2 border',
-              state.isFocused ? 'border-secondary' : 'border-primary'
+              'cursor-pointer rounded-sm w-full px-3 py-2 border disabled:cursor-not-allowed',
+              'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white',
+              state.isFocused ? 'border-primary/100 outline-none opacity-100' : 'border-primary/65'
             ),
             placeholder: (_) => cn(
-              'text-gray-tertiary text-center',
+              'text-gray-400 text-center',
             ),
             menu: (_) => cn(
-              'border border-primary rounded-sm mt-1 bg-background'
+              'border border-primary rounded-sm mt-1 bg-white dark:bg-gray-850'
             ),
             option: (_) => cn(
-              'cursor-pointer rounded-sm border-b border-primary',
-              'text-gray-primary bg-background',
-              'hover:bg-background/70 px-3 py-2',
-              
+              'rounded-sm border-b border-primary',
+              'text-black dark:text-white bg-white dark:bg-gray-850 opacity-90',
+              'hover:opacity-100 px-3 py-2',
             ),
            }}
           styles={{
@@ -75,6 +73,7 @@ export const SearchSelectInput = forwardRef<
             }),
             option: (baseStyles) => ({
               ...baseStyles,
+              cursor: 'pointer'
             }),
             menu: (baseStyles) => ({
               ...baseStyles,

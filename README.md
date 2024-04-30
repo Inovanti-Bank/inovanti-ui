@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./.vscode/logo-dark.png" alt="Logo Inovanti">
+  <img src="./.vscode/logo.png" alt="Logo Inovanti">
 </p>
 
 <h1 align="center">

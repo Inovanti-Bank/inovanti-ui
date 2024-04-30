@@ -1,10 +1,12 @@
+'use client'
+
+import { cn } from '@/utils/cn'
+import { resolveSpace } from '@inovanti/tokens'
 import { ElementRef, forwardRef } from 'react'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
-import { InputProps } from './common'
-import { cn } from '@/utils/cn'
-import { resolveSpace } from '@inovanti/tokens'
 import { BaseInput } from './BaseInput'
+import { InputProps } from './common'
 
 export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
   (
@@ -12,7 +14,7 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
       label,
       className = '',
       error,
-      $width = '96',
+      $width = '80',
       $gridArea,
       ...props
     }: InputProps,
@@ -30,7 +32,7 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
           <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
         }
         <BaseInput
-          className={className}
+          className={`dark ${className}`}
           type="date"
           ref={ref}
           {...props}

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { SearchSelectInput, SearchSelectInputProps } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, SearchSelectInput, SearchSelectInputProps } from '@inovanti/react'
 import { mockData } from './mockData'
 
 export default {
@@ -14,6 +13,15 @@ export default {
     data: mockData
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -28,16 +36,6 @@ export default {
 
 export const Primary: StoryObj<SearchSelectInputProps> = {
   args: {},
-}
-
-export const CustomWidth: StoryObj<SearchSelectInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
-  },
 }
 
 export const Error: StoryObj<SearchSelectInputProps> = {

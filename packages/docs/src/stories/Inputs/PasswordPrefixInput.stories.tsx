@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { PasswordPrefixInput, PasswordPrefixInputProps } from '@inovanti/react'
-import { Key } from 'phosphor-react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, PasswordPrefixInput, PasswordPrefixInputProps } from '@inovanti/react';
+import { Key } from '@phosphor-icons/react/dist/ssr/Key';
 
 export default {
   title: 'Form/Inputs/Password Prefix Input',
@@ -14,6 +13,15 @@ export default {
     prefix: <div style={{ paddingRight: '0.5rem', paddingLeft: '0.3rem' }}><Key size={16} /></div>
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -25,16 +33,6 @@ export default {
 
 export const Primary: StoryObj<PasswordPrefixInputProps> = {
   args: {
-  },
-}
-
-export const CustomWidth: StoryObj<PasswordPrefixInputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 

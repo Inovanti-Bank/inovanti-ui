@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Box, Switch, SwitchProps, Text, light } from '@inovanti/react'
-import { ThemeProvider } from 'styled-components'
+import { Box, Switch, SwitchProps, Text } from '@inovanti/react'
 
 export default {
   title: 'Form/Buttons/Switch',

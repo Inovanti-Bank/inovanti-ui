@@ -1,12 +1,13 @@
 {
   "name": "@inovanti/react",
-  "version": "2.2.5",
+  "version": "3.0.5",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/**"
+    "dist/**",
+    "tailwind.config.ts"
   ],
   "scripts": {
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
@@ -31,7 +32,6 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.373.0",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "tailwindcss": "^3.4.3",
@@ -40,6 +40,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.5",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -48,14 +49,11 @@
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@types/styled-components": "^5.1.30",
     "date-fns": "^2.30.0",
-    "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react-modal": "^3.16.1",
     "react-number-format": "^5.3.1",
     "react-select": "^5.8.0",
-    "styled-components": "^6.1.1",
     "tailwind-merge": "^2.3.0"
   }
 }

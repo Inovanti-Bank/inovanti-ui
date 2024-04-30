@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, Text } from '@inovanti/react'
+import { Box, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, Text } from '@inovanti/react'
 import { ReactNode } from 'react'
 
 const DialogDemo = ({trigger}: {trigger: ReactNode}) => {
@@ -25,6 +25,15 @@ export default {
   args: {
     trigger: <Text className='cursor-pointer'>Click here to open it</Text>,
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   parameters: {
     docs: {
       source: {

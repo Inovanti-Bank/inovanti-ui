@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/utils/cn'
 import { resolveSpace } from '@inovanti/tokens'
 import { ElementRef, forwardRef } from 'react'
@@ -11,7 +13,7 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
       label,
       className = '',
       error,
-      $width = '96',
+      $width = '80',
       $gridArea,
       ...props
     }: InputProps,
@@ -24,13 +26,12 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
       )}>
       <div
         className={cn(
-          'w-full cursor-pointer text-center flex flex-row text-sm border-[0.7px] rounded-sm',
-          'font-bold',
+          'w-full cursor-pointer text-center flex flex-row text-sm border rounded-sm',
           'transition-[0.2s]',
-          'border border-primary',
-          'focus:border-secondary focus:outline-none focus:opacity-100',
-          'bg-background opacity-95',
-          'text-gray-primary',
+          'border border-primary/65',
+          'focus:border-primary/100 focus:outline-none focus:opacity-100',
+          'bg-white dark:bg-gray-850 opacity-95',
+          'text-black dark:text-white',
           className,
           
         )}

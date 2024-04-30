@@ -1,4 +1,6 @@
-import { Plus } from 'phosphor-react';
+'use client'
+
+import { Plus } from '@phosphor-icons/react/dist/ssr/Plus';
 import { forwardRef, ComponentPropsWithoutRef } from 'react';
 
 export interface PlusButtonProps extends ComponentPropsWithoutRef<'button'> {}

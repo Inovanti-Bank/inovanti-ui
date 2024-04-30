@@ -12,7 +12,7 @@ export const NumberInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
       label,
       className = '',
       error,
-      $width = '96',
+      $width = '80',
       $gridArea,
       ...props
     }: InputProps,

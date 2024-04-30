@@ -1,3 +1,5 @@
+'use client'
+
 import { ElementType, forwardRef, ReactNode, Ref } from 'react';
 import { cn } from '../utils/cn';
 export interface BoxProps {
@@ -12,7 +14,9 @@ export const Box = forwardRef(
       <Component
         ref={ref}
         className={cn(
-          'flex flex-row gap-1 p-6 rounded-md bg-slate-100 dark:bg-gray-900 border border-gray-150 text-black dark:text-white',
+          'flex flex-row gap-1 p-6 rounded-md border',
+          'bg-gray-50 text-gray-950 border-gray-150',
+          'dark:bg-gray-850 dark:text-gray-50 dark:border-gray-900',
           className
         )}
       >

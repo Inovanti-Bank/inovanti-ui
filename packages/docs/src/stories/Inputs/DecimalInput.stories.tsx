@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { DecimalInput, InputProps } from '@inovanti/react'
-import { getSizes } from '../../components/GetTokens'
+import { Box, DecimalInput, InputProps } from '@inovanti/react'
 
 export default {
   title: 'Form/Inputs/Decimal Input',
@@ -12,6 +11,15 @@ export default {
     label: 'Qual o seu peso?',
     
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    },
+  ],
   argTypes: {
     inputSize: {
       control:  'inline-radio',
@@ -24,16 +32,6 @@ export default {
 export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: 'Digite seu peso',
-  },
-}
-
-export const CustomWidth: StoryObj<InputProps> = {
-  argTypes: {
-    width: {
-      control: 'inline-radio',
-      options: getSizes()
-    },
-    
   },
 }
 
