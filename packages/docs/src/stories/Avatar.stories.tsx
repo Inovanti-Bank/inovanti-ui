@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Avatar, AvatarProps } from '@inovanti/react'
+import { Avatar, AvatarProps, Box } from '@inovanti/react'
 
 export default {
   title: 'Data display/Avatar',
@@ -25,6 +25,15 @@ export default {
       },
     },
   },
+  decorators: [
+        (Story) => {
+          return (
+            <Box>
+              {Story()}
+            </Box>
+          )
+        },
+      ],
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
