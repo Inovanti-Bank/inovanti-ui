@@ -1,9 +1,9 @@
-import { dark } from "@inovanti/tokens"
+import { inovantiDefaultTheme, space } from "@inovanti/tokens"
 
 export function getColors() {
-  return Object.keys(dark.colors)
+  return Object.keys(inovantiDefaultTheme)
 }
 
 export function getSizes() {
-  return Object.keys(dark.space)
+  return Object.keys(space)
 }

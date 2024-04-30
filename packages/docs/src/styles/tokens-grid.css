@@ -26,5 +26,5 @@
 }
 
 .tokens-grid tbody tr:ntn-child(even) td {
-    background: #444;
+    background: #000000;
 }
