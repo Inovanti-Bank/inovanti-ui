@@ -41,6 +41,7 @@ export default {
         '800': "hsl(var(--gray-800))",
         '850': "hsl(var(--gray-850))",
         '900': "hsl(var(--gray-900))",
+        '950': "hsl(var(--gray-950))",
       },
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
