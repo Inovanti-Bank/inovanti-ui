@@ -41,7 +41,7 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
           'input-with-prefix flex items-center w-full text-base',
           'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white',
           'rounded-sm px-3 py-2',
-          'border border-primary/65',
+          'border border-primary',
           className
         )}>
         <span className='text-gray-secondary'>{prefix}</span>

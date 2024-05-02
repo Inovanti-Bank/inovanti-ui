@@ -1,5 +1,11 @@
 # @inovanti/tokens
 
+## 2.0.2
+
+### Patch Changes
+
+- Changing border of inputs and adjusts in tokens of colors
+
 ## 2.0.1
 
 ### Patch Changes
