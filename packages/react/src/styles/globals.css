@@ -89,13 +89,13 @@
     --primary: 57 100% 47%;
     --primary-foreground: 70 40% 98%;
 
-    --secondary: 57 80% 57%;
+    --secondary: 57 85% 47%;
     --secondary-foreground: 71 47.4% 11.2%;
 
-    --tertiary: 57 80% 47%;
+    --tertiary: 57 85% 65%;
     --tertiary-foreground: 70 40% 98%;
 
-    --quaternary: 57 85% 65%;
+    --quaternary: 57 96% 40%;
     --quaternary-foreground: 71 47.4% 11.2%;
 
     --accent: 70 3% 13%;
@@ -152,18 +152,6 @@
 
     --card: 72 71% 4%;
     --card-foreground: 62 31% 91%;
-
-    --primary: 57 100% 47%;
-    --primary-foreground: 70 40% 98%;
-
-    --secondary: 70 40% 96.1%;
-    --secondary-foreground: 71 47.4% 11.2%;
-
-    --tertiary: 57 89% 45%;
-    --tertiary-foreground: 70 40% 98%;
-
-    --quaternary: 70 40% 96.1%;
-    --quaternary-foreground: 71 47.4% 11.2%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 66 40% 98%;

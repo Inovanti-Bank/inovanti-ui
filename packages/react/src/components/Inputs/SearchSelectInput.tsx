@@ -50,7 +50,7 @@ export const SearchSelectInput = forwardRef<
             control: (state) => cn(
               'cursor-pointer rounded-sm w-full px-3 py-2 border disabled:cursor-not-allowed',
               'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white',
-              state.isFocused ? 'border-primary/100 outline-none opacity-100' : 'border-primary/65'
+              state.isFocused ? 'border-quaternary outline-none opacity-100' : 'border-primary'
             ),
             placeholder: (_) => cn(
               'text-gray-400 text-center',

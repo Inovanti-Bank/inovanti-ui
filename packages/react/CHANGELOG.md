@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.6
+
+### Patch Changes
+
+- Changing border of inputs and adjusts in tokens of colors
+
 ## 3.0.5
 
 ### Patch Changes

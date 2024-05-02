@@ -2,10 +2,10 @@ export const inovantiDefaultTheme = {
   black: '#000000',
   white: '#ffffff',
 
-  primary: '#f0e400',
-  secondary: '#e9e03a',
-  tertiary: '#d8ce18',
-  quaternary: '#f2ea5a',
+  primary: '#F0E400',
+  secondary: '#e0d612',
+  tertiary: '#f2ea5a',
+  quaternary: '#c8be04',
 
   'gray-50': '#f2f2f2',
   'gray-100': '#e6e6e6',

@@ -1,6 +1,6 @@
 .input-with-prefix {
     &:has(input:focus) {
-        @apply border-primary/100 outline-none opacity-100
+        @apply border-quaternary outline-none opacity-100
     }
 
     &:has(input:disabled) {
