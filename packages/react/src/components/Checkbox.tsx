@@ -1,42 +1,31 @@
-'use client'
+"use client"
 
-import { Check } from '@phosphor-icons/react/dist/ssr/Check';
-import { ComponentProps } from 'react'
-import { cn } from '@/utils/cn'
-import * as RadixCheckbox from '@radix-ui/react-checkbox'
+import { cn } from "@/utils/cn"
+import { Check } from "@phosphor-icons/react/dist/ssr"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import * as React from "react"
 
-export interface CheckboxProps
-  extends ComponentProps<typeof RadixCheckbox.Root> {
-  className: string
-  indicatorClassName: string
-  }
 
-export function Checkbox({className, indicatorClassName, ...props}: CheckboxProps) {
-  return (
-    <RadixCheckbox.Root
-      className={cn(
-        'w-6 h-6 bg-white rounded-sm leading-[0] cursor-pointer box-border',
-        'flex items-center justify-center border border-gray-700',
-        'disabled:bg-gray-300 disabled:cursor-not-allowed',
-        'data-[state=checked]:bg-primary',
-        'focus:data-[state=checked]:border-primary',
-        className
-      )}
-      {...props}
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "peer h-5 w-5 shrink-0 rounded-sm border border-secondary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary",
+      className
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-black dark:text-black")}
     >
-      <RadixCheckbox.Indicator
-        className={cn(
-          'text-black w-4 h-4',
-          'data-[state=checked]:animate-slideIn',
-          'data-[state=unchecked]:animate-slideOut',
-          indicatorClassName
-        )}
-        asChild
-      >
-        <Check weight="bold" />
-      </RadixCheckbox.Indicator>
-    </RadixCheckbox.Root>
-  )
-}
+      <Check className="h-4 w-4"  weight="bold" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-Checkbox.displayName = 'Checkbox'
+export { Checkbox }
+

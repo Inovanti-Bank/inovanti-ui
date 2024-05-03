@@ -27,7 +27,7 @@ export default {
       red: colors.red,
       purple: colors.purple,
       white: "hsl(var(--white))",
-      dark: "hsl(var(--dark))",
+      black: "hsl(var(--black))",
       gray: {
         '50': "hsl(var(--gray-50))",
         '100': "hsl(var(--gray-100))",

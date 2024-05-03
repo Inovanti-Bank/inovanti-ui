@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.7
+
+### Patch Changes
+
+- Transformation in checkbox primitive
+
 ## 3.0.6
 
 ### Patch Changes
