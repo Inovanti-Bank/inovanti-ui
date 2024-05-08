@@ -1,17 +1,16 @@
 export * from './components/Box'
+export * from './components/Dialog'
 export * from './components/FormAlert'
 export * from './components/FullScreenLoading'
-export * from './components/Dialog'
 export * from './components/SimpleLoading'
 
 
 export * from './components/Avatar'
 export * from './components/Dropdown'
-export * from './components/Tooltip'
 export * from './components/Toast/toast'
 export * from './components/Toast/toaster'
-export * from './components/Toast/toaster'
 export * from './components/Toast/use-toast'
+export * from './components/Tooltip'
 
 export * from './components/Heading'
 export * from './components/Text'
@@ -35,6 +34,7 @@ export * from './components/Buttons/Button'
 export * from './components/Buttons/DelButton'
 export * from './components/Buttons/PlusButton'
 export * from './components/Checkbox'
+export * from './components/Skeleton'
 export * from './components/Switch'
 
 export * from './types/styles.d'
