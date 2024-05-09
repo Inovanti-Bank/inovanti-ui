@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.9
+
+### Patch Changes
+
+- Alter color of skeleton
+
 ## 3.0.8
 
 ### Patch Changes
