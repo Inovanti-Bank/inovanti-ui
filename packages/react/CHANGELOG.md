@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.11
+
+### Patch Changes
+
+- New Style in viewportToast
+
 ## 3.0.10
 
 ### Patch Changes
