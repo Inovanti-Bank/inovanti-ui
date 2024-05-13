@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.12
+
+### Patch Changes
+
+- Add more styles to toast
+
 ## 3.0.11
 
 ### Patch Changes
