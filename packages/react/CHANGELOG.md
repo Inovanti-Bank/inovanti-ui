@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.13
+
+### Patch Changes
+
+- Now goes
+
 ## 3.0.12
 
 ### Patch Changes
