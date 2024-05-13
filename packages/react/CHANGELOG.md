@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.10
+
+### Patch Changes
+
+- A little update in Toast component
+
 ## 3.0.9
 
 ### Patch Changes
