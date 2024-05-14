@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.15
+
+### Patch Changes
+
+- Increase padding in DialogContent
+
 ## 3.0.14
 
 ### Patch Changes
