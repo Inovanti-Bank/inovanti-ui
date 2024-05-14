@@ -12,6 +12,12 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
     $width?: SpaceType
 }
 
+export const buttonStyles = cn(
+  'button cursor-pointer flex flex-row gap-2 justify-center items-center rounded-sm p-2 font-semibold',
+  'disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-700',
+  'border border-transparent focus:border-primary',
+  'bg-primary',
+  'text-accent')
 
 export const Button = forwardRef<
   HTMLButtonElement,
@@ -25,12 +31,8 @@ export const Button = forwardRef<
     return (
         <button
             className={cn(
-                'button cursor-pointer flex flex-row gap-2 justify-center items-center rounded-sm p-2 font-semibold',
                 `${resolveSpace($width)}`,
-                'disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray700',
-                'border border-transparent focus:border-primary',
-                'bg-primary',
-                'text-accent',
+                buttonStyles,
                 className
             )}
             ref={ref}

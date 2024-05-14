@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.16
+
+### Patch Changes
+
+- Add exportable of ButtonStyles
+
 ## 3.0.15
 
 ### Patch Changes
