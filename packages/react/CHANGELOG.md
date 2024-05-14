@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.14
+
+### Patch Changes
+
+- Change colors and width of Dialog
+
 ## 3.0.13
 
 ### Patch Changes
