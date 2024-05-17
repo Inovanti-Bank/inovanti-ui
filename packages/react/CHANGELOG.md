@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.17
+
+### Patch Changes
+
+- Add more margin in bottom of toast
+
 ## 3.0.16
 
 ### Patch Changes
