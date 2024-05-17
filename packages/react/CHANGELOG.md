@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.18
+
+### Patch Changes
+
+- Add id to close dialog button
+
 ## 3.0.17
 
 ### Patch Changes
