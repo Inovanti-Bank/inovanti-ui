@@ -13,4 +13,5 @@ export interface InputProps extends ComponentProps<typeof BaseInput> {
 export type DataObj = {
   value: string
   label: string
+  color?: string
 }

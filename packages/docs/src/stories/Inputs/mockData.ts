@@ -114,27 +114,33 @@ export const mockData =
    [
     {
         "value": "Sonegou",
-        "label": "Sonegou"
+           "label": "Sonegou",
+        'color': '#00000050'
     },
     {
         "value": "Sonegação",
-        "label": "Sonegação"
+        "label": "Sonegação",
+        'color': '#ff000050'
     },
     {
         "value": "Sonegação Fiscal",
-        "label": "Sonegação Fiscal"
+        "label": "Sonegação Fiscal",
+        'color': '#00ff0050'
     },
     {
         "value": "Sonegador",
-        "label": "Sonegador"
+        "label": "Sonegador",
+        'color': '#0000ff50'
     },
     {
         "value": "corrupção",
-        "label": "corrupção"
+        "label": "corrupção",
+        'color': '#aa00ff50'
     },
     {
         "value": "Remessa fraudulenta",
-        "label": "Remessa fraudulenta"
+        "label": "Remessa fraudulenta",
+        'color': '#ffff0050'
     },
     {
         "value": "Sonegar",

@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.0.19
+
+### Patch Changes
+
+- feat: add possiblity of send a color in multiselect items
+
 ## 3.0.18
 
 ### Patch Changes
