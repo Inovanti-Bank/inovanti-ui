@@ -49,7 +49,6 @@ export const MultiSelectInput = forwardRef<
           isMulti
           ref={ref}
           closeMenuOnSelect={false}
-          {...props}
           unstyled
           classNames={{ 
             control: (state) => cn(
@@ -68,11 +67,30 @@ export const MultiSelectInput = forwardRef<
               'text-black dark:text-white bg-white dark:bg-gray-850 opacity-90',
               'hover:opacity-100 px-3 py-2',
             ),
-           }}
+          }}
           styles={{
             control: (baseStyles, _) => ({
               ...baseStyles,
             }),
+            multiValue: (styles, { data }) => {
+              let color = '#99999933'
+
+              const dataColor = (data as DataObj)
+
+              if (dataColor.color) {
+                color = dataColor.color
+              }
+              return {
+                ...styles,
+                backgroundColor: color,
+                paddingBlock: '0.125rem',
+                paddingInline: '0.25rem',
+                margin: '0.1rem',
+                borderRadius: '4px',
+                display: 'flex',
+                alignItems: 'center'
+              };
+            },
             placeholder: (baseStyles) => ({
               ...baseStyles,
             }),
@@ -90,6 +108,7 @@ export const MultiSelectInput = forwardRef<
             
           }}
           className={className}
+          {...props}
           options={data}
         />
         {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
