@@ -1,8 +1,8 @@
 import { cn } from '@/utils/cn'
-import { Skeleton } from '@inovanti/react'
 import { CaretDown, CaretUp } from '@phosphor-icons/react'
 import { HTMLProps, ReactNode, forwardRef } from 'react'
 import './styles.css'
+import { Skeleton } from '../Skeleton'
 
 type TableProps = HTMLProps<HTMLTableElement>
 
