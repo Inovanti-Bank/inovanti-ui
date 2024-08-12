@@ -24,9 +24,3 @@ export default {
 } as Meta<SwitchProps>
 
 export const Primary: StoryObj<SwitchProps> = {}
-
-export const Small: StoryObj<SwitchProps> = {
-  args: {
-    small: true
-  }
-}

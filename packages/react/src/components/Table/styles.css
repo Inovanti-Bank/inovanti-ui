@@ -1,0 +1,81 @@
+.t-head {
+    @media (max-width: 768px) {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
+
+.t-head th {
+    @apply bg-gray-100/55 dark:bg-gray-900/55 text-gray-950 dark:text-gray-50 py-2 px-3 text-left text-sm;
+}
+
+.t-head th:first-child {
+    @apply rounded-tl-lg pl-6;
+}
+
+.t-head th:last-child {
+    @apply rounded-tr-lg pr-6;
+}
+
+.t-styles tr {
+    @apply duration-100 hover:bg-gray-100/55 dark:hover:bg-gray-900/55;
+    @apply p-4 block mb-[0.625rem] rounded-md border border-gray-800 dark:border-gray-200;
+    @apply md:p-0 md:mb-0 md:table-row md:rounded-none md:border-none;
+}
+
+.t-styles td {
+    @apply border-t-[0.7px] border-gray-150 dark:border-gray-800 p-1 text-sm leading-6 h-8 md:h-12;
+}
+
+.t-styles td:first-child {
+    @apply pl-6;
+}
+
+.t-styles td:last-child {
+    @apply pr-6;
+}
+
+.t-styles td {
+  @apply gap-1;
+  @media (max-width: 768px) {
+    border: none;
+    display: block;
+    text-align: right;
+
+    &::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &:first-child {
+        padding-left: 0.5rem;
+    }
+
+    &:last-child {
+        padding-right: 0.5rem;
+    }
+  }
+}
+
+.t-foot {
+    @apply bg-gray-100/55 dark:bg-gray-900/55;
+}
+
+.t-foot td {
+    @apply py-1;
+    &:first-child {
+        @apply rounded-bl-lg pl-6;
+    }
+
+    &:last-child {
+        @apply rounded-br-lg pr-6;
+    }
+}
