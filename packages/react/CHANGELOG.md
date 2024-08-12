@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.0
+
+### Minor Changes
+
+- Add a lot of new components (Graphs, Calendar, OTPInput, RadioGroup, RenderBase64, Table and more)
+
 ## 3.0.20
 
 ### Patch Changes

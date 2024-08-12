@@ -1,0 +1,21 @@
+.gauge {
+  -webkit-transform-style: flat;
+  -webkit-transform: translateZ(0px);
+}
+
+.gauge .min-scaled {
+    transform: scale(.5);
+}
+
+.gauge-center {
+  &::before, &:before {
+    content: attr(data-number);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.gauge-center {
+  &::after, &:after {
+    content: attr(data-label);
+  }
+}
