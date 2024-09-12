@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.1
+
+### Patch Changes
+
+- feat: add progressBar and a few more components in table
+
 ## 3.1.0
 
 ### Minor Changes

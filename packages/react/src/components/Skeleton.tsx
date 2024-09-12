@@ -11,3 +11,12 @@ export function Skeleton({
     />
   )
 }
+
+export function SkeletonInput({ className }: { className?: string }) {
+  return (
+    <div className="flex flex-col gap-1 mt-5 mb-9">
+      <Skeleton className="w-24 h-3" />
+      <Skeleton className={cn('w-80 h-10', className)} />
+    </div>
+  )
+}

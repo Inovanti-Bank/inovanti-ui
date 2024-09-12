@@ -208,3 +208,99 @@ export const PageActualNumber = forwardRef<
   </div>
 ))
 PageActualNumber.displayName = 'PageActualNumber'
+
+
+export type ListSortDefaultType = {
+  field: string
+  direction: 'asc' | 'desc'
+}
+
+export const ListSortDefault: ListSortDefaultType[] = [
+  { field: 'created_at', direction: 'desc' },
+]
+
+export const handleSortItems = (
+  field: string,
+  sort: ListSortDefaultType[],
+  setSort: React.Dispatch<React.SetStateAction<ListSortDefaultType[]>>,
+) => {
+  const sortIndex = sort.findIndex((item) => item.field === field)
+
+  if (sortIndex !== -1) {
+    const currentDirection = sort[sortIndex].direction
+
+    if (currentDirection === 'desc') {
+      const updatedSort = [...sort]
+      updatedSort[sortIndex] = { ...updatedSort[sortIndex], direction: 'asc' }
+      setSort(updatedSort)
+    } else if (currentDirection === 'asc') {
+      const updatedSort = sort.filter((_, index) => index !== sortIndex)
+      setSort(updatedSort)
+    }
+  } else {
+    const newSort: ListSortDefaultType = { field, direction: 'desc' }
+    const updatedSort = [...sort, newSort]
+    setSort(updatedSort)
+  }
+}
+
+export const getDirectionForField = (
+  fieldName: string,
+  sort: ListSortDefaultType[],
+) => {
+  const foundItem = sort.find((item) => item.field === fieldName)
+  return foundItem ? foundItem.direction : null
+}
+
+export const FormDataPages = {
+  operators: [
+    {
+      value: '<',
+      label: 'Menor que',
+    },
+    {
+      value: '<=',
+      label: 'Menor ou igual a',
+    },
+    {
+      value: '>',
+      label: 'Maior que',
+    },
+    {
+      value: '>=',
+      label: 'Maior ou igual a',
+    },
+    {
+      value: '=',
+      label: 'Igual a',
+    },
+    {
+      value: '!=',
+      label: 'Diferente de',
+    },
+    {
+      value: 'like',
+      label: 'Tem',
+    },
+    {
+      value: 'not like',
+      label: 'Não tem',
+    },
+    {
+      value: 'in',
+      label: 'Inclui',
+    },
+    {
+      value: 'not in',
+      label: 'Não inclui',
+    },
+    {
+      value: 'all in',
+      label: 'Tudo inclui (json)',
+    },
+    {
+      value: 'any in',
+      label: 'Algo inclui (json)',
+    },
+  ],
+}
