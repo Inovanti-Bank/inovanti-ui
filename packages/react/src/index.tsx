@@ -12,6 +12,7 @@ export * from './components/RenderBase64'
 export * from './components/Tabs'
 export * from './components/Table'
 
+export * from './components/Graphs/ProgressBar'
 export * from './components/Graphs/Speedometer'
 import './components/Graphs/Speedometer/styles.css'
 
