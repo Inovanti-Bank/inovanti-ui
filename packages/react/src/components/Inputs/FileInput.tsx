@@ -12,6 +12,9 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       $width = '80',
       $gridArea,
@@ -22,7 +25,7 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
     return (
       <div className={cn(
         'flex flex-col justify-start mb-4',
-        `${resolveSpace($width)}`
+        `${resolveSpace($width)}`, containerClassName
       )}>
       <div
         className={cn(
@@ -37,7 +40,7 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
         )}
         style={{ gridArea: $gridArea }}
       >
-        <label className='cursor-pointer w-full min-h-[100%] py-3 px-0'>
+          <label className={cn('cursor-pointer w-full min-h-[100%] py-3 px-0', labelClassName)}>
           {label}
           <BaseInput
             type="file"
@@ -48,7 +51,7 @@ export const FileInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
         </label>
         
         </div>
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },

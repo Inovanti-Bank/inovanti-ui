@@ -5,6 +5,9 @@ import { BaseInput } from './BaseInput'
 export interface InputProps extends ComponentProps<typeof BaseInput> {
   label?: string
   className?: string
+  containerClassName?: string
+  labelClassName?: string
+  alertClassName?: string
   error?: string
   $width?: SpaceType
   $gridArea?: string

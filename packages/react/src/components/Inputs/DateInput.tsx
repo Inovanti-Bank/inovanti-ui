@@ -13,6 +13,9 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       $width = '80',
       $gridArea,
@@ -24,12 +27,12 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
       <div
         className={cn(
           'flex flex-col justify-start mb-4',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <BaseInput
           className={`dark ${className}`}
@@ -38,7 +41,7 @@ export const DateInput = forwardRef<ElementRef<typeof BaseInput>, InputProps>(
           {...props}
         />
         {error ?
-          <FormAlert>{error}</FormAlert> :
+          <FormAlert className={alertClassName}>{error}</FormAlert> :
           <FormAlertBlank />
         }
       </div>

@@ -1,7 +1,7 @@
 // @ts-expect-error doesn't support ts
 import ImageZoom from 'react-image-zooom'
 
-import './styles.css'
+import './RenderBase64.css'
 
 type RenderBase64Type = {
   base64: string

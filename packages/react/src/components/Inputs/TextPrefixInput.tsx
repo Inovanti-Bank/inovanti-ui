@@ -7,6 +7,9 @@ import { Text } from '../Text'
 export interface TextPrefixInputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'prefix'> {
   label?: string
   className?: string
+  containerClassName?: string
+  labelClassName?: string
+  alertClassName?: string
   error?: string
   $width?: SpaceType
   $gridArea?: string
@@ -18,6 +21,9 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       prefix,
       $width = '80',
@@ -30,12 +36,12 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
       <div
         className={cn(
           'flex flex-col justify-start mb-4',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <div className={cn(
           'input-with-prefix flex items-center w-full text-base',
@@ -44,7 +50,7 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
           'border border-primary',
           className
         )}>
-        <span className='text-gray-secondary'>{prefix}</span>
+          <span className='text-gray-secondary'>{prefix}</span>
           <input
             className={cn(
               'w-full cursor-text bg-transparent focus:outline-none',
@@ -56,7 +62,7 @@ export const TextPrefixInput = forwardRef<HTMLInputElement, TextPrefixInputProps
             {...props}
           />
         </div>
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },

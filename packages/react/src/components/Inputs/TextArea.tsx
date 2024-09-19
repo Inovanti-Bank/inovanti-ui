@@ -8,6 +8,9 @@ import { baseInputStyles } from './BaseInput'
 export interface TextAreaProps extends ComponentPropsWithoutRef<'textarea'> {
   label?: string
   className?: string
+  containerClassName?: string
+  labelClassName?: string
+  alertClassName?: string
   error?: string
   $width?: SpaceType
   $gridArea?: string
@@ -20,6 +23,9 @@ export const TextArea = forwardRef<
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       $width = '80',
       $gridArea,
@@ -31,19 +37,19 @@ export const TextArea = forwardRef<
       <div
         className={cn(
           'flex flex-col justify-start mb-4',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <textarea
           className={cn(baseInputStyles(className), 'resize-y min-h-20 whitespace-pre-wrap')}
           ref={ref}
           {...props}
         />
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },

@@ -15,6 +15,9 @@ export const PasswordInput = forwardRef<ElementRef<typeof BaseInput>, InputProps
     {
       label,
       className,
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       $width = '80',
       $gridArea,
@@ -40,12 +43,12 @@ export const PasswordInput = forwardRef<ElementRef<typeof BaseInput>, InputProps
       <div
         className={cn(
           'flex flex-col justify-start mb-6 relative',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <BaseInput
           className={className}
@@ -71,7 +74,7 @@ export const PasswordInput = forwardRef<ElementRef<typeof BaseInput>, InputProps
             <Eye size={24} />
           )}
         </button>
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },

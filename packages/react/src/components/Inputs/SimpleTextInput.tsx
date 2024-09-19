@@ -5,6 +5,7 @@ import { baseInputStyles } from './BaseInput'
 
 export interface SimpleInputProps extends ComponentPropsWithoutRef<'input'> {
   className?: string
+  containerClassName?: string
   $width?: SpaceType
   $gridArea?: string
 }
@@ -13,6 +14,7 @@ export const SimpleTextInput = forwardRef<HTMLInputElement, SimpleInputProps>(
   (
     {
       className = '',
+      containerClassName = '',
       $width = '80',
       $gridArea,
       ...props
@@ -23,7 +25,7 @@ export const SimpleTextInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       <div
         className={cn(
           'flex flex-col justify-start',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
