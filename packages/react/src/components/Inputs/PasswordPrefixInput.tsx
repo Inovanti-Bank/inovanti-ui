@@ -12,6 +12,9 @@ type PasswordType = 'password' | 'text'
 export interface PasswordPrefixInputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'prefix'> {
   label?: string
   className?: string
+  containerClassName?: string
+  labelClassName?: string
+  alertClassName?: string
   error?: string
   $width?: SpaceType
   $gridArea?: string
@@ -23,6 +26,9 @@ export const PasswordPrefixInput = forwardRef<HTMLInputElement, PasswordPrefixIn
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       prefix,
       $width = '80',
@@ -50,12 +56,12 @@ export const PasswordPrefixInput = forwardRef<HTMLInputElement, PasswordPrefixIn
       <div
         className={cn(
           'flex flex-col justify-start mb-4',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <div className={cn(
           'input-with-prefix flex items-center w-full text-base',
@@ -92,7 +98,7 @@ export const PasswordPrefixInput = forwardRef<HTMLInputElement, PasswordPrefixIn
             </button>
           </div>
         </div>
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },

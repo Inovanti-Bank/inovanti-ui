@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.2
+
+### Patch Changes
+
+- feat: add a few more properties in input components to increase styling capacity
+
 ## 3.1.1
 
 ### Patch Changes

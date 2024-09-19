@@ -9,6 +9,9 @@ import { DataObj } from './common'
 export interface SearchSelectInputProps extends ComponentProps<typeof Select> {
   label?: string
   className?: string
+  containerClassName?: string
+  labelClassName?: string
+  alertClassName?: string
   error?: string
   data?: DataObj[]
   $width?: SpaceType
@@ -23,6 +26,9 @@ export const SearchSelectInput = forwardRef<
     {
       label,
       className = '',
+      containerClassName = '',
+      labelClassName = '',
+      alertClassName = '',
       error,
       data,
       $width = '80',
@@ -35,12 +41,12 @@ export const SearchSelectInput = forwardRef<
       <div
         className={cn(
           'flex flex-col justify-start mb-4',
-          `${resolveSpace($width)}`
+          `${resolveSpace($width)}`, containerClassName
         )}
         style={{ gridArea: $gridArea }}
       >
         {label &&
-          <Text $size="text-sm" className='mb-1' as="label">{label}</Text>
+          <Text $size="text-sm" className={cn('mb-1', labelClassName)} as="label">{label}</Text>
         }
         <Select
           ref={ref}
@@ -86,7 +92,7 @@ export const SearchSelectInput = forwardRef<
           }}
           options={data}
         />
-        {error ? <FormAlert>{error}</FormAlert> : <FormAlertBlank />}
+        {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
   },
