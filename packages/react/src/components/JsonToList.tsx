@@ -1,7 +1,7 @@
 import { Text } from "./Text"
 
 export type JsonToListProps = {
-  json: { [string: string]: string | number | null }
+  json: { [string: string]: string | number | null | string[] }
 }
 
 export function JsonToList({ json }: JsonToListProps) {
