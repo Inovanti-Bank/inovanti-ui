@@ -30,4 +30,14 @@ Here you'll find all specifications that should be used to create React web appl
     - Checkbox
     - And more...
 
+## How to add new version
+
+Run it:
+```bash
+npm run changeset # In description, set what you do
+npm run version-packages # set if the changes are minor, major or a patch
+git add .
+git commit -m "feat: the same description of npm run changeset here"
+```
+
 Any questions, ask your team leader.

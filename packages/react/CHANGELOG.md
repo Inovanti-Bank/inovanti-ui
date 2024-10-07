@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.3
+
+### Patch Changes
+
+- feat: Add new type in JsonToList props
+
 ## 3.1.2
 
 ### Patch Changes
