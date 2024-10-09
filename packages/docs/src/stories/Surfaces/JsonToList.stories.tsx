@@ -32,7 +32,6 @@ export const RudeJson: StoryObj<JsonToListProps> = {
       "mobile_phone_country": "55",
       "user_name": "natan.inovanti",
       "birth_date": "2000-01-01",
-      "password": "teste123X25#",
       "organizations": ["teste1", "teste2"]
     }
   }
