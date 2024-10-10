@@ -13,7 +13,7 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
 }
 
 export const buttonStyles = cn(
-  'button cursor-pointer flex flex-row gap-2 justify-center items-center rounded-sm p-2 font-semibold',
+  'flex flex-row gap-2 justify-center items-center rounded py-0.5 px-2','btn-hover',
   'disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-700',
   'border border-transparent focus:border-primary',
   'bg-primary',
