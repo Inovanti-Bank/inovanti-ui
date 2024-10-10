@@ -28,6 +28,11 @@ export default {
       action: 'click',
     },
   },
+  decorators: [
+    (Story) => {
+      return <Box className="flex justify-center">{Story()}</Box>;
+    },
+  ],
   
 } as Meta<typeof Button>
 
