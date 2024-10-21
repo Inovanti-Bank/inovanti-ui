@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Text, ContextMenu, ContextMenuContent, ContextMenuItem, ContextMenuTrigger, Box } from '@inovanti/react'
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react'
+import { ReactNode } from 'react'
 
 
 const ContextMenuDemo = ({ trigger }: { trigger: ReactNode }) => {
@@ -20,7 +20,7 @@ export default {
     component: ContextMenuDemo,
     tags: ['autodocs'],
     args: {
-        trigger: <Text>Click here to open the menu</Text>
+        trigger: <Text>Click here with right button to open the menu</Text>
     },
     decorators: [
     (Story) => {
