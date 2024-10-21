@@ -1,24 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import {
-  Text,
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
   Box,
   PopoverContent,
   PopoverTrigger,
   Popover,
   Button,
 } from "@inovanti/react";
-import {
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-} from "react";
-import React from "react";
 
 const PopoverDemo = () => {
   return (

@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.7
+
+### Patch Changes
+
+- feat: add Accordion component
+
 ## 3.1.6
 
 ### Patch Changes
