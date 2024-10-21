@@ -1,6 +1,6 @@
 import { cn } from '@/utils/cn'
 import { CaretDown, CaretUp } from '@phosphor-icons/react'
-import { HTMLProps, ReactNode, forwardRef } from 'react'
+import { ComponentPropsWithoutRef, HTMLProps, ReactNode, forwardRef } from 'react'
 import './styles.css'
 import { Skeleton } from '../Skeleton'
 
@@ -101,7 +101,7 @@ export const Navigator = forwardRef<HTMLButtonElement, NavigatorProps>(
 
 Navigator.displayName = 'Navigator'
 
-type ChangePageProps = {
+type ChangePageProps = ComponentPropsWithoutRef<'button'> & {
   children?: ReactNode
   $isDisabled?: boolean
   $isActive?: boolean
