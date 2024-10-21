@@ -11,6 +11,7 @@ export * from './components/Popover'
 export * from './components/RenderBase64'
 export * from './components/Tabs'
 export * from './components/Table'
+export * from './components/Accordion'
 
 export * from './components/Graphs/ProgressBar'
 export * from './components/Graphs/Speedometer'
