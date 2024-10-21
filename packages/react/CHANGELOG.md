@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.5
+
+### Patch Changes
+
+- feat: change styles of box to decrease paddingBlock and change gradient of Button component
+
 ## 3.1.4
 
 ### Patch Changes
