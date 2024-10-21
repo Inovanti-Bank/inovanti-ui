@@ -14,7 +14,7 @@ export const Box = forwardRef(
       <Component
         ref={ref}
         className={cn(
-          'flex flex-row gap-1 p-6 rounded-md border',
+          'flex flex-row flex-wrap gap-1 py-3 px-6 rounded-md border',
           'bg-gray-50 text-gray-950 border-gray-150',
           'dark:bg-gray-850 dark:text-gray-50 dark:border-gray-900',
           className

@@ -184,7 +184,7 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #f5ea1a, #f1e538, #f3dd16, #faea76);
+    background-image: linear-gradient(to right, #f5ea1a, #f1e538, #f3dd16, #fae75b);
     box-shadow: 0 2px 7px 0 rgba(243, 231, 13, 0.5);
   }
   .btn-hover:hover {
