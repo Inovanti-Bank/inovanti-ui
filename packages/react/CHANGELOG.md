@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.6
+
+### Patch Changes
+
+- fix: add type in ChangePage
+
 ## 3.1.5
 
 ### Patch Changes
