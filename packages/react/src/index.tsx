@@ -1,62 +1,61 @@
-export * from './components/Box'
-export * from './components/Dialog'
-export * from './components/FormAlert'
-export * from './components/FullScreenLoading'
-export * from './components/SimpleLoading'
-export * from './components/JsonToList'
-export * from './components/ContextMenu'
-export * from './components/DataBox'
-export * from './components/PageHead'
-export * from './components/Popover'
-export * from './components/RenderBase64'
-export * from './components/Tabs'
-export * from './components/Table'
-export * from './components/Accordion'
+export * from './components/Accordion';
+export * from './components/Box';
+export * from './components/ContextMenu';
+export * from './components/DataBox';
+export * from './components/Dialog';
+export * from './components/FormAlert';
+export * from './components/FullScreenLoading';
+export * from './components/JsonToList';
+export * from './components/PageHead';
+export * from './components/Popover';
+export * from './components/RenderBase64';
+export * from './components/SimpleLoading';
+export * from './components/Table';
+export * from './components/Tabs';
 
-export * from './components/Graphs/ProgressBar'
-export * from './components/Graphs/Speedometer'
-import './components/Graphs/Speedometer/styles.css'
+export * from './components/Graphs/ProgressBar';
+export * from './components/Graphs/Speedometer';
 
-export * from './components/Avatar'
-export * from './components/Dropdown'
-export * from './components/Toast/toast'
-export * from './components/Toast/toaster'
-export * from './components/Toast/use-toast'
-export * from './components/Tooltip'
+export * from './components/Avatar';
+export * from './components/Dropdown';
+export * from './components/Toast/toast';
+export * from './components/Toast/toaster';
+export * from './components/Toast/use-toast';
+export * from './components/Tooltip';
 
-export * from './components/Heading'
-export * from './components/Text'
+export * from './components/Heading';
+export * from './components/Text';
 
-export * from './components/Inputs/DateInput'
-export * from './components/Inputs/DecimalInput'
-export * from './components/Inputs/FileInput'
-export * from './components/Inputs/MaskInput'
-export * from './components/Inputs/MultiSelectInput'
-export * from './components/Inputs/NumberInput'
-export * from './components/Inputs/PasswordInput'
-export * from './components/Inputs/PasswordPrefixInput'
-export * from './components/Inputs/SearchSelectInput'
-export * from './components/Inputs/SimpleTextInput'
-export * from './components/Inputs/TextArea'
-export * from './components/Inputs/TextInput'
-export * from './components/Inputs/TextPrefixInput'
-export * from './components/Inputs/common'
-export * from './components/Inputs/Calendar'
-export * from './components/Inputs/InputOTP'
-export * from './components/Inputs/RadioGroup'
+export * from './components/Inputs/Calendar';
+export * from './components/Inputs/common';
+export * from './components/Inputs/DateInput';
+export * from './components/Inputs/DecimalInput';
+export * from './components/Inputs/FileInput';
+export * from './components/Inputs/InputOTP';
+export * from './components/Inputs/MaskInput';
+export * from './components/Inputs/MultiSelectInput';
+export * from './components/Inputs/NumberInput';
+export * from './components/Inputs/PasswordInput';
+export * from './components/Inputs/PasswordPrefixInput';
+export * from './components/Inputs/RadioGroup';
+export * from './components/Inputs/SearchSelectInput';
+export * from './components/Inputs/SimpleTextInput';
+export * from './components/Inputs/TextArea';
+export * from './components/Inputs/TextInput';
+export * from './components/Inputs/TextPrefixInput';
 
-export * from './components/Buttons/Button'
-export * from './components/Buttons/DelButton'
-export * from './components/Buttons/PlusButton'
-export * from './components/Buttons/CopyButton'
-export * from './components/Buttons/ShadCnButton'
-export * from './components/Checkbox'
-export * from './components/Skeleton'
-export * from './components/Switch'
+export * from './components/Buttons/Button';
+export * from './components/Buttons/CopyButton';
+export * from './components/Buttons/DelButton';
+export * from './components/Buttons/PlusButton';
+export * from './components/Buttons/ShadCnButton';
+export * from './components/Checkbox';
+export * from './components/Skeleton';
+export * from './components/Switch';
 
-export * from './types/styles.d'
+export * from './types/styles.d';
 
-import './styles/globals.css'
+import './styles/globals.css';
 
 // You: WTF? Why we have this comments here?
 // Me: Check this: https://tailwindcss.com/docs/content-configuration#class-detection-in-depth
