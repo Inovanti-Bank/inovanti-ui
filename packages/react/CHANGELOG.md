@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.10
+
+### Patch Changes
+
+- fix: adjust way of pass props to SkeletonTableBody component
+
 ## 3.1.9
 
 ### Patch Changes
