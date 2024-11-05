@@ -88,7 +88,12 @@ export const SkeletonTable = ({ rows = 5, className }: SkeletonTableProps) => {
 
 SkeletonTable.displayName = 'SkeletonTable';
 
-export const SkeletonTableBody = (rowsQuantity: number, columnsQuantity: number) => {
+type SkeletonTableBodyProps = {
+  rowsQuantity: number
+  columnsQuantity: number
+}
+
+export const SkeletonTableBody = ({rowsQuantity, columnsQuantity}: SkeletonTableBodyProps) => {
   return <TableBody>
     {[...Array(rowsQuantity).keys()].map((_, i) => {
       return (<tr key={i}>
@@ -99,7 +104,7 @@ export const SkeletonTableBody = (rowsQuantity: number, columnsQuantity: number)
         ))}
       </tr>)
     })}
-</TableBody>
+  </TableBody>
 }
 
 SkeletonTableBody.displayName = 'SkeletonTableBody';
