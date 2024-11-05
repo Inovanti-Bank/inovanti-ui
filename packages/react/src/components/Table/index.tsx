@@ -88,6 +88,22 @@ export const SkeletonTable = ({ rows = 5, className }: SkeletonTableProps) => {
 
 SkeletonTable.displayName = 'SkeletonTable';
 
+export const SkeletonTableBody = (rowsQuantity: number, columnsQuantity: number) => {
+  return <TableBody>
+    {[...Array(rowsQuantity).keys()].map((_, i) => {
+      return (<tr key={i}>
+        {[...Array(columnsQuantity).keys()].map((j) => (
+          <td key={j} colSpan={1}>
+            <Skeleton className={cn('w-full h-8',)} />
+          </td>
+        ))}
+      </tr>)
+    })}
+</TableBody>
+}
+
+SkeletonTableBody.displayName = 'SkeletonTableBody';
+
 type NavigatorProps = {
   children?: ReactNode;
 };

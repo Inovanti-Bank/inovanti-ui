@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.9
+
+### Patch Changes
+
+- feat: add SkeletonTableBody component
+
 ## 3.1.8
 
 ### Patch Changes
