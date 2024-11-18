@@ -1,5 +1,23 @@
 # @inovanti/react
 
+## 3.1.11
+
+### Patch Changes
+
+- feat: add disabled style to button
+
+## 3.1.10
+
+### Patch Changes
+
+- fix: adjust way of pass props to SkeletonTableBody component
+
+## 3.1.9
+
+### Patch Changes
+
+- feat: add SkeletonTableBody component
+
 ## 3.1.8
 
 ### Patch Changes
