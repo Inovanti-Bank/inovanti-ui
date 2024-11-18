@@ -1,10 +1,17 @@
 # @inovanti/react
 
+## 3.1.13
+
+### Patch Changes
+
+- fix button hover
+
 ## 3.1.12
 
 ### Patch Changes
 
 - dd8a183: fix button hover in other styles
+- da6572b: changed button hover style again
 
 ## 3.1.11
 
