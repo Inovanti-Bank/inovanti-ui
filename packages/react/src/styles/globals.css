@@ -179,12 +179,6 @@
   .btn-hover {
   }
   .btn-hover:hover {
-    background-position: 100% 0;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    @apply bg-gradient-to-r from-primary to-secondary;
   }
 
   .btn-hover:focus {
