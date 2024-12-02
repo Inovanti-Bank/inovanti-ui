@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.1.14
+
+### Patch Changes
+
+- feat: a few updates in button styles
+
 ## 3.1.13
 
 ### Patch Changes
