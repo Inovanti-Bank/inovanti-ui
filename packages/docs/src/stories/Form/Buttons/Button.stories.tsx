@@ -14,7 +14,8 @@ export default {
         "Click me"
       
     ),
-    $width: undefined
+    $width: undefined,
+    className: ''
   },
   argTypes: {
     $width: {
@@ -48,9 +49,27 @@ export const WithIcon: StoryObj<typeof Button> = {
   args: {
     children: (
       <>
-        Próximo passo
+        <span>Próximo passo</span>
         <ArrowRight />
       </>
     ),
+  },
+}
+
+export const Giant: StoryObj<typeof Button> = {
+  args: {
+    className: 'w-64 h-64 text-3xl'
+  },
+}
+
+export const Large: StoryObj<typeof Button> = {
+  args: {
+    className: 'w-64'
+  },
+}
+
+export const OtherColor: StoryObj<typeof Button> = {
+  args: {
+    className: 'bg-green-400'
   },
 }
