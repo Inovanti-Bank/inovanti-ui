@@ -14,7 +14,7 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
 
 
 const buttonBaseStyles = cn(
-  'flex flex-row flex-nowrap gap-2 justify-center items-center rounded-sm z-10', 
+  'flex flex-row flex-nowrap gap-2 justify-center items-center rounded-sm z-0', 
   'py-0.5 px-2 btn-hover font-medium border border-transparent', 
   'focus:border-primary bg-primary text-black click:bg-red-500')
 
