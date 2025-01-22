@@ -1,5 +1,17 @@
 # @inovanti/react
 
+## 3.1.15
+
+### Patch Changes
+
+- fix: adjust button z-index to don't overlay other components
+
+## 3.1.14
+
+### Patch Changes
+
+- feat: a few updates in button styles
+
 ## 3.1.13
 
 ### Patch Changes
