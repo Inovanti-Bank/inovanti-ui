@@ -140,7 +140,7 @@ export const ChangePage = forwardRef<HTMLButtonElement, ChangePageProps>(
         'rounded-md py-0.5 px-2 mx-1 text-center',
         $isDisabled
           ? 'cursor-not-allowed bg-gray-100 dark:bg-gray-700 text-gray-950 dark:text-gray-200'
-          : 'cursor-pointer bg-primary/80 text-gray-950',
+          : 'cursor-pointer bg-primary/50 text-gray-950',
         $isActive && 'cursor-text bg-primary text-black'
       )}
       {...rest}
