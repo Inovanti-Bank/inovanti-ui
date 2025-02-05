@@ -1,5 +1,12 @@
 # @inovanti/react
 
+## 3.1.16
+
+### Patch Changes
+
+- 8c9abf8: change color of non active changePage components
+- 58cfeb8: fix button styling
+
 ## 3.1.15
 
 ### Patch Changes
