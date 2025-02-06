@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
+import { Button } from '../Buttons/Button'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'
@@ -59,18 +60,18 @@ export const MultiSelectInput = forwardRef<
           classNames={{ 
             control: (state) => cn(
               'cursor-pointer rounded-sm w-full px-3 py-2 border disabled:cursor-not-allowed',
-              'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white',
+              'bg-white dark:bg-gray-850 opacity-95 text-black dark:text-white ',
               state.isFocused ? 'border-quaternary outline-none opacity-100' : 'border-primary'
             ),
             placeholder: (_) => cn(
               'text-gray-400 text-center',
             ),
             menu: (_) => cn(
-              'border border-primary rounded-sm mt-1 bg-white dark:bg-gray-850'
+              'border border-primary rounded-sm mt-1 bg-white dark:bg-gray-850 '
             ),
             option: (_) => cn(
-              'rounded-sm border-b border-primary',
-              'text-black dark:text-white bg-white dark:bg-gray-850 opacity-90',
+              'rounded-sm border-b border-primary ',
+              'text-black dark:text-white z-50 bg-white dark:bg-gray-850 opacity-90',
               'hover:opacity-100 px-3 py-2',
             ),
           }}
@@ -117,6 +118,7 @@ export const MultiSelectInput = forwardRef<
           {...props}
           options={data}
         />
+        <Button>Oi</Button>
         {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )

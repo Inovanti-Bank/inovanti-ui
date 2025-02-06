@@ -24,16 +24,10 @@ const buttonDisabledStyles = cn(
   'dark:disabled:bg-gray-700 dark:disabled:text-gray-200'
 )
 
-const buttonAnimationStyles = cn(
-  'before:-z-10 before:ease relative overflow-hidden border shadow-2xl hover:border-gray-100 border-[1.5px] hover:box-border box-border dark:hover:border-gray-700',
-  'transition-all before:absolute before:right-0 before:-top-[10%] before:h-[120%] before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-40',
-  'before:duration-500 hover:shadow-primary/50 hover:before:-translate-x-[15%]'
-)
 
 export const buttonStyles = cn(
   buttonBaseStyles,
   buttonDisabledStyles,
-  buttonAnimationStyles
 );
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
