@@ -25,10 +25,12 @@ const buttonDisabledStyles = cn(
 )
 
 const buttonAnimationStyles = cn(
-  'before:-z-10 before:ease relative overflow-hidden border shadow-2xl hover:border-gray-100 border-[1.5px] hover:box-border box-border dark:hover:border-gray-700',
-  'transition-all before:absolute before:right-0 before:-top-[10%] before:h-[120%] before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-40',
-  'before:duration-500 hover:shadow-primary/50 hover:before:-translate-x-[15%]'
-)
+  'before:-z-10 before:ease relative overflow-hidden before:blur-xl' ,
+  'transition-all before:absolute before:right-0  before:h-[120%] before:w-[150%] before:translate-x-[150%]  before:bg-white before:opacity-60',
+  'before:duration-1000  hover:before:-translate-x-[150%] '
+);
+
+
 
 export const buttonStyles = cn(
   buttonBaseStyles,
