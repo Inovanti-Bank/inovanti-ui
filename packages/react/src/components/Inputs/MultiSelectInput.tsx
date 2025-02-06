@@ -5,7 +5,6 @@ import { cn } from '@/utils/cn'
 import { SpaceType, resolveSpace } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import Select from 'react-select'
-import { Button } from '../Buttons/Button'
 import { FormAlert, FormAlertBlank } from '../FormAlert'
 import { Text } from '../Text'
 import { DataObj } from './common'
@@ -118,7 +117,6 @@ export const MultiSelectInput = forwardRef<
           {...props}
           options={data}
         />
-        <Button>Oi</Button>
         {error ? <FormAlert className={alertClassName}>{error}</FormAlert> : <FormAlertBlank />}
       </div>
     )
