@@ -5,7 +5,8 @@
 ### Patch Changes
 
 - 85f67f0: fix:changeset
-- d9812fd: fix: build error
+- fix: fix build errors (again)
+
 
 ## 3.2.3
 
