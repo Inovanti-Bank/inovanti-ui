@@ -1,5 +1,12 @@
 # @inovanti/react
 
+## 3.2.4
+
+### Patch Changes
+
+- 85f67f0: fix:changeset
+- d9812fd: fix: build error
+
 ## 3.2.3
 
 ### Patch Changes
@@ -11,7 +18,8 @@
 ### Patch Changes
 
 - fix: fix imports
-- 
+-
+
 ## 3.2.1
 
 ### Patch Changes
