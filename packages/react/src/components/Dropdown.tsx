@@ -8,9 +8,10 @@ export interface DropdownProps {
   children: ReactNode
   items: ReactNode[]
   prefixId?: string
+  classname?: string
 }
 
-export const Dropdown = ({ items, children, prefixId }: DropdownProps) => {
+export const Dropdown = ({ classname,items, children, prefixId }: DropdownProps) => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger id={`${prefixId}-dropdown_trigger`} asChild>
