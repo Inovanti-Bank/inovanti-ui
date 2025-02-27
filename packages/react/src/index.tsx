@@ -15,7 +15,6 @@ export * from './components/Table';
 export * from './components/Table/DataTable/index';
 export * from './components/Tabs';
 
-export * from './components/Charts/Chart';
 export * from './components/Charts/ChartsCard';
 
 
