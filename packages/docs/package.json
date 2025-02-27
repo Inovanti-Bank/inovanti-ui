@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@inovanti/eslint-config": "*",
-    "@inovanti/react": "*",
+    "@inovanti/react": "3.2.1",
     "@inovanti/tokens": "*",
     "@phosphor-icons/react": "^2.1.5",
     "@storybook/addon-a11y": "^7.5.3",
