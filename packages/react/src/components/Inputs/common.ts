@@ -1,7 +1,7 @@
 import { SpaceType } from '@inovanti/tokens'
 import { ComponentProps } from 'react'
 import { BaseInput } from './BaseInput'
-
+import { Text } from '../Text'
 export interface InputProps extends ComponentProps<typeof BaseInput> {
   label?: string
   className?: string

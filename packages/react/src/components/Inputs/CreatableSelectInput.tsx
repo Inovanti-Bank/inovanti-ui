@@ -1,19 +1,16 @@
-import {
-    DataObj,
-    FormAlert,
-    FormAlertBlank,
-    Spaces,
-    Text,
-} from '@inovanti/react'
+import { SpaceType } from '@inovanti/tokens'
 import { ComponentProps, ElementRef, forwardRef } from 'react'
 import CreatableSelect from 'react-select/creatable'
+import { FormAlert, FormAlertBlank } from '../FormAlert'
+import { Text } from '../Text'
+import { DataObj } from './common'
 export interface CreatableSelectInputProps
   extends ComponentProps<typeof CreatableSelect> {
   label: string
   error?: string
   data?: DataObj[]
-  height?: Spaces
-  width?: Spaces
+  height?: SpaceType
+  width?: SpaceType
 
   flexColumn?: boolean
   gridAreaName?: string
