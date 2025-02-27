@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.2.1
+
+### Patch Changes
+
+- fb2eaf6: fix exports
+
 ## 3.2.0
 
 ### Minor Changes
