@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.2.2
+
+### Patch Changes
+
+- fix: fix imports
+- 
 ## 3.2.1
 
 ### Patch Changes

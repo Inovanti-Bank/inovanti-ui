@@ -1,6 +1,8 @@
 import { cn } from '@/utils/cn'
-import { Box, Heading } from '@inovanti/react'
+
 import React from 'react'
+import { Box } from '../Box'
+import { Heading } from '../Heading'
 
 interface ChartsCardProps {
   title: string

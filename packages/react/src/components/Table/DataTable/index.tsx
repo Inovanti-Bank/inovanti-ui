@@ -1,16 +1,8 @@
-import {
-  ChangePage,
-  Dropdown,
-  getDirectionForField,
-  handleSortItems,
-  ListSortDefaultType,
-  PageActualNumber,
-  SkeletonTableBody,
-  SortIcon,
-} from '@inovanti/react'
+
+import { Dropdown } from '@/components/Dropdown'
 import he from 'he'
 import React, { Dispatch, SetStateAction } from 'react'
-import { Table, TableBody, TableFooter, TableHead } from '..'
+import { ChangePage, getDirectionForField, handleSortItems, ListSortDefaultType, PageActualNumber, SkeletonTableBody, SortIcon, Table, TableBody, TableFooter, TableHead } from '..'
 
 
 export interface Column<T> {
