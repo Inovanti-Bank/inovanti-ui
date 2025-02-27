@@ -1,4 +1,3 @@
-import { PaginatedFullDTO } from '@/dtos/OrionDTO'
 import {
   ChangePage,
   Dropdown,
@@ -11,7 +10,8 @@ import {
 } from '@inovanti/react'
 import he from 'he'
 import React, { Dispatch, SetStateAction } from 'react'
-import { Table, TableBody, TableFooter, TableHead } from '../Table'
+import { Table, TableBody, TableFooter, TableHead } from '..'
+
 
 export interface Column<T> {
   key: keyof T & string
@@ -35,7 +35,7 @@ interface DataTableProps<T> {
 
 const extractPageNumber = (url: string | null): number => {
   if (!url) return 1
-  const match = url.match(/page=(\d+)/)
+  const match = RegExp(/page=(\d+)/).exec(url)
   return match ? parseInt(match[1], 10) : 1
 }
 
@@ -197,4 +197,67 @@ export function DataTable<T>({
       </Table>
     )
   }
+}
+
+
+
+
+
+export type OrionDTO<T> = {
+  data: T[]
+}
+
+export type OrionObjDTO<T> = {
+  data: T
+}
+
+export type OrionPaginateDTO<T> = OrionDTO<T> & {
+  current_page: number
+  from: number | null
+  last_page: number
+  links: {
+    url: string | null
+    label: string
+    active: boolean
+  }[]
+  path: string
+  per_page: number
+  to: number
+  total: number
+  meta: {
+    current_page: number
+    from: number | null
+    last_page: number
+    links: {
+      url: string | null
+      label: string
+      active: boolean
+    }[]
+    path: string
+    per_page: number
+    to: number
+    total: number
+  }
+}
+
+export type PaginatedDTO<T> = {
+  data: T[]
+}
+export type PaginatedFullDTO<T> = PaginatedDTO<T> & {
+  current_page: number
+  first_page_url: string | null
+  from: number | null
+  last_page: number
+  last_page_url: string | null
+  links: {
+    url: string | null
+    label: string
+    active: boolean
+  }[]
+  next_page_url: string | null
+  path: string
+  per_page: number
+  prev_page_url: string | null
+  to: number
+  total: number
 }

@@ -28,8 +28,8 @@ const ChartCard: React.FC<ChartsCardProps> = ({
         <div className="flex w-full flex-row items-center justify-between px-4">
           {title}{' '}
           <span className="font-bold">
-            {details && details}
-            {link && link}
+            {details || ''}
+            {link ||  ''}
           </span>
         </div>
       </Heading>
