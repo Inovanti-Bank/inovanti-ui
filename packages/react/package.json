@@ -1,6 +1,6 @@
 {
   "name": "@inovanti/react",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "This project is a part of the Design System for use in Inovanti React based projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,6 +26,7 @@
     "@inovanti/eslint-config": "*",
     "@inovanti/tokens": "*",
     "@inovanti/ts-config": "*",
+    "@types/he": "^1.2.3",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-modal": "^3.16.3",
@@ -55,6 +56,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "date-fns": "^2.30.0",
+    "he": "^1.2.0",
     "input-otp": "^1.2.4",
     "polished": "^4.2.2",
     "react-day-picker": "^8.10.1",
@@ -62,6 +64,7 @@
     "react-modal": "^3.16.1",
     "react-number-format": "^5.3.1",
     "react-select": "^5.8.0",
+    "recharts": "^2.15.1",
     "tailwind-merge": "^2.3.0"
   }
 }

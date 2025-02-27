@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.2.3
+
+### Patch Changes
+
+- fix: fix broken dependencies
+
 ## 3.2.2
 
 ### Patch Changes

@@ -55,7 +55,6 @@ export * from './components/Inputs/TextPrefixInput';
 export * from './components/Buttons/Button';
 export * from './components/Buttons/CopyButton';
 export * from './components/Buttons/DelButton';
-export * from './components/Buttons/GoBackButton';
 export * from './components/Buttons/PlusButton';
 export * from './components/Buttons/ShadCnButton';
 export * from './components/Checkbox';

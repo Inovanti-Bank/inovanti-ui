@@ -4,7 +4,6 @@ import he from 'he'
 import React, { Dispatch, SetStateAction } from 'react'
 import { ChangePage, getDirectionForField, handleSortItems, ListSortDefaultType, PageActualNumber, SkeletonTableBody, SortIcon, Table, TableBody, TableFooter, TableHead } from '..'
 
-
 export interface Column<T> {
   key: keyof T & string
   label: string
