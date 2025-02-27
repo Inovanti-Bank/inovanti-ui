@@ -9,53 +9,57 @@ import {
 import { Skeleton } from '../Skeleton';
 import './styles.css';
 
-type TableProps = HTMLProps<HTMLTableElement>;
+type TableProps = HTMLProps<HTMLTableElement>
 
 export const Table = forwardRef<HTMLTableElement, TableProps>(
-  ({ children }: TableProps, ref) => (
+  ({ children, className, ...props }, ref) => (
     <table
-      className='w-full border-collapse text-gray-950 dark:text-gray-50'
+      className={cn(
+        'w-full border-collapse text-gray-950 dark:text-gray-50',
+        className,
+      )}
       ref={ref}
+      {...props}
     >
       {children}
     </table>
-  )
-);
-Table.displayName = 'Table';
+  ),
+)
+Table.displayName = 'Table'
 
-type TableHeadProps = HTMLProps<HTMLTableSectionElement>;
+type TableHeadProps = HTMLProps<HTMLTableSectionElement>
 
 export const TableHead = forwardRef<HTMLTableSectionElement, TableHeadProps>(
-  ({ children }: TableHeadProps, ref) => (
-    <thead className='t-head' ref={ref}>
+  ({ children, className, ...props }, ref) => (
+    <thead className={cn('t-head', className)} ref={ref} {...props}>
       {children}
     </thead>
-  )
-);
-TableHead.displayName = 'TableHead';
+  ),
+)
+TableHead.displayName = 'TableHead'
 
-type TableBodyProps = HTMLProps<HTMLTableSectionElement>;
+type TableBodyProps = HTMLProps<HTMLTableSectionElement>
 
 export const TableBody = forwardRef<HTMLTableSectionElement, TableBodyProps>(
-  ({ children }: TableBodyProps, ref) => (
-    <tbody className='t-styles' ref={ref}>
+  ({ children, className, ...props }, ref) => (
+    <tbody className={cn('t-styles', className)} ref={ref} {...props}>
       {children}
     </tbody>
-  )
-);
-TableBody.displayName = 'TableBody';
+  ),
+)
+TableBody.displayName = 'TableBody'
 
-type TableFooterProps = HTMLProps<HTMLTableSectionElement>;
+type TableFooterProps = HTMLProps<HTMLTableSectionElement>
 
 export const TableFooter = forwardRef<
   HTMLTableSectionElement,
   TableFooterProps
->(({ children }: TableFooterProps, ref) => (
-  <tfoot className='t-styles t-foot' ref={ref}>
+>(({ children, className, ...props }, ref) => (
+  <tfoot className={cn('t-styles t-foot', className)} ref={ref} {...props}>
     {children}
   </tfoot>
-));
-TableFooter.displayName = 'TableFooter';
+))
+TableFooter.displayName = 'TableFooter'
 
 type ContainerSkeletonProps = HTMLProps<HTMLDivElement>;
 
