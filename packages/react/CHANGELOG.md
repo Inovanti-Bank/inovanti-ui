@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 3.2.0
+
+### Minor Changes
+
+- add new components, and change table styling
+
 ## 3.1.16
 
 ### Patch Changes
