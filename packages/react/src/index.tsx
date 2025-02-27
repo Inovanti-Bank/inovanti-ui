@@ -1,4 +1,5 @@
 export * from './components/Accordion';
+export * from './components/Badge';
 export * from './components/Box';
 export * from './components/ContextMenu';
 export * from './components/DataBox';
@@ -11,8 +12,14 @@ export * from './components/Popover';
 export * from './components/RenderBase64';
 export * from './components/SimpleLoading';
 export * from './components/Table';
+export * from './components/Table/DataTable/index';
 export * from './components/Tabs';
 
+export * from './components/Charts/Chart';
+export * from './components/Charts/ChartsCard';
+
+
+export * from './components/Graphs/LineGraph';
 export * from './components/Graphs/ProgressBar';
 export * from './components/Graphs/Speedometer';
 
@@ -28,6 +35,7 @@ export * from './components/Text';
 
 export * from './components/Inputs/Calendar';
 export * from './components/Inputs/common';
+export * from './components/Inputs/CreatableSelectInput';
 export * from './components/Inputs/DateInput';
 export * from './components/Inputs/DecimalInput';
 export * from './components/Inputs/FileInput';
@@ -47,6 +55,7 @@ export * from './components/Inputs/TextPrefixInput';
 export * from './components/Buttons/Button';
 export * from './components/Buttons/CopyButton';
 export * from './components/Buttons/DelButton';
+export * from './components/Buttons/GoBackButton';
 export * from './components/Buttons/PlusButton';
 export * from './components/Buttons/ShadCnButton';
 export * from './components/Checkbox';
