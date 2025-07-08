@@ -30,6 +30,14 @@ Here you'll find all specifications that should be used to create React web appl
     - Checkbox
     - And more...
 
+## How to run the project
+
+Run the follow commands:
+```bash
+npm i --legacy-peer-deps
+npm run dev
+```
+
 ## How to add new version
 
 Run it:
