@@ -1,5 +1,11 @@
 # @inovanti/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- feat: update theme with new brand colors
+
 ## 2.0.2
 
 ### Patch Changes

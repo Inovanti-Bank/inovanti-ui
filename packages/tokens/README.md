@@ -1,6 +1,6 @@
-# Inovanti Design Tokens
+# Humu Design Tokens
 
-This project is a part of the Design System for use in Inovanti React based projects
+This project is a part of the Design System for use in Humu React based projects
 
 Here you'll find all specifications that should be used to create React web applications, like:
 
