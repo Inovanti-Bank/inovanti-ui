@@ -1,5 +1,11 @@
 # @inovanti/react
 
+## 4.0.0
+
+### Major Changes
+
+- feat: update theme with new brand colors
+
 ## 3.2.5
 
 ### Patch Changes

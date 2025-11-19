@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./.vscode/logo.png" alt="Logo Inovanti">
+  <img src="./.vscode/logo.png" alt="Logo Humu">
 </p>
 
 <h1 align="center">
-  Inovanti Design System
+  Humu Design System
 </h1>
 
-This project is the Design System for use in Inovanti React based projects
+This project is the Design System for use in Humu React based projects
 
 Here you'll find all specifications that should be used to create React web applications, like:
 
