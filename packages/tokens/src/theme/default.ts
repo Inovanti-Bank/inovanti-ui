@@ -2,10 +2,10 @@ export const inovantiDefaultTheme = {
   black: '#000000',
   white: '#ffffff',
 
-  primary: '#F0E400',
-  secondary: '#e0d612',
-  tertiary: '#f2ea5a',
-  quaternary: '#c8be04',
+  primary: '#ABC928',
+  secondary: '#9BB622',
+  tertiary: '#C5DF4E',
+  quaternary: '#8EA81B',
 
   'gray-50': '#f2f2f2',
   'gray-100': '#e6e6e6',
@@ -26,10 +26,10 @@ export const inovantiDarkTheme = {
   black: '#ffffff',
   white: '#000000',
 
-  primary: '#f0e400',
-  secondary: '#e9e03a',
-  tertiary: '#d8ce18',
-  quaternary: '#f2ea5a',
+  primary: '#ABC928',
+  secondary: '#A1BD24',
+  tertiary: '#8FA71C',
+  quaternary: '#BEDA48',
 
   'gray-50': '#0d0d0d',
   'gray-100': '#1a1a1a',
